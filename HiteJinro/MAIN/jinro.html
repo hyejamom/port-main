@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 뷰포트 정의하는부분 (스크린이 다양할수도있으니까 그거 호환시키는거 ) -->
+    <meta charset="UTF-8">
+    <!-- 기본 브라우저 호환성 세팅 알아서 렌더링 해줌  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <!-- 인코딩 타입 해당 문서의 문자 인코딩 방식을 명시함.  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- 전화번호 자동링크 없앨때 -->   
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 검색엔진 크롤러 (검색방식조절)  -->
+    <meta name="robots" content="ALL">     
+    <!-- 공유버튼이나 URL전달할때 정보 포함시킬수 있는 파라미터 이면서 + 카카오톡 URL사진뜨는거 그런거 -->
+    <meta property="og:title" content="HITE JINRO" />
+    <meta property="og:type" content="website" />
+    <!-- 대표 사이트 주소  -->
+    <meta property="og:url" content="" />
+    <!-- 대표 이미지 절대경로 적으면됨 -->
+    <meta property="og:image" content="" /> 
+    <!-- 테마컬러 메인컬러 - 사이트에 어울리게 예쁘게 보정 -->
+    <meta name="theme-color" content="#018CC7"/>
+    <!-- meta 내에서 타이틀 확인  -->
+    <meta name="title" content='HITE JINRO'>
+    <!-- SEO의 핵심 사이트 묘사 -->
+    <meta name="Description" content="This site is a portfolio of web publisher Jo KyoungA. This is the renewal site of the liquor company HITE JINRO.">
+    <meta name="Keywords" content="web publisher, web design, web designer, portfolio, HTML, CSS, JavaScript, Jquery, SCSS, Junior portfolio, Junior web publisher, HITE JINRO ,renewal web site">
+    <!-- 대표사이트 메인페이지로 유도할 때 사용 -->
+    <link rel="canonical" href="">
+    <!-- 저작자  -->
+    <meta name="Author" content="KyoungA Jo">
+    <!-- 파비콘  -->
+    <link rel="shortcut icon" type="image/x-icon" href="../HITEJINRO-FA.ico">
+    <link rel="stylesheet" href="./jinro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>HITEJINRO</title>
+</head>
+
+<body>
+
+    <div class="intro" style="display: none;">
+        <div>
+            <div class="intro-1">
+                <p class="intro1">HI</p>
+                <p class="intro2">!</p>
+                <p class="intro3">TE</p>
+            </div>
+            <p class="intro4">JINRO</p>
+        </div>
+    </div>
+    <!-- header  -->
+    <header class="header">
+        <nav class="nav">
+            <div class="pc-menu-back"></div>
+            <div class="pc-menu">
+                <div class="hover-menu">
+                    <img src="../down_img1.jpg" alt="#">
+                    <div class="hoverA1 pc">
+                        <a href="../company/company.html">하이트 진로<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="../brand/brand.html">대표 브랜드<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="../esg/esg.html">지속가능환경<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="">Social board<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hoverA1 pc">
+                        <a href="#">연혁<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#">신제품<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#">식품안전경영<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#">Media<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hoverA1 pc">
+                        <a href="#">경영 철학<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#">전체 제품 보기<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#">CSR<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#">마케팅 성공사례<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hoverA1 pc">
+                        <a href="#">CI<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hoverA1 pc">
+                        <a href="#">사업장 현황<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hoverA1 pc">
+                        <a href="#">오시는 길<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hoverA1 mo">
+                        <a href="../company/company.html">하이트 진로<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="../brand/brand.html">대표 브랜드<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="../esg/esg.html">지속가능환경<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="">Social board<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="./jinro.html">
+                <h1 class="logo">
+                    <img src="./img/logo.png" alt="hitejinro-logo">
+                </h1>
+            </a>
+            <ul class="menu pc">
+                <li><a href="../company/company.html">COMPANY</a></li>
+                <li><a href="../brand/brand.html">BRAND</a></li>
+                <li><a href="../esg/esg.html">ESG</a></li>
+                <li><a href="#">SOCIAL</a></li>
+                <button class="settingClose mo" id="settingClose"><i class="fa-solid fa-xmark"></i></button>
+            </ul>
+            <div class="search">
+                <p class="pc"><a href="#">고객센터</a></p>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-bars mo mo-menu" id="settingBtn"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- header  -->
+
+
+    <section class="section0">
+        <div class="section0-left section0-arrow">
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>FILL LIGHT</p>
+        </div>
+        <div class="section0-right section0-arrow">
+            <p>JINRO</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="cover-box">
+            <div class="cover-video-wrap">
+                <div>
+                    <video autoplay muted loop src="./video/video0.mp4" class="video"></video>
+                </div>
+                <div>
+                    <video autoplay muted loop src="./video/video1.mp4" class="video"></video>
+                </div>
+                <div>
+                    <video autoplay muted loop src="./video/video2.mp4" class="video"></video>
+                </div>
+                <div>
+                    <video autoplay muted loop src="./video/video3.mp4" class="video"></video>
+                </div>
+            </div>
+        </div>
+        <div class="roading-wrap">
+            <div class="roading">
+                <p>01 참이슬</p>
+                <div></div>
+                <div class="on"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section1  -->
+    <section class="section1">
+        <h2 class="section-title">브랜드</h2>
+        <div class="section1-brand-wrap">
+            <ul class="selec-box">
+                <li>
+                    <div class="selec-back on"></div>
+                </li>
+                <li>
+                    <div class="selec-back"></div>
+                </li>
+                <li>
+                    <div class="selec-back"></div>
+                </li>
+            </ul>
+            <ul class="brand-img">
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: green;"></div>
+                        <img src="./img/brand-logo1.png" alt="참이슬_LOGO">
+                        <img src="./img/brand1.jpg" alt="brand-img1">
+                    </a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: #2EB1E7;"></div>
+                        <img src="./img/brand-logo2.png" alt="진로_LOGO">
+                        <img src="./img/brand2.jpg" alt="brand-img2">
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: #1d1d1d;"></div>
+                        <img src="./img/brand-logo3.png" alt="1924_LOGO">
+                        <img src="./img/brand3.jpg" alt="brand-img3">
+                    </a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: #144734;"></div>
+                        <img src="./img/brand-logo4.png" alt="TERA_LOGO">
+                        <img src="./img/brand4.png" alt="brand-img4">
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: #CE9D53;"></div>
+                        <img src="./img/brand-logo5.png" alt="MAX_LOGO">
+                        <img src="./img/brand5.jpg" alt="brand-img5">
+                    </a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: #030303;"></div>
+                        <img src="./img/brand-logo6.png" alt="진로레드와인_LOGO">
+                        <img src="./img/brand6.png" alt="brand-img6">
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: #005AAB;"></div>
+                        <img src="./img/brand-logo7.png" alt="필라이트_LOGO">
+                        <img src="./img/brand7.jpg" alt="brand-img7">
+                    </a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000">
+                    <a href="">
+                        <div class="brand-cover" style="background-color: #003CA6;"></div>
+                        <img src="./img/brand-logo8.png" alt="HITE_LOGO">
+                        <img src="./img/brand8.jpg" alt="brand-img8">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- section2  -->
+    <section class="section2">
+        <div class="section2-left" data-aos="fade-up-right" data-aos-duration="1000">
+            <div class="section2-left-img-box">
+                <img src="./img/section2-left-img3.jpg" alt="">
+                <img src="./img/section2-left-img1.jpg" alt="">
+            </div>
+            <h3 class="section2-title">경영철학</h3>
+            <div class="section2-roading-box">
+                <div class="section2-roading">
+                    <h3>경영철학</h3>
+                    <div></div>
+                    <div class="on"></div>
+                </div>
+                <div class="section2-roading">
+                    <h3>지속가능환경경영</h3>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="section2-roading">
+                    <h3>CSR</h3>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="section2-right">
+            <div class="section2-right-img-box" data-aos="fade-up-left" data-aos-duration="1000">
+                <div class="section2-img-wrap">
+                    <img src="./img/section2-right-img3.jpg" alt="" class="section2-r-img">
+                    <img src="./img/section2-right-img1.jpg" alt="" class="section2-r-img">
+                </div>
+            </div>
+            <div class="section2-text-box">
+                <p>경영철학</p>
+                <p>세계 모든 이들과 늘 함께하며, </p>
+                <p>삶의 즐거움과 희망을 나누겠습니다.</p>
+                <button>자세히보기</botton>
+            </div>
+        </div>
+    </section>
+
+    <!-- section3  -->
+    <section class="section3">
+        <div class="section3-sticky">
+            <div class="section3-back"></div>
+            <div class="sticky-back">
+                <div class="sticky-content">
+                    <img src="./img/product0.jpg" alt="" class="sticky-content-img">
+                    <div class="sticky-content-p">#마음을 녹이는 초 깔끔한 맛 #진로</div>
+                </div>
+            </div>
+        </div>
+        <div class="section3-right">
+            <h2 class="section-title">제품</h2>
+            <div class="section3-content">
+                <ul class="section3-2box" data-aos="fade-up" data-aos-duration="1000">
+                    <li>
+                        <img src="./img/product1.jpg" alt="">
+                        <div class="section3-text">
+                            <p>초 깔끔함에 쌓여놀껍!</p>
+                            <p>대한민국 원조 소주 진로의 옛 감성과 향수 그대로 감각적인 맛과 디자인으로 돌아왔습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/product2.jpg" alt="">
+                        <div class="section3-text">
+                            <p>이슬같이 깨끗한 다음날</p>
+                            <p>대나무 숯으로 4번 걸러 더 깨끗해진 참이슬</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="section3-3box" data-aos="fade-up" data-aos-duration="1000">
+                    <li>
+                        <img src="./img/product3.png" alt="">
+                        <div class="section3-text">
+                            <p>이 맛이 청정라거다!</p>
+                            <p>시대의 돌풍을 일으킬 청정라거, TERRA</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/product4.jpg" alt="">
+                        <div class="section3-text">
+                            <p>새콤달콤한 체리맛</p>
+                            <p>한정판 신제품 필라이트 “체리” 출시</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/product5.png" alt="">
+                        <div class="section3-text">
+                            <p>ALL NEW 일품진로</p>
+                            <p>일품진로가 새로워진 모습으로 여러분께 찾아갑니다.</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="section3-2box have" data-aos="fade-up" data-aos-duration="1000">
+                    <li>
+                        <img src="./img/product6.jpg" alt="">
+                        <div class="section3-text">
+                            <p>보리 100%의 첫 즙만 담은 하나의 맛</p>
+                            <p> 첫 번째 짜낸 맥즙만을 사용하여 원료(보리)본연의 진한 맛을 충분히 느낄 수 있고, 깔끔한 맛이 특징입니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/product7.png" alt="">
+                        <div class="section3-text">
+                            <p>누구나 즐기는 흑맥주</p>
+                            <p>누구에게나 부드럽고 깔끔한 라거타입 흑맥주</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="section3-3box" data-aos="fade-up" data-aos-duration="1000">
+                    <li>
+                        <img src="./img/product8.jpg" alt="">
+                        <div class="section3-text">
+                            <p>올해의 호프로 더욱 신선한</p>
+                            <p>국내 최초 All Malt Beer, 15년의 내공</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/product9.jpg" alt="">
+                        <div class="section3-text">
+                            <p>진로 레드와인 출시!</p>
+                            <p>시칭리아의 풍미 그대로, 프리미엄 진로 레드와인</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/product10.jpg" alt="">
+                        <div class="section3-text">
+                            <p>국내 최초 33도 위스키</p>
+                            <p>국내 최정상 연구진이 4년에 걸쳐 만들어낸 최고의 명작</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- section4  -->
+    <section class="section4">
+        <div class="section4-title">
+            <h2 class="section-title">SOCIAL & MEDIA</h2>
+        </div>
+        <div class="section4-social-wrap">
+            <div class="button">
+                <i class="fa-solid fa-play" style="transform: rotate(-180deg);"></i>
+            </div>
+            <div class="button">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="phone-line"></div>
+            <ul class="section4-social-box on">
+                <li style="margin: 0px;" >
+                    <img src="./img/social-img1.jpg" alt="">
+                    <p>#공들여 쌓은 #진로탑에 소원빌자 </p>
+                    <div class="phone-text">
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTAGRAM</p>
+                        </div>
+                        <div class="instagram-content">
+                            <p>친구들이랑 진로로 밤새 달렸더니 진로탑이 되었네?</p>
+                        </div>
+                        <div class="date">
+                            <p>2022.12.3</p>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin: 0px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                    <img src="./img/social-img2.png" alt="">
+                    <p>#찬바람 불어올땐 #초간단 불멍화로</p>
+                    <div class="phone-text">
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTAGRAM</p>
+                        </div>
+                        <div class="instagram-content">
+                            <p>테라 캔으로 만든 불멍화로! 테라 한캔 하실래예?</p>
+                        </div>
+                        <div class="date">
+                            <p>2022.12.3</p>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin: 0px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="./img/social-img3.jpg" alt="">
+                    <p>#붕어빵엔 테라가 찰떡이지</p>
+                    <div class="phone-text">
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTAGRAM</p>
+                        </div>
+                        <div class="instagram-content">
+                            <p>붕맥이라고 아시나요? 뜨끈한 붕어 한마리에 차가운 맥주~ 캬~</p>
+                        </div>
+                        <div class="date">
+                            <p>2022.12.3</p>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin: 0px 5%;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <img src="./img/social-img4.jpg" alt="">
+                    <p>#너 김묻었다 입김 #아이스 참이슬 포기못해</p>
+                    <div class="phone-text">
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTAGRAM</p>
+                        </div>
+                        <div class="instagram-content">
+                            <p>열받은 내 속을 달래주는 아이스 참이슬!</p>
+                        </div>
+                        <div class="date">
+                            <p>2022.12.3</p>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin: 0px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <img src="./img/social-img5.jpg" alt="">
+                    <p>#참이슬 한 잔 #요정님 얼굴 한번</p>
+                    <div class="phone-text">
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTAGRAM</p>
+                        </div>
+                        <div class="instagram-content">
+                            <p>해산물엔 소주! 퇴근후엔 참이슬 후레쉬!</p>
+                        </div>
+                        <div class="date">
+                            <p>2022.12.19</p>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin: 0px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <img src="./img/social-img6.jpg" alt="">
+                    <p>#닭발에 링끼워주는 #너란사람</p>
+                    <div class="phone-text">
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTAGRAM</p>
+                        </div>
+                        <div class="instagram-content">
+                            <p>애인도 없는데 즐겨보자 크리스마스! 매운 음식엔 매화주!</p>
+                        </div>
+                        <div class="date">
+                            <p>2022.12.24</p>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin: 0px;">
+                    <img src="./img/social-img7.jpg" alt="">
+                    <p>#한정판 체리 사려면 #다들 정신 체리자</p>
+                    <div class="phone-text">
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTAGRAM</p>
+                        </div>
+                        <div class="instagram-content">
+                            <p>새해엔 필라이트 체리맛! 한정판이래 달려가자~</p>
+                        </div>
+                        <div class="date">
+                            <p>2023.1.5</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- section5  -->
+    <section class="section5">
+        <h2 class="section-title">온라인 견학관</h2>
+        <div class="section5-video-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <div class="drink-wrap">
+                <video autoplay muted loop src="./video/soju.mp4"></video>
+            </div>
+            <div class="drink-wrap">
+                <video autoplay muted loop src="./video/beer.mp4"></video>
+            </div>
+            <div class="section5-content">
+                <h3>강원공장</h3>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">첨단 설비와 완전 자동화 System을 갖춘 환경 친화형 공장</p>
+                <div class="section5-botton-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <button>체험하기</button>
+                    <button>신청하기</button>
+                </div>
+            </div>
+            <div class="section5-slide">
+                <div>
+                    <div class="section5-road on"></div>
+                </div>
+                <div>
+                    <div class="section5-road"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./img/logo.png" alt="footer-logo">
+                <div>
+                    <a href="#">개인정보처리방침</a>|
+                    <a href="#">이용약관</a>|
+                    <a href="#">법적고지</a>|
+                    <a href="#">이메일 무단수집 거부</a>|
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <div class="footer-line-box">
+                <p>서울특별시 강남구 영동대로 714 하이트진로빌딩 | 대표전화 080-210-0150 | 사업자등록번호214-81-00777</p>
+            </div>
+            <div class="section5-icon">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer  -->
+
+
+
+
+
+
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="./jinro.js"></script>
+</body>
+
+</html>

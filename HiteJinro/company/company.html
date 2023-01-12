@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 뷰포트 정의하는부분 (스크린이 다양할수도있으니까 그거 호환시키는거 ) -->
+    <meta charset="UTF-8">
+    <!-- 기본 브라우저 호환성 세팅 알아서 렌더링 해줌  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <!-- 인코딩 타입 해당 문서의 문자 인코딩 방식을 명시함.  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- 전화번호 자동링크 없앨때 -->   
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 검색엔진 크롤러 (검색방식조절)  -->
+    <meta name="robots" content="ALL">     
+    <!-- 공유버튼이나 URL전달할때 정보 포함시킬수 있는 파라미터 이면서 + 카카오톡 URL사진뜨는거 그런거 -->
+    <meta property="og:title" content="HITE JINRO" />
+    <meta property="og:type" content="website" />
+    <!-- 대표 사이트 주소  -->
+    <meta property="og:url" content="" />
+    <!-- 대표 이미지 절대경로 적으면됨 -->
+    <meta property="og:image" content="" /> 
+    <!-- 테마컬러 메인컬러 - 사이트에 어울리게 예쁘게 보정 -->
+    <meta name="theme-color" content="#018CC7"/>
+    <!-- meta 내에서 타이틀 확인  -->
+    <meta name="title" content='HITE JINRO'>
+    <!-- SEO의 핵심 사이트 묘사 -->
+    <meta name="Description" content="This site is a portfolio of web publisher Jo KyoungA. This is the renewal site of the liquor company HITE JINRO.">
+    <meta name="Keywords" content="web publisher, web design, web designer, portfolio, HTML, CSS, JavaScript, Jquery, SCSS, Junior portfolio, Junior web publisher, HITE JINRO ,renewal web site">
+    <!-- 대표사이트 메인페이지로 유도할 때 사용 -->
+    <link rel="canonical" href="">
+    <!-- 저작자  -->
+    <meta name="Author" content="KyoungA Jo">
+    <!-- 파비콘  -->
+    <link rel="shortcut icon" type="image/x-icon" href="../HITEJINRO-FA.ico">
+    <link rel="stylesheet" href="./company.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- header  -->
+    <header class="header">
+      <nav class="nav">
+          <div class="pc-menu-back"></div>
+          <div class="pc-menu">
+              <div class="hover-menu">
+                  <img src="../down_img1.jpg" alt="#">
+                  <div class="hoverA1 pc">
+                      <a href="../company/company.html">하이트 진로<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../brand/brand.html">대표 브랜드<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../esg/esg.html">지속가능환경<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="">Social board<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">연혁<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">신제품<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">식품안전경영<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">Media<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">경영 철학<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">전체 제품 보기<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">CSR<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">마케팅 성공사례<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">CI<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">사업장 현황<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">오시는 길<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 mo">
+                      <a href="../company/company.html">하이트 진로<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../brand/brand.html">대표 브랜드<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../esg/esg.html">지속가능환경<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="">Social board<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+          <a href="../MAIN/jinro.html">
+              <h1 class="logo">
+                  <img src="./img/logo.png" alt="hitejinro-logo">
+              </h1>
+          </a>
+          <ul class="menu pc">
+              <li><a href="../company/company.html">COMPANY</a></li>
+              <li><a href="../brand/brand.html">BRAND</a></li>
+              <li><a href="../esg/esg.html">ESG</a></li>
+              <li><a href="#">SOCIAL</a></li>
+              <button class="settingClose mo" id="settingClose"><i class="fa-solid fa-xmark"></i></button>
+          </ul>
+          <div class="search">
+              <p class="pc"><a href="#">고객센터</a></p>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-bars mo mo-menu" id="settingBtn"></i>
+          </div>
+      </nav>
+  </header>
+  <!-- header  -->
+
+    <!-- visual/hero  -->
+    <section class="visual">
+      <img class="pc" src="./img/bg_company_top.jpg" alt="">
+      <img class="mo" src="./img/mo_bg_company_top.png" alt="">
+      <ul class="subMenuList">
+        <li class="sub_menu active"><a href="#">하이트진로</a></li>
+        <li class="sub_menu"><a href="#">연혁</a></li>
+        <li class="sub_menu"><a href="#">경영철학</a></li>
+        <li class="sub_menu"><a href="#">CI</a></li>
+        <li class="sub_menu"><a href="#">사업장 현황</a></li>
+        <li class="sub_menu"><a href="#">오시는 길</a></li>
+      </ul>
+      <h2>회사소개</h2>
+    </section>
+    <!-- visual/hero  -->
+
+    <!-- tab menu controller  -->
+    <section class="tabMenu">
+      <ul class="tabMenuList">
+        <li class="tab_menu active"><a href="">회사개요</a></li>
+        <li class="tab_menu"><a href="">비전</a></li>
+        <li class="tab_menu"><a href="">CEO 인사말</a></li>
+      </ul>
+    </section>
+    <!-- tab menu controller  -->
+
+    <!-- scene1  -->
+    <section class="scene1">
+      <div class="txtBox" data-aos="fade-right" data-aos-duration="1000">
+        <h2>회사개요</h2>
+        <p>
+          하이트진로(주)는 1924년 창립과 함께 진로 소주 생산이 시작되었으며, 1970년 순수 토종 기업으로 전통주이자 국민주인 소주 시장에서 삼학을 제치고 시장 1위를 차지했습니다.<br><br>
+          글로벌화 되어 가고 있는 경쟁환경 내에서 앞으로도 꿋꿋하게 국내 주류시장을 지켜나갈 것이며, 현재는 세계적인 초우량 종합주류 기업으로 성장을 하고 있습니다.
+        </p>
+      </div>
+      <div class="imgBox pc" data-aos="fade-left" data-aos-duration="1000">
+        <img src="./img/img_history_1.jpg" alt="">
+      </div>
+    </section>
+    <!-- scene1  -->
+
+    <!-- scene2  -->
+    <section class="scene2">
+      <div class="txtBox" data-aos="fade-right" data-aos-duration="1000">
+        <h2>1등 기업의 비결</h2>
+        <p>
+          우수한 제품력, 다년간의 산업 노하우, <br>
+          직원들간의 결속력을 바탕으로 일구어 낸 업계 1위의 위치를 굳건히 지키고 있습니다.<br>
+          주류산업을 이끄는 선두주자의 자부심과 함께, 기업가치를 높이기 위한 노력을 지속적으로 이어가고 있습니다.
+        </p>
+      </div>
+      <div class="valueBallList">
+        <div class="value_wrap">
+          <div class="value_list">
+            <div class="value_ball" style="background:#018CC7" data-aos="fade-up" data-aos-duration="1000">고객만족</div>
+            <ul class="value">
+              <li>· 적극적인 마케팅 활동, 신뢰성 있는 마케팅 전략</li>
+              <li>· 제품의 맛·품질에서 고객만족을 최상의 가치로 추구</li>
+              <li>· 오픈 이노베이션을 통한 끊임없는 제품 혁신</li>
+            </ul>
+          </div>
+          <div class="value_list">
+            <div class="value_ball" style="background:#449DEF" data-aos="fade-up" data-aos-duration="1000">선제적<br>시장 대응</div>
+            <ul class="value">
+              <li>· 4차 산업에 대비한 Digital Transformation 추진</li>
+              <li>· 급변하는 시장 내·외부 환경변화 분석 강화</li>
+              <li>· 생애 포트폴리오 구축을 통한 소비자 대응</li>
+            </ul>
+          </div>
+        </div>
+        <div class="value_wrap">
+          <div class="value_list">
+            <div class="value_ball" style="background:#304BB1" data-aos="fade-up" data-aos-duration="1000">사회적<br>책임 강화</div>
+            <ul class="value">
+              <li>· 준법경영을 통한 기업 투명성 확보</li>
+              <li>· 신뢰를 바탕으로 상생 경영 추구</li>
+              <li>· 공유가치 창출 확대를 통한 질적 성장 기반 마련</li>
+            </ul>
+          </div>
+          <div class="value_list">
+            <div class="value_ball" style="background:#152A78" data-aos="fade-up" data-aos-duration="1000">조직 내실 강화</div>
+            <ul class="value">
+              <li>· 수평적 문화구축을 통한 조직 내 소통 및 협력 강화</li>
+              <li>· 명확한 역할 분담을 통한 책임 경영체제 확립</li>
+              <li>· 도전적 조직문화 / 선진 경영시스템 도입</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- scene2  -->
+
+    <!-- scene3  -->
+    <section class="scene3">
+      <p class="catch">하이트 진로는 변화와 혁신을 위한 끊임없는 노력을 통해<br class="mo mo2"> 새로운 가치를 창조합니다.</p>
+      <h2>나아가는 길</h2>
+      <div class="slide_controller">
+        <div class="slide_title">
+          <div class="slide_content" data-aos="fade-up" data-aos-duration="1000">
+            <img src="./img/goWay_icon1.png" alt="">
+            <h4>오직 한 길만을 걸어 온 기업</h4>
+            <p>
+              1924년 창사 이래 종합주류회사의 힘찬 명맥을 유지해 온 주류업계의 산 증인이자 1등 기업입니다. 앞으로도 한결같은 모습으로 그 커다란 맥을 이어가겠습니다.
+            </p>
+          </div>
+          <div class="slide_content" data-aos="fade-up" data-aos-duration="1000">
+            <img src="./img/goWay_icon2.png" alt="">
+            <h4>물을 사랑하는 기업</h4>
+            <p>
+              인체의 70%를 차지하고 있는 물. 물은 우리에게 가장 필요하고 소중한 것입니다. 
+              이러한 물을 사용하여 제품을 만드는 롯데칠성의 물에 대한 사랑은 그 누구보다도 각별합니다.
+            </p>
+          </div>
+          <div class="slide_content" data-aos="fade-up" data-aos-duration="1000">
+            <img src="./img/goWay_icon3.png" alt="">
+            <h4>환경보호에 앞장서는 기업</h4>
+            <p>
+              환경오염을 최대한 줄이는 차원을 넘어, 
+              환경보호의 중요성을 널리 알리는 환경캠페인의 선두기업이 되겠습니다.
+            </p>
+          </div>
+        </div>
+        <div class="slide_content">
+          <img src="./img/goWay_icon1.png" alt="">
+          <h4>오직 한 길만을 걸어 온 기업</h4>
+          <p>
+            1924년 창사 이래 종합주류회사의 힘찬 명맥을 유지해 온 주류업계의 산 증인이자 1등 기업입니다. 앞으로도 한결같은 모습으로 그 커다란 맥을 이어가겠습니다.
+          </p>
+        </div>
+        <div class="slide_pagination">
+          <div class="active"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <button class="prevSlide">
+          <i class="fa-solid fa-angles-left"></i>
+        </button>
+        <button class="nextSlide">
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+      </div>
+
+    </section>
+    <!-- scene3  -->
+
+    <!-- scene4  -->
+    <section class="scene4">
+      <div class="txtBox headingBox" data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="harmony">가치 창조 문화</h2>
+        <p>"구성원 모두가 마음과 생각을 나누어 더 큰 가치를 만들자"는 기업문화의 지향점에 근간을 두어,<br>하이트 진로만의 가치 창조 문화를 만들어 가고 있습니다.</p>
+      </div>
+      <div class="listBox">
+        <div class="txtBox">
+          <h2>기업가치 창조</h2>
+          <p>효율과 혁신에 기반하여 실질적인 성과를 창출합니다.</p>
+          <ul>
+            <li>사내벤처 Project / 주니어보드</li>
+            <li>업무효율화를 통한 성과 창출</li>
+            <li>가치 창조 문화 선포</li>
+            <li>조직문화 우수 조직 시상</li>
+          </ul>
+        </div>
+        <div class="imgBox" data-aos="fade-left" data-aos-duration="1000"><img src="./img/introD_culture_img2.jpg" alt=""></div>
+      </div>
+      <div class="listBox even">
+        <div class="imgBox" data-aos="fade-right" data-aos-duration="1000"><img src="./img/introD_culture_img3.jpg" alt=""></div>
+        <div class="txtBox">
+          <h2>사회적 가치 창조</h2>
+          <p>사회적 책임 준수를 통해 다양한 이해관계자와의 상생을 구현합니다.</p>
+          <ul>
+            <li>준법경영 서약</li>
+            <li>동반성장 펀드 운영</li>
+            <li>하이트 봉사단 운영</li>
+            <li>기타 각종단체 지원</li>
+          </ul>
+        </div>
+      </div>
+      <div class="listBox">
+        <div class="txtBox">
+          <h2>소통 창조</h2>
+          <p>자유로운 소통을 통해 정서적 공감대를 형성합니다.</p>
+          <ul>
+            <li>CEO OPEN TALK</li>
+            <li>Bottom-Up 의견 개진</li>
+            <li>On/Off Line 소통창구</li>
+            <li>기업문화 TFT 운영</li>
+          </ul>
+        </div>
+        <div class="imgBox" data-aos="fade-left" data-aos-duration="1000"><img src="./img/introD_culture_img4.jpg" alt=""></div>
+      </div>
+    </section>
+    <!-- scene4  -->
+
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./img/logo.png" alt="footer-logo">
+                <div>
+                    <a href="#">개인정보처리방침</a>|
+                    <a href="#">이용약관</a>|
+                    <a href="#">법적고지</a>|
+                    <a href="#">이메일 무단수집 거부</a>|
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <div class="footer-line-box">
+                <p>서울특별시 강남구 영동대로 714 하이트진로빌딩 | 대표전화 080-210-0150 | 사업자등록번호214-81-00777</p>
+            </div>
+            <div class="section5-icon">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer  -->
+
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="./company.js"></script>
+</body>
+</html>

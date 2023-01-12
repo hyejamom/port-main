@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 뷰포트 정의하는부분 (스크린이 다양할수도있으니까 그거 호환시키는거 ) -->
+    <meta charset="UTF-8">
+    <!-- 기본 브라우저 호환성 세팅 알아서 렌더링 해줌  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <!-- 인코딩 타입 해당 문서의 문자 인코딩 방식을 명시함.  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- 전화번호 자동링크 없앨때 -->   
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 검색엔진 크롤러 (검색방식조절)  -->
+    <meta name="robots" content="ALL">     
+    <!-- 공유버튼이나 URL전달할때 정보 포함시킬수 있는 파라미터 이면서 + 카카오톡 URL사진뜨는거 그런거 -->
+    <meta property="og:title" content="HITE JINRO" />
+    <meta property="og:type" content="website" />
+    <!-- 대표 사이트 주소  -->
+    <meta property="og:url" content="" />
+    <!-- 대표 이미지 절대경로 적으면됨 -->
+    <meta property="og:image" content="" /> 
+    <!-- 테마컬러 메인컬러 - 사이트에 어울리게 예쁘게 보정 -->
+    <meta name="theme-color" content="#018CC7"/>
+    <!-- meta 내에서 타이틀 확인  -->
+    <meta name="title" content='HITE JINRO'>
+    <!-- SEO의 핵심 사이트 묘사 -->
+    <meta name="Description" content="This site is a portfolio of web publisher Jo KyoungA. This is the renewal site of the liquor company HITE JINRO.">
+    <meta name="Keywords" content="web publisher, web design, web designer, portfolio, HTML, CSS, JavaScript, Jquery, SCSS, Junior portfolio, Junior web publisher, HITE JINRO ,renewal web site">
+    <!-- 대표사이트 메인페이지로 유도할 때 사용 -->
+    <link rel="canonical" href="">
+    <!-- 저작자  -->
+    <meta name="Author" content="KyoungA Jo">
+    <!-- 파비콘  -->
+    <link rel="shortcut icon" type="image/x-icon" href="../HITEJINRO-FA.ico">
+    <link rel="stylesheet" href="./esg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- header  -->
+    <header class="header">
+      <nav class="nav">
+          <div class="pc-menu-back"></div>
+          <div class="pc-menu">
+              <div class="hover-menu">
+                  <img src="../down_img1.jpg" alt="#">
+                  <div class="hoverA1 pc">
+                      <a href="../company/company.html">하이트 진로<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../brand/brand.html">대표 브랜드<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../esg/esg.html">지속가능환경<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="">Social board<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">연혁<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">신제품<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">식품안전경영<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">Media<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">경영 철학<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">전체 제품 보기<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">CSR<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#">마케팅 성공사례<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">CI<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">사업장 현황<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 pc">
+                      <a href="#">오시는 길<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="hoverA1 mo">
+                      <a href="../company/company.html">하이트 진로<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../brand/brand.html">대표 브랜드<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="../esg/esg.html">지속가능환경<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="">Social board<i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+          <a href="../MAIN/jinro.html">
+              <h1 class="logo">
+                  <img src="./img/logo.png" alt="hitejinro-logo">
+              </h1>
+          </a>
+          <ul class="menu pc">
+              <li><a href="../company/company.html">COMPANY</a></li>
+              <li><a href="../brand/brand.html">BRAND</a></li>
+              <li><a href="../esg/esg.html">ESG</a></li>
+              <li><a href="#">SOCIAL</a></li>
+              <button class="settingClose mo" id="settingClose"><i class="fa-solid fa-xmark"></i></button>
+          </ul>
+          <div class="search">
+              <p class="pc"><a href="#">고객센터</a></p>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-bars mo mo-menu" id="settingBtn"></i>
+          </div>
+      </nav>
+  </header>
+  <!-- header  -->
+
+    <!-- visual/hero  -->
+    <section class="visual">
+      <img class="pc" src="./img/subVisual_management.jpg" alt="">
+      <img class="mo" src="./img/subVisual_management.jpg" alt="">
+      <ul class="subMenuList">
+        <li class="sub_menu active"><a href="#">지속가능환경영영</a></li>
+        <li class="sub_menu"><a href="#">식품안전경영</a></li>
+        <li class="sub_menu"><a href="#">CSR</a></li> 
+      </ul>
+      <h2>ESG</h2>
+    </section>
+    <!-- visual/hero  -->
+
+    <!-- tab menu controller  -->
+    <section class="tabMenu">
+      <ul class="tabMenuList">
+        <li class="tab_menu active"><a href="">2050 to zerO!</a></li>
+        <li class="tab_menu"><a href="">CSV</a></li>
+        <li class="tab_menu"><a href="">Managment</a></li>
+      </ul>
+    </section>
+    <!-- tab menu controller  -->
+
+    <!-- scene1  -->
+    <section class="scene1">
+      <div class="txtBox">
+        <h2  data-aos="fade-right" data-aos-duration="1000">
+          HJ ENVIRONMENT STRATEGY<br>
+          2050 TO ZERO!
+        </h2>
+        <p>
+          하이트진로는 2025년까지 25! CHALLENGE 환경경영 목표에서 더 나아가 2050 to ZerO!<br class="pc">
+          환경경영 중장기 목표를 새롭게 수립하였습니다.<br class="pc">
+          하이트진로는 환경경영 목표를 달성하여 전 인류의 지속가능성 확보에 적극적으로<br class="pc">
+          참여하겠습니다. <br><br>
+          소비자와 함께하는 분리수거 활동인 테라크루 청정 캠페인과 재활용 원료로 제작된 다양한<br class="pc">
+          굿즈를 출시하는 등 경계를 넘어 친환경 할 수 있는 경영 활동을 시행하고 있습니다.
+        </p>
+      </div>
+    </section>
+    <!-- scene1  -->
+
+    <!-- scene2  -->
+    <section class="scene2">
+      <ul class="sdgLists">
+        <div class="sdgWrap">
+          <li class="sdgList">
+            <img src="./img/sdg_1.png" alt="sdg goal6 : Healthy and safe water management" data-aos="fade-up" data-aos-duration="1000">
+            <h4>SDG Goal 6</h4>
+            <p>
+              깨끗한 물을 더 많이 자연에 환원시켜 모두를 위한 물의 이용가능성과 지속가능한 관리를 위해 노력하겠습니다.
+            </p>
+          </li>
+          <li class="sdgList">
+            <img src="./img/sdg_2.png" alt="sdg goal7 : Energy Saving Activities Production and Consumption" data-aos="fade-up" data-aos-duration="1000">
+            <h4>SDG Goal 7</h4>
+            <p>
+              에너지 절감 활동과 에너지 고효율 시설에 투자하여 에너지 소비 효율성을 증대하겠습니다.
+            </p>
+          </li>
+        </div>
+        <div class="sdgWrap">
+          <li class="sdgList">
+            <img src="./img/sdg_3.png" alt="sdg goal12 : Sustainable production and consumption" data-aos="fade-up" data-aos-duration="1000">
+            <h4>SDG Goal 12</h4>
+            <p>
+              환경성적표지 인증 제품을 확대하고 친환경 포장재를 제공하여 소비자들이 지속가능한 소비와 생활을 누릴 수 있도록 하겠습니다.
+            </p>
+          </li>
+          <li class="sdgList">
+            <img src="./img/sdg_4.png" alt="sdg goal13 : Climate Change and Response" data-aos="fade-up" data-aos-duration="1000">
+            <h4>SDG Goal 13</h4>
+            <p>
+              온실가스 배출량을 감축하여 기후변화로 인한 영향 감소를 위해 노력하겠습니다.
+            </p>
+          </li>
+        </div>
+      </ul>
+    </section>
+    <!-- scene2  -->
+
+    <!-- scene3  -->
+    <section class="scene3">
+      <h2>25! CHALLENGE</h2>
+      <div class="contentBox">
+        <img src="./img/img1.png" alt="current to 25!">
+        <ul class="challenLists">
+          <li class="challenList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">·<b>온실가스 배출</b> 원단위 25% 감소</li>
+          <li class="challenList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">·<b>환경오염물질</b> 배출 원단위 25% 감소</li>
+          <li class="challenList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">·<b>환경성적표지 인증</b> 제품 25개 이상</li>
+        </ul>
+      </div>
+    </section>
+    <!-- scene3  -->
+
+    <!-- scene4  -->
+    <section class="scene4">
+      <h2>2050 TO ZERO!</h2>
+      <div class="contentBox">
+        <img src="./img/img2.png" alt="2050 TO ZERO!">
+        <div class="toZeroWrap">
+          <ul class="toZeroLists">
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">·<b>온실가스</b> 30% 감소</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">·<b>수자원</b> 30% 환원</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">·<b>친환경 포장재</b> 30% 전환</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">·<b>SCOPE 3</b> 산정</li>
+          </ul>
+          <ul class="toZeroLists">
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">·<b>온실가스</b> 30% 감소</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">·<b>수자원</b> 30% 환원</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">·<b>친환경 포장재</b> 30% 전환</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">·<b>SCOPE 3</b> 산정</li>
+          </ul>
+          <ul class="toZeroLists">
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">·<b>온실가스</b> 30% 감소</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">·<b>수자원</b> 30% 환원</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">·<b>친환경 포장재</b> 30% 전환</li>
+            <li class="toZeroList" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">·<b>SCOPE 3</b> 산정</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- scene4  -->
+
+    <!-- scene5  -->
+    <section class="scene5">
+      <div class="policyWrap">
+        <h4>
+          <img src="./img/tit_mark.png" alt="check tit mark">
+          환경방침
+        </h4>
+        <div class="policyListWrap">
+          <ul>
+            <li>
+              <div class="imgBox" data-aos="fade-up" data-aos-duration="1000"><img src="./img/img3.png" alt="LIFE CYCLE"></div>
+              <p class="txtBox">
+                전 과정(LIFE CYCLE)을 고려한 자원의 효율적 사용과 최적 오염 방지 시설을 도입하여 환경영향을 최소화한다.
+              </p>
+            </li>
+            <li>
+              <div class="imgBox" data-aos="fade-up" data-aos-duration="1000"><img src="./img/img4.png" alt="environmental management"></div>
+              <p class="txtBox">
+                환경 경영의 투명한 정보 공개와 체계적 관리를 통해 지역사회의 환경을 보호한다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="policyWrap">
+        <h4>
+          <img src="./img/tit_mark.png" alt="check tit mark">
+          안전/보건방침
+        </h4>
+        <div class="policyListWrap">
+          <ul>
+            <li>
+              <div class="imgBox" data-aos="fade-up" data-aos-duration="1000"><img src="./img/img5.png" alt="Compliance"></div>
+              <p class="txtBox">
+                법규 준수를 기본 원칙으로 안전하고 사고 없는 사업장 구현을 위해 지속적 개선 활동을 수행한다.
+              </p>
+            </li>
+            <li>
+              <div class="imgBox" data-aos="fade-up" data-aos-duration="1000"><img src="./img/img6.png" alt="Risk Remediation"></div>
+              <p class="txtBox">
+                임직원과 협력사 직원 모두 건강하고 안전한 작업 환경을 위해, 위험성을 사전 감지하여 개선한다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-logo">
+              <img src="./img/logo.png" alt="footer-logo">
+              <div>
+                  <a href="#">개인정보처리방침</a>|
+                  <a href="#">이용약관</a>|
+                  <a href="#">법적고지</a>|
+                  <a href="#">이메일 무단수집 거부</a>|
+                  <a href="#">고객센터</a>
+              </div>
+          </div>
+          <div class="footer-line-box">
+              <p>서울특별시 강남구 영동대로 714 하이트진로빌딩 | 대표전화 080-210-0150 | 사업자등록번호214-81-00777</p>
+          </div>
+          <div class="section5-icon">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+      </div>
+  </footer>
+  <!-- footer  -->
+
+
+  <script>
+    AOS.init();
+  </script>
+  <script src="./esg.js"></script>
+</body>
+</html>

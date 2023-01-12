@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 뷰포트 정의하는부분 (스크린이 다양할수도있으니까 그거 호환시키는거 ) -->
+    <meta charset="UTF-8">
+    <!-- 기본 브라우저 호환성 세팅 알아서 렌더링 해줌  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <!-- 인코딩 타입 해당 문서의 문자 인코딩 방식을 명시함.  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- 전화번호 자동링크 없앨때 -->   
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 검색엔진 크롤러 (검색방식조절)  -->
+    <meta name="robots" content="ALL">     
+    <!-- 공유버튼이나 URL전달할때 정보 포함시킬수 있는 파라미터 이면서 + 카카오톡 URL사진뜨는거 그런거 -->
+    <meta property="og:title" content="SEOUL FOOD" />
+    <meta property="og:type" content="website" />
+    <!-- 대표 사이트 주소  -->
+    <meta property="og:url" content="" />
+    <!-- 대표 이미지 절대경로 적으면됨 -->
+    <meta property="og:image" content="" /> 
+    <!-- 테마컬러 메인컬러 - 사이트에 어울리게 예쁘게 보정 -->
+    <meta name="theme-color" content="#890302"/>
+    <!-- meta 내에서 타이틀 확인  -->
+    <meta name="title" content='SEOUL FOOD'>
+    <!-- SEO의 핵심 사이트 묘사 -->
+    <meta name="Description" content="This site is a portfolio of web publisher Jo KyoungA. This is the renewal site of the food company SEOUL FOOD.">
+    <meta name="Keywords" content="web publisher, web design, web designer, portfolio, HTML, CSS, JavaScript, Jquery, SCSS, Junior portfolio, Junior web publisher, SEOUL FOOD ,renewal web site">
+    <!-- 대표사이트 메인페이지로 유도할 때 사용 -->
+    <link rel="canonical" href="">
+    <!-- 저작자  -->
+    <meta name="Author" content="KyoungA Jo">
+    <!-- 파비콘  -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/SEOULFOOD-FA.png">
+    <link rel="stylesheet" href="./seoulFood.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <title>SEOUL FOOD</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="h-logo-wrap">
+            <div class="search-nav">
+                <div class="saerch-input">
+                    <input type="text" placeholder="Search">
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                </div>
+            </div>
+            <div class="h-logo">
+                <div class="social-box">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <div class="serch-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <a href="./seoulFood.html" class="logo-img">
+                    <img src="./img/logo-red.png" alt="seoulfood-logo">
+                </a>
+                <ul class="h-side">
+                    <li><a href="#">SHOP</a></li>
+                    <p>|</p>
+                    <li><a href="#">SNS</a></li>
+                    <li class="menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <div class="h-menu-wrap">
+                <ul class="h-menu">
+                    <li class="menu-box">
+                        <a href="#">COMPANY</a>
+                        <div class="line"></div>
+                        <ul class="nav-menu">
+                            <div></div>
+                            <li><a href="#">OUR STORY</span></a></li>
+                            <li><a href="#">OUR HISTORY</span></a></li>
+                            <li><a href="#">SYMBOL</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <a href="#">BUSINESS</a>
+                        <div class="line"></div>
+                        <ul class="nav-menu">
+                            <div></div>
+                            <li><a href="#">제과·제빵</span></a></li>
+                            <li><a href="#">F & B</span></a></li>
+                            <li><a href="#">스낵</span></a></li>
+                            <li><a href="#">환경</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <a href="#">NEWS</a>
+                        <div class="line"></div>
+                        <ul class="nav-menu">
+                            <div></div>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">EVENT</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <a href="#">CUSTOMER</a>
+                        <div class="line"></div>
+                        <ul class="nav-menu">
+                            <div></div>
+                            <li><a href="#">고객의 소리</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="side-menu">
+                    <div class="side-menu-back"></div>
+                    <li class="side-menu-content-box">
+                        <div href="#">
+                            <i class="fa-solid fa-xmark fa-2x"></i>
+                        </div>
+                        <ul class="side-menu-content">
+                            <li>
+                                <div class="on">
+                                    <p>COMPANY</p>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <ul class="side-li">
+                                    <li><a href="#">OUR STORY</a></li>
+                                    <li><a href="#">OUR HISTORY</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="on">
+                                    <p>BUSINESS</p>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <ul class="side-li">
+                                    <li><a href="#">제과·제빵</a></li>
+                                    <li><a href="#">F & B</a></li>
+                                    <li><a href="#">스낵</a></li>
+                                    <li><a href="#">환경</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="on">
+                                    <p>NEWS</p>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <ul class="side-li">
+                                    <li><a href="#">NEWS</a></li>
+                                    <li><a href="#">EVENT</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="on">
+                                    <p>CUSTOMER</p>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <ul class="side-li">
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="side-scroll-bar">
+            <li class="side-scroll-text"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+
+
+    <!-- section1  -->
+    <section class="section1">
+        <div class="video-box">
+            <video muted autoplay loop src="./img/main-video.mp4"></video>
+        </div>
+        <div class="section1-content action-position all-content">
+            <h2><span>정성으로 쌓은 맛,</span> 서울식품</h2>
+            <p>항상 고객의 건강을 최우선으로 생각하겠습니다.</p>
+        </div>
+        <div class="section1-scroll-arrow">
+            <p>SCROLL</p>
+            <i class="fa-solid fa-angles-down fa-2x"></i>
+        </div>
+    </section>
+
+    <!-- section2  -->
+    <section class="section2">
+        <div class="section2-content all-content">
+            <div class="section2-company all-company">
+                <p>COMPANY</p>
+            </div>
+            <div class="section2-text all-text">
+                <h2>고객님과 함께한 60년</h2>
+                <p>맛있고 풍성한 식탁을 만들기 위해 끊임없이 정진합니다.</p>
+            </div>
+            <div class="section2-content-box content-box">
+                <a href="#">
+                    <div class="section2-back"></div>
+                    <p>OUR STORY</p>
+                    <div href="#" class="section-icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="section2-back"></div>
+                    <p>OUR HISTORY</p>
+                    <div href="#" class="section-icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="section2-back"></div>
+                    <p>SYMBOL</p>
+                    <div href="#" class="section-icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section3 -->
+    <section class="section3">
+        <div class="section3-content all-content">
+            <div class="section3-company all-company">
+                <p>BUSINESS</p>
+            </div>
+            <div class="section3-text all-text">
+                <h2>좋은 원료만을 사용한 제품</h2>
+                <p>합리적인 가격, 편리한 사용으로 고객님을 만족시켜드리겠습니다.</p>
+            </div>
+            <div class="section3-content-box content-box">
+                <a href="#">
+                    <div class="section3-back"></div>
+                    <p>제빵 | 제과</p>
+                    <div href="#" class="section-icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="section3-back"></div>
+                    <p>F & B</p>
+                    <div href="#" class="section-icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="section3-back"></div>
+                    <p>스낵</p>
+                    <div href="#" class="section-icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="section3-back"></div>
+                    <p>환경</p>
+                    <div href="#" class="section-icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section4 -->
+    <section class="section4">
+        <div class="section4-content all-content">
+            <div class="section4-company all-company">
+                <p>NEWS</p>
+            </div>
+            <div class="section4-media-content media-content-box">
+                <a class="media-content" href="#">
+                    <div class="media-back"></div>
+                    <img src="./img/koala-img.jpg" alt="koalabakery-img">
+                    <p>코알라 베이커리 오픈</p>
+                    <div class="more">
+                        <p>더보기</p>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+                <a class="media-content" href="#">
+                    <div class="media-back"></div>
+                    <img src="./img/croasant-img.jpg" alt="croasant-img">
+                    <p>쌀쌀할땐 갓 구운 빵!</p>
+                    <div href="#" class="more">
+                        <p>더보기</p>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+            </div>
+            <ul class="section4-content-box content-box">
+                <li class="section4-arrow-box">
+                    <i class="fa-solid fa-angles-left left-btn"></i>
+                    <i class="fa-solid fa-angles-right right-btn"></i>
+                </li>
+                <li class="section4-slide-box">
+                    <div class="slide-img-box">
+                        <div class="slide-img">
+                            <a href="#">
+                                <div class="slide-content">
+                                    <div class="slide-back"></div>
+                                    <img src="./img/koala-img.jpg" alt="koalabakery-img">
+                                    <div class="slide-text">
+                                        <p>코알라 베이커리 오픈</p>
+                                        <p>서울식품의 베스트 제품인 추억의 코알라빵을 모티브로 기획한 브랜드입니다.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="slide-content">
+                                    <div class="slide-back"></div>
+                                    <img src="./img/makarong-img.jpg" alt="snack-img">
+                                    <div class="slide-text">
+                                        <p>뻥이요 X 돈까스 & 마카롱</p>
+                                        <p>추억의 대표간식 뻥이요! <br>뉴트로 열풍의 주인이 되다!</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="slide-content">
+                                    <div class="slide-back"></div>
+                                    <img src="./img/croasant-img.jpg" alt="croasant-img">
+                                    <div class="slide-text">
+                                        <p>쌀쌀할땐 갓 구운 빵!</p>
+                                        <p>고 물가 시대엔 홈 베이커리! <br>집에서 전문점 수준의 빵을 즐겨보세요</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="slide-content">
+                                    <div class="slide-back"></div>
+                                    <img src="./img/koala-img.jpg" alt="koalabakery-img">
+                                    <div class="slide-text">
+                                        <p>코알라 베이커리 오픈</p>
+                                        <p>서울식품의 베스트 제품인 추억의 코알라빵을 모티브로 기획한 브랜드입니다.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="slide-content">
+                                    <div class="slide-back"></div>
+                                    <img src="./img/makarong-img.jpg" alt="snack-img">
+                                    <div class="slide-text">
+                                        <p>뻥이요 X 돈까스 & 마카롱</p>
+                                        <p>추억의 대표간식 뻥이요! <br>뉴트로 열풍의 주인이 되다!</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="slide-content">
+                                    <div class="slide-back"></div>
+                                    <img src="./img/croasant-img.jpg" alt="croasant-img">
+                                    <div class="slide-text">
+                                        <p>쌀쌀할땐 갓 구운 빵!</p>
+                                        <p>고 물가 시대엔 홈 베이커리! <br>집에서 전문점 수준의 빵을 즐겨보세요</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <img src="./img//logoWhite.png" alt="footer-logo">
+        <p>
+            <a href="#">개인정보취급방침</a>|<a href="#">이용약관</a>|<a href="#">이메일무단수집거부</a>
+        </p>
+        <p>서울식품공업(주) | 대표자 : 서성훈 |<br class="mo"> 본사 : 충청북도 충주시 충원대로 862 | 대표전화 : 043-720-7000</p>
+        <p>서울사무소 : 서울 강남구 도산대로 85길 39 |<br class="mo"> 대표전화 : 02-514-5207 | 팩스 : 02-514-5290</p>
+    </footer>
+
+
+    <script src="./seoulFood.js"></script>
+</body>
+
+</html>
