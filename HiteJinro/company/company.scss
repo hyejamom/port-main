@@ -51,7 +51,7 @@ button{background:none; border:none;}
  } 
 .pc-menu .hover-menu img { width: 300px; } 
 .pc-menu.on { transform: translateX(-100%); } 
-.hover-menu { display: flex; flex-direction: column; justify-content: space-between; height: 70%; } 
+.hover-menu { display: flex; flex-direction: column; justify-content: space-between; height: 40%; } 
 .hoverA1 { width: 100%; height: 35px; overflow: hidden; } 
 .hoverA1.mo { height: auto; justify-content: space-around; display: none;} 
 .hoverA1.mo a:hover {color: #018CC7;}
