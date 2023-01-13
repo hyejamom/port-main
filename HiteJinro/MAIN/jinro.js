@@ -1,39 +1,6 @@
 $(document).ready(function () {
 
 
-    // intro 
-    let intro = '.intro'
-    let intro_1 = '.intro-1'
-    let intro1 = '.intro1'
-    let intro2 = '.intro2'
-    let intro3 = '.intro3'
-    let intro4 = '.intro4'
-    setTimeout(function () {
-        $(intro1).css({ 'transform': 'translateY(0%)', 'opacity': '1' })
-    }, 900)
-    setTimeout(function () {
-        $(intro2).css({ 'transform': 'translateY(0%)', 'opacity': '1' })
-    }, 1900)
-    setTimeout(function () {
-        $(intro4).css({ 'transform': 'translateY(0%)', 'opacity': '1' })
-    }, 2900)
-    setTimeout(function () {
-        $(intro1).stop().animate({ 'left': '0%' })
-        $(intro2).stop().animate({ 'left': '19%' }, 500, function () {
-            $(intro2).fadeOut(1000);
-        })
-        $(intro4).stop().animate({ 'right': '0%' })
-    }, 3000)
-    setTimeout(function () {
-        $(intro3).fadeIn(1000);
-    }, 4000)
-    setTimeout(function () {
-        $(intro).stop().animate({ 'width': '0%' });
-        $(intro_1).fadeOut();
-        $(intro4).fadeOut();
-    }, 5000)
-
-
     //header menu
     let menuPc = '.menu'
     let pcMenuBack = '.pc-menu-back'

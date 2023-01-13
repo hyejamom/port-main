@@ -13,22 +13,6 @@ a { color: #333; text-decoration: none; }
 video {width: 100%; height: 100%; object-fit: cover;}
 
 
-/* intro */
-.intro { width: 100%; height: 100vh; background-color: white; position: fixed; z-index: 999; font-family: 'HarmonyM'; } 
-.intro>div { width: 63%; display: flex; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); height: 235px; overflow: hidden; justify-content: space-around; } 
-.intro>div>p { font-size: 11vw; } 
-.intro-1 { display: flex; padding-right: 5%; } 
-.intro-1>p { font-size: 11vw; } 
-.intro1, .intro2, .intro4 { transform: translateY(0%); opacity: 0; } 
-.intro1 { animation: intro 1s; position: absolute; left: 15%; } 
-.intro2 { animation: intro 1s; animation-delay: 1s; position: absolute; left: 34%; color: #018CC7; } 
-.intro4 { animation: intro 1s; animation-delay: 2s; position: absolute; right: 10%; } 
-.intro3 { position: absolute; left: 18%; display: none; } 
-@keyframes intro { 
- 0% { transform: translateY(100%); opacity: 1; } 100% { transform: translateY(0%); opacity: 1; } 
- }
-
-
  /* common style */
 .pc { display:block; } 
 .mo { display:none; } 
@@ -54,7 +38,7 @@ video {width: 100%; height: 100%; object-fit: cover;}
  }
 .pc-menu .hover-menu img { width: 300px; } 
 .pc-menu.on { transform: translateX(-100%); } 
-.hover-menu { display: flex; flex-direction: column; justify-content: space-between; height: 40%; } 
+.hover-menu { display: flex; flex-direction: column; justify-content: space-between;} 
 .hoverA1 { width: 100%; height: 35px; overflow: hidden; } 
 .hoverA1.mo { height: auto; justify-content: space-around; } 
 .hoverA1.mo a:hover { color: #018CC7; } 
