@@ -54,8 +54,8 @@ img { width: 100%; display: block; }
 /* popup see */
 .popup-see .seen1 { width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; z-index: 99; display: none; } 
 .popup-see .seen1 .popup-back { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background-color: #101010; opacity: 0.3; z-index: -1; } 
-.popup-see .seen1 .ipad-inner-img { overflow: auto; z-index: 1; width: 52.5vw; height: 39.5vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
-.popup-see .seen1 .ipad-box { width: 57.5%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.popup-see .seen1 .ipad-inner-img { overflow: auto; z-index: 1; width: 59.5vw; height: 44vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.popup-see .seen1 .ipad-box { width: 65%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: block; } 
 .popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: none; } 
 .popup-see .seen1 .ipad-box .popup-see-x { position: absolute; top: 0%; right: -5%; cursor: pointer; color: #fff; transition: 0.5s; } 
@@ -65,9 +65,9 @@ img { width: 100%; display: block; }
 /* banner see */
 .seen2 { display: none; width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; z-index: 99; } 
 .seen2 .banner-back { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background-color: #101010; opacity: 0.3; z-index: -1; } 
-.seen2 .ipad-inner-img { overflow: hidden; z-index: 1; width: 52.5vw; height: 39.5vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.seen2 .ipad-inner-img { overflow: hidden; z-index: 1; width: 59.5vw; height: 42vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .seen2 .ipad-inner-img img { height: 100%; width: auto; } 
-.seen2 .ipad-box { width: 57.5%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.seen2 .ipad-box { width: 65%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .seen2 .ipad-box .ipad-x { width: 100%; display: block; } 
 .seen2 .ipad-box .ipad-y { width: 100%; display: none; } 
 .seen2 .ipad-box .popup-see-x { position: absolute; top: 0%; right: -12%; cursor: pointer; color: #fff; transition: 0.5s; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; } 
@@ -108,8 +108,9 @@ img { width: 100%; display: block; }
 #header #nav { transition: 0.5s; width: 80%; max-width: 1200px; height: 100px; display: flex; justify-content: space-between; align-items: center; background: #BCA2CE; border-radius: 0px 0px 30px 30px; box-shadow: 4px 5px 15px rgba(0, 0, 0, .75); padding: 1.3rem; margin: 0px auto; } 
 #header #nav.on { box-shadow: 0px 0px 0px white; } 
 #header #nav .logo { width: 150px; display: flex; justify-content: center; align-items: center; } 
-#header #nav .logo a { width: 100%; height: 100%; display: block; } 
+#header #nav .logo a { width: 100%; height: 100%; display: block; position: relative;} 
 #header #nav .logo img { object-fit: cover; width: 100%; } 
+#header #nav .logo .logo-black { position: absolute; top: 0px; left: 0px; opacity: 0;} 
 #header #nav .menu { display: flex; } 
 #header #nav .menu a { height: 80%; display: block; display: flex; align-items: center; margin-left: 1.3rem; cursor: pointer; color: #fff; } 
 #header #nav .menu a>img { width: 25px; margin-right: 5px; } 
@@ -334,10 +335,10 @@ img { width: 100%; display: block; }
  }
 @media (max-width: 1025px) { html { font-size: 16px; } 
 /* popup-see */
-.seen2 .ipad-box { width: 50.5%; } 
+.seen2 .ipad-box { width: 60.5%; } 
 .seen2 .ipad-box .ipad-x { display: none; } 
 .seen2 .ipad-box .ipad-y { display: block; } 
-.seen2 .ipad-inner-img { overflow: auto; width: 44.5vw; height: 63.5vw; } 
+.seen2 .ipad-inner-img { overflow: auto; width: 53.5vw; height: 76.5vw; } 
 
 
 /* portfolio see */
@@ -355,7 +356,9 @@ img { width: 100%; display: block; }
 .portfolio-see1 .see1-title .see1-img-box img { width: auto; max-height: 300px; min-height: 200px; height: 50vw;} 
 .portfolio-see1 .see1-title.back2 { flex-direction: column-reverse; justify-content: center;} 
 .portfolio-see1 .see1-title .see1-title1 .see1-title2 .see1-text h4 {margin: 10px 0px;}
-
+.popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: none; } 
+.popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: block; } 
+.popup-see .seen1 .ipad-inner-img {height: auto; width: 58vw;}
 
 /* header */
 #header #nav { justify-content: center; } 
