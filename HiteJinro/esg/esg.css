@@ -18,6 +18,7 @@
 /* rem control  */
 html {
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -72,7 +73,7 @@ button {
 }
 
 .txtBox h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
 }
 
@@ -83,7 +84,7 @@ button {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 
 section {
@@ -215,7 +216,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 70%;
+  height: 40%;
 }
 
 .hoverA1 {
@@ -271,7 +272,7 @@ section {
 }
 
 .visual {
-  margin-top: 100px;
+  padding-top: 100px;
   position: relative;
   margin-bottom: 0;
 }
@@ -281,7 +282,7 @@ section {
   border-bottom: 1px solid #fff;
   width: 100%;
   position: absolute;
-  top: 6vw;
+  top: 13vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -309,7 +310,7 @@ section {
 
 .visual h2 {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -329,7 +330,7 @@ section {
 }
 
 .tabMenu .tabMenuList .tab_menu {
-  width: 100%;
+  width: 400px;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -373,10 +374,6 @@ section {
   margin-bottom: 20px;
 }
 
-.scene1 .txtBox p {
-  color: #101010;
-}
-
 .scene1 .imgBox {
   flex: 1;
 }
@@ -384,6 +381,10 @@ section {
 .scene2 .sdgLists {
   display: flex;
   justify-content: center;
+}
+
+.scene2 .sdgLists p {
+  font-size: 1.2rem;
 }
 
 .scene2 .sdgLists .sdgWrap {
@@ -411,7 +412,7 @@ section {
 .scene3 h2 {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 
 .scene3 .contentBox {
@@ -426,10 +427,10 @@ section {
 }
 
 .scene3 .contentBox .challenLists {
-  font-size: 1.8rem;
-  width: 650px;
+  width: 600px;
+  font-size: 1.2rem;
   border: 1px solid #aaaaaa;
-  padding: 111px 46px;
+  padding: 86px 46px;
   border-radius: 80px;
 }
 
@@ -470,7 +471,7 @@ section {
 }
 
 .scene4 .toZeroWrap .toZeroLists .toZeroList {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .scene5 {
@@ -480,7 +481,6 @@ section {
 
 .scene5 .policyWrap {
   padding: 53px 0;
-  padding-right: 50px;
   border-top: 2px solid #aaaaaa;
   display: flex;
   justify-content: space-between;
@@ -488,7 +488,7 @@ section {
 }
 
 .scene5 .policyWrap h4 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .scene5 .policyWrap h4 img {
@@ -503,8 +503,9 @@ section {
 
 .scene5 .policyWrap .policyListWrap ul li {
   width: 340px;
+  font-size: 1.2rem;
   text-align: center;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 .scene5 .policyWrap .policyListWrap ul li:last-of-type {
@@ -530,10 +531,25 @@ section {
 /* footer */
 .footer {
   width: 100%;
+  position: relative;
   height: 14.66rem;
   border-top: 1px solid lightgray;
   text-align: center;
   margin-top: 50px;
+}
+
+.footer .i-box {
+  margin: 0px;
+  position: absolute;
+  top: -50px;
+  right: 0%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .footer a {
@@ -669,13 +685,10 @@ section {
   }
   .visual .subMenuList {
     padding: 0 80px;
-    top: 2.5vw;
+    top: 17vw;
   }
   section {
     margin-bottom: 50px;
-  }
-  .scene1 .txtBox {
-    padding-left: 4vw;
   }
   .scene3 .contentBox img {
     width: 70%;
@@ -692,7 +705,7 @@ section {
   }
   .scene5 .policyWrap h4 {
     margin-bottom: 20px;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
   .scene5 .policyWrap .policyListWrap ul {
     display: block;
@@ -708,14 +721,11 @@ section {
     width: 40vw;
     height: 40vw;
   }
-  .scene5 .policyWrap .policyListWrap ul li p {
-    font-size: 1.5rem;
-  }
   section {
     margin-bottom: 100px;
   }
   .visual {
-    margin-top: 55px;
+    padding-top: 55px;
   }
   .settingClose {
     position: absolute;
@@ -729,9 +739,6 @@ section {
   }
   .scene1 {
     margin: 40px 0 100px;
-  }
-  .scene1 .txtBox {
-    padding-right: 11.25rem;
   }
   .scene2 .sdgLists .sdgList h4 {
     font-size: 1.5rem;
@@ -754,8 +761,7 @@ section {
     font-size: 15px;
   }
   .scene3 .contentBox .challenLists {
-    width: 500px;
-    font-size: 1.5rem;
+    width: 430px;
     padding: 50px 25px;
     border-radius: 30px;
   }
@@ -763,18 +769,10 @@ section {
     padding: 30px 15px;
     border-radius: 20px;
   }
-  .scene4 .toZeroWrap .toZeroLists .toZeroList {
-    font-size: 1.2rem;
-  }
 }
 @media screen and (max-width: 800px) {
   html {
     font-size: 14px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .scene4 .toZeroWrap .toZeroLists .toZeroList {
-    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 700px) {
@@ -790,12 +788,8 @@ section {
   .scene1 {
     margin: 80px 0;
   }
-  .scene1 .txtBox {
-    padding: 0 30px;
-  }
   .scene3 h2 {
     top: 35vw;
-    font-size: 2.6rem;
     margin-bottom: 30px;
   }
   .scene2 {
@@ -807,7 +801,7 @@ section {
   .scene2 .sdgLists .sdgList {
     margin: 0 auto;
     margin-bottom: 30px;
-    width: 65%;
+    width: 55vw;
   }
   .scene2 .sdgLists .sdgList:last-of-type {
     margin: 0 auto;
@@ -816,14 +810,14 @@ section {
   .scene2 .sdgLists .sdgWrap:last-of-type .sdgList:last-of-type {
     margin: 0 auto;
   }
-  .scene2 .sdgLists .sdgList h4 {
-    font-size: 2rem;
-  }
   .scene2 .sdgLists .sdgList p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .scene5 .policyWrap .policyListWrap ul li {
     width: 80%;
+  }
+  .scene2 .sdgLists .sdgList h4 {
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -841,19 +835,10 @@ section {
   .scene4 .toZeroWrap .toZeroLists:last-of-type {
     margin: 0 auto;
   }
-  .scene4 .toZeroWrap .toZeroLists .toZeroList {
-    font-size: 1.7rem;
-  }
 }
 @media screen and (max-width: 600px) {
   html {
     font-size: 12px;
-  }
-  .scene1 .txtBox {
-    padding: 0 20px;
-  }
-  .scene1 .txtBox h2 {
-    font-size: 2.6rem;
   }
   .scene1 .txtBox p {
     font-size: 1.3rem;
@@ -872,7 +857,7 @@ section {
     font-size: 11px;
   }
   .visual h2 {
-    top: 60%;
+    top: 70%;
   }
   section {
     margin-bottom: 40px;
@@ -882,10 +867,8 @@ section {
   }
   .tabMenu .tabMenuList .tab_menu {
     text-align: center;
+    height: 30px;
     font-size: 14px;
-  }
-  .scene2 .sdgLists .sdgList h4 {
-    font-size: 2rem;
   }
 }
 /* 모바일사이즈 */

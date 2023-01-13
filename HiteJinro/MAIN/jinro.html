@@ -9,24 +9,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <!-- 인코딩 타입 해당 문서의 문자 인코딩 방식을 명시함.  -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- 전화번호 자동링크 없앨때 -->   
+    <!-- 전화번호 자동링크 없앨때 -->
     <meta name="format-detection" content="telephone=no" />
     <!-- 검색엔진 크롤러 (검색방식조절)  -->
-    <meta name="robots" content="ALL">     
+    <meta name="robots" content="ALL">
     <!-- 공유버튼이나 URL전달할때 정보 포함시킬수 있는 파라미터 이면서 + 카카오톡 URL사진뜨는거 그런거 -->
     <meta property="og:title" content="HITE JINRO" />
     <meta property="og:type" content="website" />
     <!-- 대표 사이트 주소  -->
     <meta property="og:url" content="" />
     <!-- 대표 이미지 절대경로 적으면됨 -->
-    <meta property="og:image" content="" /> 
+    <meta property="og:image" content="" />
     <!-- 테마컬러 메인컬러 - 사이트에 어울리게 예쁘게 보정 -->
-    <meta name="theme-color" content="#018CC7"/>
+    <meta name="theme-color" content="#018CC7" />
     <!-- meta 내에서 타이틀 확인  -->
     <meta name="title" content='HITE JINRO'>
     <!-- SEO의 핵심 사이트 묘사 -->
-    <meta name="Description" content="This site is a portfolio of web publisher Jo KyoungA. This is the renewal site of the liquor company HITE JINRO.">
-    <meta name="Keywords" content="web publisher, web design, web designer, portfolio, HTML, CSS, JavaScript, Jquery, SCSS, Junior portfolio, Junior web publisher, HITE JINRO ,renewal web site">
+    <meta name="Description"
+        content="This site is a portfolio of web publisher Jo KyoungA. This is the renewal site of the liquor company HITE JINRO.">
+    <meta name="Keywords"
+        content="web publisher, web design, web designer, portfolio, HTML, CSS, JavaScript, Jquery, SCSS, Junior portfolio, Junior web publisher, HITE JINRO ,renewal web site">
     <!-- 대표사이트 메인페이지로 유도할 때 사용 -->
     <link rel="canonical" href="">
     <!-- 저작자  -->
@@ -43,7 +45,8 @@
 
 <body>
 
-    <div class="intro" style="display: none;">
+    <!-- intro  -->
+    <div class="intro">
         <div>
             <div class="intro-1">
                 <p class="intro1">HI</p>
@@ -53,6 +56,9 @@
             <p class="intro4">JINRO</p>
         </div>
     </div>
+    <!-- intro  -->
+
+
     <!-- header  -->
     <header class="header">
         <nav class="nav">
@@ -77,15 +83,6 @@
                         <a href="#">전체 제품 보기<i class="fa-solid fa-arrow-right"></i></a>
                         <a href="#">CSR<i class="fa-solid fa-arrow-right"></i></a>
                         <a href="#">마케팅 성공사례<i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="hoverA1 pc">
-                        <a href="#">CI<i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="hoverA1 pc">
-                        <a href="#">사업장 현황<i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="hoverA1 pc">
-                        <a href="#">오시는 길<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <div class="hoverA1 mo">
                         <a href="../company/company.html">하이트 진로<i class="fa-solid fa-arrow-right"></i></a>
@@ -116,8 +113,8 @@
     </header>
     <!-- header  -->
 
-
-    <section class="section0">
+    <!-- section0  -->
+    <section class="section0" id="section0">
         <div class="section0-left section0-arrow">
             <i class="fa-solid fa-chevron-left"></i>
             <p>FILL LIGHT</p>
@@ -150,6 +147,7 @@
             </div>
         </div>
     </section>
+    <!-- section0 -->
 
     <!-- section1  -->
     <section class="section1">
@@ -379,7 +377,7 @@
             </div>
             <div class="phone-line"></div>
             <ul class="section4-social-box on">
-                <li style="margin: 0px;" >
+                <li style="margin: 0px;">
                     <img src="./img/social-img1.jpg" alt="">
                     <p>#공들여 쌓은 #진로탑에 소원빌자 </p>
                     <div class="phone-text">
@@ -499,15 +497,18 @@
     <section class="section5">
         <h2 class="section-title">온라인 견학관</h2>
         <div class="section5-video-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <div class="section5-left"></div>
+            <div class="section5-right"></div>
             <div class="drink-wrap">
                 <video autoplay muted loop src="./video/soju.mp4"></video>
             </div>
-            <div class="drink-wrap">
+            <div class="drink-wrap on">
                 <video autoplay muted loop src="./video/beer.mp4"></video>
             </div>
             <div class="section5-content">
-                <h3>강원공장</h3>
-                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">첨단 설비와 완전 자동화 System을 갖춘 환경 친화형 공장</p>
+                <h3>소주공장(강원)</h3>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">첨단 설비와 완전 자동화 System을 갖춘 환경 친화형 공장
+                </p>
                 <div class="section5-botton-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <button>체험하기</button>
                     <button>신청하기</button>
@@ -526,6 +527,10 @@
 
     <!-- footer  -->
     <footer class="footer">
+        <a href="#section0" class="i-box">
+            <i class="fa-solid fa-angles-up"></i>
+            <p>TOP</p>
+        </a>
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="./img/logo.png" alt="footer-logo">
@@ -550,13 +555,8 @@
     <!-- footer  -->
 
 
-
-
-
-
-
     <script>
-      AOS.init();
+        AOS.init();
     </script>
     <script src="./jinro.js"></script>
 </body>

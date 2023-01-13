@@ -9,12 +9,12 @@
 @mixin flexJust { display: flex; justify-content: center;}
 
 @mixin heading2 {color:#fff; font-weight:700; font-size:3rem;}
-@mixin txtBox_h2 {font-size:2.5rem; font-weight: 800;}
+@mixin txtBox_h2 {font-size:1.8rem; font-weight: 800;}
 @mixin txtBox_p {font-size: 1.2rem; font-weight: 700; color:#aaaaaa;}
 
 
 /* rem control  */
-html{font-size:18px;} 
+html{font-size:18px; scroll-behavior: smooth;} 
 
 * { margin: 0px; padding: 0px; box-sizing: border-box; } 
 body { font-family: 'GmarketSansMedium'; overflow-x: hidden; } 
@@ -31,7 +31,7 @@ button{background:none; border:none;}
 .mo{display:none;}
 .txtBox h2{@include txtBox_h2}
 .txtBox p{@include txtBox_p}
-h2{font-size:2.5rem;}
+h2{font-size:1.8rem;}
 section{margin-bottom:200px;}
 
 /* header */
@@ -51,7 +51,7 @@ section{margin-bottom:200px;}
  } 
 .pc-menu .hover-menu img { width: 300px; } 
 .pc-menu.on { transform: translateX(-100%); } 
-.hover-menu { display: flex; flex-direction: column; justify-content: space-between; height: 70%; } 
+.hover-menu { display: flex; flex-direction: column; justify-content: space-between; height: 40%; } 
 .hoverA1 { width: 100%; height: 35px; overflow: hidden; } 
 .hoverA1.mo { height: auto; justify-content: space-around; display: none;} 
 .hoverA1.mo a:hover {color: #018CC7;}
@@ -66,17 +66,17 @@ section{margin-bottom:200px;}
 
 
 // visual section 
-.visual{margin-top:100px; position: relative; margin-bottom:0;}
-.visual .subMenuList{padding:0 450px; border-bottom: 1px solid #fff; width:100%; position: absolute; top:6vw; @include flexAlign; justify-content: space-between;}
+.visual{padding-top:100px; position: relative; margin-bottom:0;}
+.visual .subMenuList{padding:0 450px; border-bottom: 1px solid #fff; width:100%; position: absolute; top:13vw; @include flexAlign; justify-content: space-between;}
 .visual .subMenuList .sub_menu a{font-size:20px; color:#fff; line-height:32px; transition: 0.5s;}
 .visual .subMenuList .sub_menu:hover >a {color: #018CC7;}
 .visual .subMenuList .sub_menu.active::after{display: block; content:''; width:100%; height:5px; background:#fff; transform:translateY(2.5px)}
-.visual h2{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); @include heading2;}
+.visual h2{position:absolute; top:65%; left:50%; transform:translate(-50%,-50%); @include heading2;}
 
 // tabMenuList
 .tabMenu {width:100%; height:80px;}
 .tabMenu .tabMenuList{@include flexCenter();}
-.tabMenu .tabMenuList .tab_menu{width:100%; height:80px; @include flexCenter(); font-size:20px; transition: 0.5s};
+.tabMenu .tabMenuList .tab_menu{width:400px; height:80px; @include flexCenter(); font-size:20px; transition: 0.5s};
 .tabMenu .tabMenuList .tab_menu:hover {background-color: #018CC7;}
 .tabMenu .tabMenuList .tab_menu:hover >a {color: #fff;}
 .tabMenu .tabMenuList .tab_menu a {transition: 0.5s;}
@@ -87,11 +87,11 @@ section{margin-bottom:200px;}
 .scene1{margin:144px 0 250px; @include flexJust();}
 .scene1 .txtBox{padding :0px 3.25rem; flex:1;}
 .scene1 .txtBox h2{margin-bottom:20px;}
-.scene1 .txtBox p{color:#101010;}
 .scene1 .imgBox{flex:1;}
 
 // scene2 
 .scene2 .sdgLists{display:flex; justify-content: center;}
+.scene2 .sdgLists p {font-size: 1.2rem;}
 .scene2 .sdgLists .sdgWrap{display:flex;}
 .scene2 .sdgLists .sdgList{width:263px; margin-right:66px;}
 .scene2 .sdgLists .sdgWrap:last-of-type .sdgList:last-of-type{margin-right:0;}
@@ -99,10 +99,10 @@ section{margin-bottom:200px;}
 .scene2 .sdgLists .sdgList h4{margin-bottom:22px; font-size:1.3rem;}
 
 // scene3 
-.scene3 h2{text-align: center; margin-bottom:50px; font-size:2.5rem;}
+.scene3 h2{text-align: center; margin-bottom:50px; font-size:1.8rem;}
 .scene3 .contentBox{@include flexCenter;}
 .scene3 .contentBox img{width:535px; margin-right:50px;}
-.scene3 .contentBox .challenLists{font-size:1.8rem; width:650px; border:1px solid #aaaaaa; padding:111px 46px; border-radius:80px;}
+.scene3 .contentBox .challenLists{width:600px; font-size: 1.2rem; border:1px solid #aaaaaa; padding:86px 46px; border-radius:80px;}
 .scene3 .contentBox .challenList{margin-bottom:5px;}
 .scene3 .contentBox .challenList:last-of-type{margin-bottom:0;}
 
@@ -112,22 +112,22 @@ section{margin-bottom:200px;}
 .scene4 .toZeroWrap{@include flexCenter;}
 .scene4 .toZeroWrap .toZeroLists{border-radius:50px; margin-right:20px; width: 300px; padding:53px 22px; border:1px solid #aaaaaa}
 .scene4 .toZeroWrap .toZeroLists:last-of-type{margin-right:0;}
-.scene4 .toZeroWrap .toZeroLists .toZeroList{font-size:1.3rem;}
+.scene4 .toZeroWrap .toZeroLists .toZeroList{font-size:1.2rem;}
 
 // scene5 
 .scene5{padding:0 300px; margin-bottom:0;}
-.scene5 .policyWrap{padding:53px 0; padding-right:50px; border-top:2px solid #aaaaaa; display:flex; justify-content: space-between; align-items: center;}
-.scene5 .policyWrap h4{font-size:1.6rem;}
+.scene5 .policyWrap {padding:53px 0; border-top:2px solid #aaaaaa; display:flex; justify-content: space-between; align-items: center;}
+.scene5 .policyWrap h4{font-size:1.8rem;}
 .scene5 .policyWrap h4 img{width:24px; margin-bottom:10px}
-.scene5 .policyWrap .policyListWrap{}
 .scene5 .policyWrap .policyListWrap ul{display: flex; justify-content: space-around;}
-.scene5 .policyWrap .policyListWrap ul li{width:340px;text-align: center; margin-right: 100px;}
+.scene5 .policyWrap .policyListWrap ul li{width:340px; font-size: 1.2rem; text-align: center; margin-right: 50px;}
 .scene5 .policyWrap .policyListWrap ul li:last-of-type{margin-right:0;}
 .scene5 .policyWrap .policyListWrap ul li .imgBox{@include flexCenter; margin:0 auto; margin-bottom:42px; width:210px; height:210px; background:#eeeeee; border-radius:50%;}
 .scene5 .policyWrap .policyListWrap ul li .imgBox img{width:100px;}
 
 /* footer */
-.footer { width: 100%; height: 14.66rem; border-top: 1px solid lightgray; text-align: center; margin-top: 50px; } 
+.footer { width: 100%; position: relative; height: 14.66rem; border-top: 1px solid lightgray; text-align: center; margin-top: 50px; } 
+.footer .i-box { margin: 0px; position: absolute; top: -50px; right: 0%; height: 50px; width: 50px; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer; } 
 .footer a { font-size: 1rem; margin: 20px 10px; } 
 .footer p { font-size: 1rem; } 
 .footer-content { width: 100%; height: 100%; } 
@@ -175,25 +175,22 @@ section{margin-bottom:200px;}
     .search { flex-direction: row-reverse; } 
     .search i{font-size:25px; cursor:pointer;}
     .search i:nth-of-type(2){margin-right:10px;}
-    .visual .subMenuList{padding:0 80px; top:2.5vw;}
+    .visual .subMenuList{padding:0 80px; top: 17vw;}
     section{margin-bottom:50px;}
-    .scene1 .txtBox{padding-left:4vw}
     .scene3 .contentBox img{width:70%;}
     .scene4 .contentBox img{width:90%;}
     .scene4 .toZeroWrap{padding:0 20px;}
     .scene5 .policyWrap{display:block; padding-right:0;}
-    .scene5 .policyWrap h4{margin-bottom:20px; font-size:2.5rem}
+    .scene5 .policyWrap h4{margin-bottom:20px; font-size:1.8rem}
     .scene5 .policyWrap .policyListWrap ul{display:block;}
     .scene5 .policyWrap .policyListWrap ul li{margin: 0 auto 50px; width:50%;}
     .scene5 .policyWrap .policyListWrap ul li:last-of-type{margin:0 auto;}
     .scene5 .policyWrap .policyListWrap ul li .imgBox{width:40vw; height:40vw;}
-    .scene5 .policyWrap .policyListWrap ul li p{font-size:1.5rem;}
     section{margin-bottom:100px;}
-    .visual{margin-top:55px;}
+    .visual{padding-top:55px;}
     .settingClose{position:absolute; top:10px; right:10px; font-size:21px; cursor:pointer;}
     .fa-bars:before, .fa-navicon:before{display:block;}
     .scene1{margin:40px 0 100px;}
-    .scene1 .txtBox{padding-right:11.25rem;}
     .scene2 .sdgLists .sdgList h4{font-size:1.5rem;}
     .scene2 .txtBox{margin-bottom:120px;}
     .tabMenu .tabMenuList .tab_menu{height:55px;}
@@ -203,9 +200,8 @@ section{margin-bottom:200px;}
 
   @media screen and (max-width: 900px) { 
     html { font-size: 15px; } 
-    .scene3 .contentBox .challenLists{width:500px; font-size:1.5rem; padding: 50px 25px; border-radius:30px;}
+    .scene3 .contentBox .challenLists{width:430px; padding: 50px 25px; border-radius:30px;}
     .scene4 .toZeroWrap .toZeroLists{padding: 30px 15px; border-radius:20px;}
-    .scene4 .toZeroWrap .toZeroLists .toZeroList{font-size:1.2rem;}
   } 
 
   @media screen and (max-width: 800px) { 
@@ -213,7 +209,6 @@ section{margin-bottom:200px;}
   } 
 
   @media screen and (max-width: 720px){
-    .scene4 .toZeroWrap .toZeroLists .toZeroList{font-size:1.1rem;}
   }
 
   @media screen and (max-width: 700px) { 
@@ -221,16 +216,15 @@ section{margin-bottom:200px;}
     .visual .subMenuList .sub_menu a{font-size:13px;}
     .visual .subMenuList{padding:0 25px}
     .scene1{margin:80px 0;}
-    .scene1 .txtBox{padding:0 30px;}
-    .scene3 h2{top:35vw; font-size:2.6rem; margin-bottom:30px;}
+    .scene3 h2{top:35vw; margin-bottom:30px;}
     .scene2{margin-bottom:50px;}
     .scene2 .sdgLists .sdgWrap{display:block;}
-    .scene2 .sdgLists .sdgList{margin:0 auto; margin-bottom:30px; width:65%;}
+    .scene2 .sdgLists .sdgList{margin:0 auto; margin-bottom:30px; width:55vw;}
     .scene2 .sdgLists .sdgList:last-of-type{margin:0 auto; margin-bottom:30px;}
     .scene2 .sdgLists .sdgWrap:last-of-type .sdgList:last-of-type{margin:0 auto;}
-    .scene2 .sdgLists .sdgList h4{font-size:2rem;}
-    .scene2 .sdgLists .sdgList p{font-size:1.5rem;}
+    .scene2 .sdgLists .sdgList p{font-size:1.2rem;}
     .scene5 .policyWrap .policyListWrap ul li{width:80%;}
+    .scene2 .sdgLists .sdgList h4 {margin-bottom: 10px;}
   } 
 
   @media screen and (max-width: 650px){
@@ -238,13 +232,10 @@ section{margin-bottom:200px;}
     .scene4 .contentBox img{margin-bottom:25px;}
     .scene4 .toZeroWrap .toZeroLists{margin:0 auto 20px; width:70%; padding:30px}
     .scene4 .toZeroWrap .toZeroLists:last-of-type{margin:0 auto;}
-    .scene4 .toZeroWrap .toZeroLists .toZeroList{font-size:1.7rem;}
   }
 
   @media screen and (max-width: 600px) { 
     html { font-size: 12px; } 
-    .scene1 .txtBox{padding:0 20px;}
-    .scene1 .txtBox h2{font-size:2.6rem;}
     .scene1 .txtBox p{font-size:1.3rem;}
     .scene3 .contentBox .challenLists{padding: 30px;}
   } 
@@ -255,11 +246,10 @@ section{margin-bottom:200px;}
 
   @media screen and (max-width: 500px) { 
     html { font-size: 11px; } 
-    .visual h2{top:60%;}
+    .visual h2{top:70%;}
     section{margin-bottom:40px;}
     .tabMenu{height:auto;}
-    .tabMenu .tabMenuList .tab_menu{ text-align: center; font-size:14px;}
-    .scene2 .sdgLists .sdgList h4{font-size:2rem;}
+    .tabMenu .tabMenuList .tab_menu{ text-align: center; height: 30px; font-size:14px;}
   } 
 
   /* 모바일사이즈 */

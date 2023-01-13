@@ -14,7 +14,7 @@
 
 
 /* rem control  */
-html{font-size:18px;} 
+html{font-size:18px; scroll-behavior: smooth;} 
 
 * { margin: 0px; padding: 0px; box-sizing: border-box; } 
 body { font-family: 'GmarketSansMedium'; overflow-x: hidden;} 
@@ -66,12 +66,12 @@ button{background:none; border:none;}
 
 
 // visual section 
-.visual{margin-top:100px; position: relative;}
-.visual .subMenuList{padding:0 450px; border-bottom: 1px solid #fff; width:100%; position: absolute; top:6vw; @include flexAlign; justify-content: space-between;}
+.visual{padding-top:100px; position: relative;}
+.visual .subMenuList{padding:0 450px; border-bottom: 1px solid #fff; width:100%; position: absolute; top:13vw; @include flexAlign; justify-content: space-between;}
 .visual .subMenuList .sub_menu a{font-size:20px; color:#fff; line-height:32px; transition: 0.5s;}
 .visual .subMenuList .sub_menu a:hover {color: #018CC7;}
 .visual .subMenuList .sub_menu.active::after{display: block; content:''; width:100%; height:5px; background:#fff; transform:translateY(2.5px)}
-.visual h2{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); @include heading2;}
+.visual h2{position:absolute; top:65%; left:50%; transform:translate(-50%,-50%); @include heading2;}
 
 // tabMenuList
 .tabMenu {width:100%; height:80px;}
@@ -130,12 +130,13 @@ button{background:none; border:none;}
 .scene4 .listBox .txtBox h2{margin-bottom:15px;}
 .scene4 .listBox .txtBox p{margin-bottom:15px;}
 .scene4 .listBox .txtBox ul{border-left:3px solid #d9d9d9; padding-left:16px;}
-.scene4 .listBox .txtBox ul li{font-size:1rem; margin-bottom:10px; color:#333; font-weight:700;}
+.scene4 .listBox .txtBox ul li{font-size:1rem; margin-bottom:10px; color:#333; font-weight:300;}
 .scene4 .listBox .txtBox ul li:last-of-type{margin-bottom:0;}
 .scene4 .listBox.even .imgBox{padding-right:100px;}
 
 /* footer */
-.footer { width: 100%; height: 14.66rem; border-top: 1px solid lightgray; text-align: center; margin-top: 50px; } 
+.footer { width: 100%; height: 14.66rem; border-top: 1px solid lightgray; text-align: center; margin-top: 50px; position: relative;} 
+.footer .i-box { margin: 0px; position: absolute; top: -50px; right: 0%; height: 50px; width: 50px; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer; } 
 .footer a { font-size: 0.7rem; margin: 20px 10px; } 
 .footer p { font-size: 0.7rem; } 
 .footer-content { width: 100%; height: 100%; } 
@@ -167,9 +168,9 @@ button{background:none; border:none;}
     .search { flex-direction: row-reverse; } 
     .search i{font-size:25px; cursor:pointer; }
     .search i:nth-of-type(2){margin-right:10px;}
-    .visual .subMenuList{padding:0 80px; top:4vw;}
+    .visual .subMenuList{padding:0 80px; top:17vw;}
     .menu.active{position:absolute; display:block; right:0; top:0; height:500px;}
-    .visual{margin-top:55px;}
+    .visual{padding-top:55px;}
     .settingClose{position:absolute; top:10px; right:10px; font-size:21px; cursor:pointer;}
     .fa-bars:before, .fa-navicon:before{display:block;}
     .scene2 {background: none;}
@@ -223,7 +224,7 @@ button{background:none; border:none;}
   } 
   @media (max-width: 500px) { 
     html { font-size: 11px; } 
-    .visual h2{top:60%;}
+    .visual h2{top:70%;}
     .tabMenu .tabMenuList .tab_menu{height:30px; font-size:14px;}
     .scene3 h2{top:30vw;}
     .scene4 .listBox .txtBox ul li{margin-bottom:10px;}

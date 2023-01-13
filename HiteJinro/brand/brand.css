@@ -17,6 +17,7 @@
 /* rem control  */
 html {
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -211,7 +212,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 70%;
+  height: 40%;
 }
 
 .hoverA1 {
@@ -267,7 +268,7 @@ button {
 }
 
 .visual {
-  margin-top: 100px;
+  padding-top: 100px;
   position: relative;
 }
 
@@ -282,7 +283,7 @@ button {
   border-bottom: 1px solid #fff;
   width: 100%;
   position: absolute;
-  top: 6vw;
+  top: 13vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -310,7 +311,7 @@ button {
 
 .visual h2 {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -528,6 +529,21 @@ button {
   border-top: 1px solid lightgray;
   text-align: center;
   margin-top: 50px;
+  position: relative;
+}
+
+.footer .i-box {
+  margin: 0px;
+  position: absolute;
+  top: -50px;
+  right: 0%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .footer a {
@@ -624,7 +640,7 @@ button {
   }
   .visual .subMenuList {
     padding: 0 80px;
-    top: 4vw;
+    top: 17vw;
   }
   .menu.active {
     position: absolute;
@@ -635,7 +651,7 @@ button {
     height: 500px;
   }
   .visual {
-    margin-top: 55px;
+    padding-top: 55px;
   }
   .settingClose {
     position: absolute;
@@ -765,9 +781,6 @@ button {
 @media (max-width: 500px) {
   html {
     font-size: 11px;
-  }
-  .visual h2 {
-    top: 60%;
   }
   .tabMenu .tabMenuList .tab_menu {
     height: 30px;
