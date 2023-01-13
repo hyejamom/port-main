@@ -508,7 +508,7 @@ img { width: 100%; display: block; }
 #portfolio-wrap .port-content .port-slide-box >i { color: #aaa; } 
 #portfolio-wrap .port-content .port-slide-box { height: 60vw; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text { width: 100%; justify-content: center; } 
-#portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text h4 { font-size: 1rem; flex-direction: revert; } 
+#portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text h4 { font-size: 1.1rem; flex-direction: revert; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text { top: 73%; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-top { justify-content: center; height: auto; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text p { font-size: 3vw; } 
@@ -520,9 +520,13 @@ img { width: 100%; display: block; }
 #popup-wrap { margin-bottom: 3rem; } 
 #popup-wrap .popup-content { flex-direction: column; height: 150vw; justify-content: space-between; } 
 #popup-wrap .popup-content .popup-left { width: 100%; height: 30%; align-items: center; justify-content: space-between; } 
-#popup-wrap .popup-content .popup-left .popup-title>p { display: block; font-size: 2.5vw; } 
+#popup-wrap .popup-content .popup-left .popup-title>p { display: block; font-size: 1rem; } 
 #popup-wrap .popup-content .popup-left .popup-title >div { width: 100%; display: flex; align-items: center; } 
-#popup-wrap .popup-content .popup-left .popup-title>div p:nth-of-type(1) { margin-right: 5px; } 
+#popup-wrap .popup-content .popup-left .popup-title>div p:nth-of-type(1) { margin-right: 5px; font-size: 1rem;} 
+#popup-wrap .popup-content .popup-left .popup-title>div h3 { margin-right: 5px; font-size: 1.1rem;} 
+#banner-wrap .banner-content .banner-text-box .banner-text p {font-size: 1rem;}
+#banner-wrap .banner-content .banner-text-box .banner-text h3 {font-size: 1.1rem;}
+#banner-wrap .banner-content .banner-text-box .banner-text-con p {font-size: 1rem;}
 #popup-wrap .popup-content .popup-left .popup-img-box { height: 60%; justify-content: space-between; } 
 #popup-wrap .popup-content .popup-left .popup-img-box>div { width: 100%; height: 90%; } 
 #popup-wrap .popup-content .popup-left .popup-img-box img { width: 18%; height: 100%; } 
