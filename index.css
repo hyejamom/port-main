@@ -238,10 +238,10 @@ img { width: 100%; display: block; }
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-top { width: 100%; display: flex; justify-content: space-around; flex-direction: column; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text h4 { font-family: 'twaysky'; font-size: 1.4rem; color: #333; text-align: center; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot { display: flex; margin-top: 1rem; width: 100%; margin-top: 10px; justify-content: center; } 
-#portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot a { width: 30%; display: block; height: 100%; } 
+#portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot a { width: 30%; display: block; height: 100%;  max-width: 200px; padding: 0.5rem; width: 100%; border-radius: 10px; transition: all 0.5s; font-size: 1rem; text-align: center; background-color: #fff; border: 1px solid #BCA2CE; color: #BCA2CE;} 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot button { max-width: 200px; padding: 0.5rem; width: 100%; border-radius: 10px; transition: all 0.5s; font-size: 1rem; background-color: #fff; border: 1px solid #BCA2CE; color: #BCA2CE; cursor: pointer; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot>button:nth-of-type(1) { width: 30%; background-color: #fff; border: 1px solid #334B45; color: #334B45; font-weight: bold; margin-right: 10px; } 
-#portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot button:hover { box-shadow: 200px 0 0 0 #BCA2CE inset; color: #fff; } 
+#portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot a:hover { box-shadow: 200px 0 0 0 #BCA2CE inset; color: #fff; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text .port-text-bot>button:nth-of-type(1):hover { width: 30%; max-width: 200px; box-shadow: 200px 0 0 0 #334B45 inset; color: #fff; } 
 
 
