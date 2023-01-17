@@ -207,7 +207,7 @@ video {width: 100%; height: 100%; object-fit: cover;}
 .instagram p { margin-left: 0.5rem; font-size: 0.8rem; } 
 .instagram-content p { font-size: 1rem; } 
 .date p { font-size: 0.8rem; } 
-.phone-line-box { margin-top: 5.77rem auto 0px auto; position: absolute; width: 95%; height: 38vw; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: -1; } 
+.phone-line-box { margin: 5.77rem auto 0px auto; position: absolute; width: 95%; height: 38vw; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: -1; } 
 .phone-line { top: -7%; width: 23%; height: 39vw; position: absolute; left: 50%; transform: translateX(-50%); border-radius: 20px; box-shadow: 5px 5px 0.55rem lightgray; border: 5px solid #333; padding-left: 1%; display: flex; align-items: flex-end; } 
 .section4-social-wrap .button { position: absolute; height: 1.66rem; top: 23%; transform: translate(-50%,-50%); } 
 .section4-social-wrap .button:nth-of-type(1) { left: 36%; z-index: 1; } 

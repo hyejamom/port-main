@@ -4,7 +4,7 @@
 /* All */
 html { max-width: 100%; font-size: 18px; font-family: 'NanumSquareRound'; color: #333; scroll-behavior: smooth; overflow-x: hidden; } 
 * { margin: 0px; padding: 0px; box-sizing: border-box; } 
-body { max-width: 100%; overflow-x: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; background-color: #fff; } 
+body { max-width: 100%; overflow-x: hidden; background-color: #fff; } 
 ::-webkit-scrollbar { width: 15px; } 
 ::-webkit-scrollbar-thumb { background-color: #334B45; border: 3px solid transparent; border-radius: 15px; } 
 ::-webkit-scrollbar-track { background-color: #fff; } 
@@ -98,7 +98,7 @@ img { width: 100%; display: block; }
 .side-menu-box .fa-xmark.x { font-size: 1.2rem; color: #fff; display: none; } 
 .side-menu-box .side-menu-open { width: 2.77rem; display: flex; transition: all 0.5s; opacity: 0; height: 0px; animation: menuClose 0.5s; position: absolute; bottom: 3.2rem; right: 0px; z-index: -1; border-radius: 2.77rem 2.77rem 0px 0px; flex-direction: column; justify-content: space-around; align-items: center; } 
 .side-menu-box .side-menu-open.on { display: flex; animation: menuOpen 0.5s; height: 16.66rem; opacity: 1; } 
-.side-menu-box .side-menu-open a { display: blocks; width: 2.77rem; height: 2.77rem; background-color: #fff; box-shadow: 0px 0px 10px gray; border-radius: 2.77rem; cursor: pointer; transition: 0.5s; position: relative; } 
+.side-menu-box .side-menu-open a { display: block; width: 2.77rem; height: 2.77rem; background-color: #fff; box-shadow: 0px 0px 10px gray; border-radius: 2.77rem; cursor: pointer; transition: 0.5s; position: relative; } 
 .side-menu-box .side-menu-open img { transition: 0.5s; width: 1.5rem; max-width: 23px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); } 
 .side-menu-box .side-menu-open img:nth-of-type(1) { opacity: 1; } 
 .side-menu-box .side-menu-open img:nth-of-type(2) { opacity: 0; } 
@@ -235,7 +235,6 @@ img { width: 100%; display: block; }
 #portfolio-wrap .port-content .port-slide-box .port-slide li:hover >.port-cover-text { opacity: 1; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide li >.hover-box { opacity: 1; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide li:hover >.hover-box { opacity: 0; } 
-#portfolio-wrap .port-content .port-slide-box .port-slide li:hover > { opacity: 0; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-hover-img { width: 100%; opacity: 1; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover { width: 100%; position: absolute; top: 0%; left: 50%; transform: translateX(-50%); opacity: 0; transition: 0.5s; } 
 #portfolio-wrap .port-content .port-slide-box .port-slide .port-cover-text { width: 100%; justify-content: center; position: absolute; top: 105%; display: flex; flex-direction: column; opacity: 0; transition: 0.5s; } 
@@ -451,7 +450,6 @@ img { width: 100%; display: block; }
 #banner-wrap .banner-content .banner-text-box .banner-text-con { width: 100%; } 
 #portfolio-wrap .port-content .port-title-box .port-title .port-text { justify-content: center; } 
 #banner-wrap .banner-content .banner .banner-img button { top: 63vw; border: 2px solid #334B45; padding: 0.8rem 15px; color: #334B45; opacity: 1; height: auto; } 
-#banner-wrap .banner-content .banner .banner-img button:hover { box-shadow: 100px 0 0 0 100px inset; color: #fff; } 
 #banner-wrap .banner-content .banner .banner-img:hover img { filter: brightness(1); } 
 #banner-wrap .banner-content .banner .banner-img .section6-but { padding: 0.5rem; } 
 
