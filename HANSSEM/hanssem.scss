@@ -1,0 +1,33 @@
+//font face 
+@font-face { font-family: 'HarmonyM'; src: url('../font/Harmony_M.ttf') format('truetype'); } 
+@font-face { font-family: 'SUIT-Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2'); font-weight: normal; font-style: normal; } 
+@font-face {font-family: 'GmarketSansMedium';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');font-weight: normal;font-style: normal;}
+
+//mixin
+@mixin flexCenter {display: flex; justify-content: center; align-items: center;}
+@mixin flexAlign {display: flex; align-items: center;}
+@mixin flexJust { display: flex; justify-content: center;}
+
+@mixin heading2 {color:#fff; font-weight:700; font-size:3rem;}
+@mixin txtBox_h2 {font-size:1.8rem; font-weight: 800;}
+@mixin txtBox_p {font-size: 1.2rem; font-weight: 700; color:#aaaaaa;}
+
+
+/* rem control  */
+html{font-size:18px; scroll-behavior: smooth;} 
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; } 
+body { font-family: 'GmarketSansMedium'; overflow-x: hidden;} 
+::-webkit-scrollbar { width: 15px; } 
+::-webkit-scrollbar-thumb { background-color: #99D1E9; border: 3px solid transparent; } 
+::-webkit-scrollbar-track { background-color: #fff; } 
+ul { list-style: none; } 
+a { color: #333; text-decoration: none; } 
+img { width:100%; display: block; }
+button{background:none; border:none;}
+
+// common style 
+.pc{display:block;}
+.mo{display:none;}
+.txtBox h2{@include txtBox_h2}
+.txtBox p{@include txtBox_p}

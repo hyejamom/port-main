@@ -109,7 +109,7 @@ button {
   border-bottom: 1px solid #fff;
 }
 
-.pc-menu-back {
+.pc_menu_back {
   -webkit-animation: pcMenuBack 1s;
           animation: pcMenuBack 1s;
   transition: 1s;
@@ -141,7 +141,7 @@ button {
     opacity: 0.7;
   }
 }
-.pc-menu {
+.pc_menu {
   font-family: "GmarketSansMedium";
   position: absolute;
   height: 100vh;
@@ -154,7 +154,7 @@ button {
   padding: 100px 0px 0px 50px;
 }
 
-.pc-menu .hover-menu a {
+.pc_menu .hover_menu a {
   align-items: center;
   color: #333;
   transition: 0.5s;
@@ -164,16 +164,16 @@ button {
   padding: 0px 20px 0px 0px;
 }
 
-.pc-menu .hover-menu a > i {
+.pc_menu .hover_menu a > i {
   opacity: 0;
   transition: 0.5s;
 }
 
-.pc-menu .hover-menu a:hover {
+.pc_menu .hover_menu a:hover {
   color: #018CC7;
 }
 
-.pc-menu .hover-menu a:hover > i {
+.pc_menu .hover_menu a:hover > i {
   opacity: 1;
   -webkit-animation: pcMenu 1s linear infinite;
           animation: pcMenu 1s linear infinite;
@@ -200,19 +200,18 @@ button {
     opacity: 1;
   }
 }
-.pc-menu .hover-menu img {
+.pc_menu .hover_menu img {
   width: 300px;
 }
 
-.pc-menu.on {
+.pc_menu.on {
   transform: translateX(-100%);
 }
 
-.hover-menu {
+.hover_menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40%;
 }
 
 .hoverA1 {
@@ -363,17 +362,17 @@ button {
   padding: 8.11rem 0px 3.25rem 0px;
 }
 
-.scene-content1 {
+.scene_content1 {
   display: flex;
   position: relative;
 }
 
-.scene-content1:before {
+.scene_content1:before {
   content: "";
   width: 20rem;
 }
 
-.scene-content1 .txtBox {
+.scene_content1 .txtBox {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -381,64 +380,64 @@ button {
   transition: 0.5s;
 }
 
-.scene-content1 .txtBox.left {
-  padding: 3.25rem 0px 3.25rem 2rem;
+.scene_content1 .txtBox.left {
+  padding: 3.25rem 0px 3.25rem 0rem;
 }
 
-.scene-content1 .txtBox:hover > h2 {
+.scene_content1 .txtBox:hover > h2 {
   color: #fff;
 }
 
-.scene-content1 .txtBox:hover .brandBox a img {
+.scene_content1 .txtBox:hover .brandBox a img {
   box-shadow: none;
 }
 
-.scene-content1 .txtBox.beerBox:hover {
+.scene_content1 .txtBox.beerBox:hover {
   background-color: #FFC100;
 }
 
-.scene-content1 .txtBox:hover .brandBox img {
+.scene_content1 .txtBox:hover .brandBox img {
   filter: brightness(0.5);
 }
 
-.scene-content2 .txtBox:hover .brandBox img {
+.scene_content2 .txtBox:hover .brandBox img {
   filter: brightness(0.5);
 }
 
-.scene-content1 .txtBox .brandBox a img:hover {
+.scene_content1 .txtBox .brandBox a img:hover {
   filter: brightness(1);
 }
 
-.scene-content2 .txtBox .brandBox a img:hover {
+.scene_content2 .txtBox .brandBox a img:hover {
   filter: brightness(1);
 }
 
-.scene-content1 .txtBox.whiskeyBox:hover {
+.scene_content1 .txtBox.whiskeyBox:hover {
   background-color: #BB2B2B;
 }
 
-.scene-content1 .txtBox.sakeBox:hover {
+.scene_content1 .txtBox.sakeBox:hover {
   background-color: #2DABDF;
 }
 
-.scene-content1 .txtBox.internationalBox:hover {
+.scene_content1 .txtBox.internationalBox:hover {
   background-color: #F68A0A;
 }
 
-.scene-content1 .txtBox .brandBox {
+.scene_content1 .txtBox .brandBox {
   width: 500px;
   display: flex;
   margin-top: 3.25rem;
 }
 
-.scene-content1 .txtBox .brandBox a {
+.scene_content1 .txtBox .brandBox a {
   width: 13%;
   min-width: 65px;
   margin-right: 3%;
   display: block;
 }
 
-.scene-content1 .txtBox .brandBox a img {
+.scene_content1 .txtBox .brandBox a img {
   width: 100%;
   top: 0px;
   left: 0px;
@@ -447,24 +446,24 @@ button {
   transition: 0.5s;
 }
 
-.scene-content1 .txtBox > img {
+.scene_content1 .txtBox > img {
   position: absolute;
   bottom: 0px;
   right: 0%;
   width: 320px;
 }
 
-.scene-content2 {
+.scene_content2 {
   display: flex;
   position: relative;
 }
 
-.scene-content2::after {
+.scene_content2::after {
   content: "";
   width: 20rem;
 }
 
-.scene-content2 .txtBox {
+.scene_content2 .txtBox {
   width: 100%;
   padding: 3.25rem 6.25rem 3.25rem 0px;
   display: flex;
@@ -474,48 +473,48 @@ button {
   transition: 0.5s;
 }
 
-.scene-content2 .txtBox:hover h2 {
+.scene_content2 .txtBox:hover h2 {
   color: #fff;
 }
 
-.scene-content2 .txtBox:hover .brandBox a img {
+.scene_content2 .txtBox:hover .brandBox a img {
   box-shadow: none;
 }
 
-.scene-content2 .txtBox.sojuBox:hover {
+.scene_content2 .txtBox.sojuBox:hover {
   background-color: #99CC41;
 }
 
-.scene-content2 .txtBox.wineBox:hover {
+.scene_content2 .txtBox.wineBox:hover {
   background-color: #7436B5;
 }
 
-.scene-content2 .txtBox.otherBox:hover {
+.scene_content2 .txtBox.otherBox:hover {
   background-color: #FF617F;
 }
 
-.scene-content2 .txtBox .brandBox {
+.scene_content2 .txtBox .brandBox {
   width: 500px;
   display: flex;
   margin-top: 3.25rem;
   justify-content: flex-end;
 }
 
-.scene-content2 .txtBox .brandBox a {
+.scene_content2 .txtBox .brandBox a {
   width: 13%;
   min-width: 65px;
   margin-left: 3%;
   display: block;
 }
 
-.scene-content2 .txtBox .brandBox a img {
+.scene_content2 .txtBox .brandBox a img {
   width: 100%;
   border-radius: 100px;
   box-shadow: 5px 5px 5px lightgray;
   transition: 0.5s;
 }
 
-.scene-content2 .txtBox > img {
+.scene_content2 .txtBox > img {
   position: absolute;
   bottom: 0px;
   left: -3%;
@@ -532,7 +531,7 @@ button {
   position: relative;
 }
 
-.footer .i-box {
+.footer .i_box {
   margin: 0px;
   position: absolute;
   top: -50px;
@@ -555,21 +554,21 @@ button {
   font-size: 0.7rem;
 }
 
-.footer-content {
+.footer_content {
   width: 100%;
   height: 100%;
 }
 
-.footer-logo {
+.footer_logo {
   padding: 20px 20px 0px 20px;
 }
 
-.footer-logo div {
+.footer_logo div {
   width: 100%;
   padding: 10px;
 }
 
-.footer-logo img {
+.footer_logo img {
   width: 20%;
   display: block;
   margin: 0px auto;
@@ -577,23 +576,23 @@ button {
   padding: 10px 0px;
 }
 
-.footer-line-box {
+.footer_line-box {
   width: 100%;
   text-align: center;
 }
 
-.section5-icon {
+.section5_icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.section5-icon i {
+.section5_icon i {
   font-size: 1.5rem;
   margin-right: 20px;
 }
 
-.section5-icon i:last-child {
+.section5_icon i:last-child {
   margin-right: 0px;
 }
 
@@ -676,83 +675,83 @@ button {
   .scene1 {
     padding: 3.25rem 0px;
   }
-  .scene-content1 .txtBox > img {
+  .scene_content1 .txtBox > img {
     width: auto;
     height: 100%;
   }
-  .scene-content1 .txtBox.beerBox {
+  .scene_content1 .txtBox.beerBox {
     box-shadow: 0rem -12rem 0 #ffc100 inset;
   }
-  .scene-content2 .txtBox.sojuBox {
+  .scene_content2 .txtBox.sojuBox {
     box-shadow: 0rem -12rem 0 #99CC41 inset;
   }
-  .scene-content1 .txtBox.whiskeyBox {
+  .scene_content1 .txtBox.whiskeyBox {
     box-shadow: 0rem -12rem 0 #BB2B2B inset;
   }
-  .scene-content2 .txtBox.wineBox {
+  .scene_content2 .txtBox.wineBox {
     box-shadow: 0rem -12rem 0 #7436B5 inset;
   }
-  .scene-content1 .txtBox.sakeBox {
+  .scene_content1 .txtBox.sakeBox {
     box-shadow: 0rem -12rem 0 #2DABDF inset;
   }
-  .scene-content2 .txtBox.otherBox {
+  .scene_content2 .txtBox.otherBox {
     box-shadow: 0rem -12rem 0 #FF617F inset;
   }
-  .scene-content1 .txtBox.internationalBox {
+  .scene_content1 .txtBox.internationalBox {
     box-shadow: 0rem -12rem 0 #F68A0A inset;
   }
-  .scene-content1 .txtBox.left:hover,
-.scene-content2 .txtBox.sojuBox:hover,
-.scene-content1 .txtBox.whiskeyBox:hover,
-.scene-content2 .txtBox.wineBox:hover,
-.scene-content1 .txtBox.sakeBox:hover,
-.scene-content2 .txtBox.otherBox:hover {
+  .scene_content1 .txtBox.left:hover,
+.scene_content2 .txtBox.sojuBox:hover,
+.scene_content1 .txtBox.whiskeyBox:hover,
+.scene_content2 .txtBox.wineBox:hover,
+.scene_content1 .txtBox.sakeBox:hover,
+.scene_content2 .txtBox.otherBox:hover {
     background-color: transparent;
   }
-  .scene-content1 .txtBox.left:hover > h2,
-.scene-content2 .txtBox.sojuBox:hover > h2,
-.scene-content1 .txtBox.whiskeyBox:hover > h2,
-.scene-content2 .txtBox.wineBox:hover > h2,
-.scene-content1 .txtBox.sakeBox:hover > h2,
-.scene-content2 .txtBox.otherBox:hover > h2 {
+  .scene_content1 .txtBox.left:hover > h2,
+.scene_content2 .txtBox.sojuBox:hover > h2,
+.scene_content1 .txtBox.whiskeyBox:hover > h2,
+.scene_content2 .txtBox.wineBox:hover > h2,
+.scene_content1 .txtBox.sakeBox:hover > h2,
+.scene_content2 .txtBox.otherBox:hover > h2 {
     color: #333;
   }
-  .scene-content1 .txtBox.left {
+  .scene_content1 .txtBox.left {
     padding: 5.25rem 0px 5.25rem 2rem;
   }
-  .scene-content2 .txtBox .brandBox a img {
+  .scene_content2 .txtBox .brandBox a img {
     box-shadow: none;
   }
-  .scene-content1 .txtBox .brandBox a img {
+  .scene_content1 .txtBox .brandBox a img {
     box-shadow: none;
   }
-  .scene-content2 .txtBox > img {
+  .scene_content2 .txtBox > img {
     width: auto;
     height: 100%;
   }
-  .scene-content1:before {
+  .scene_content1:before {
     width: 0px;
   }
-  .scene-content2::after {
+  .scene_content2::after {
     width: 0px;
   }
-  .scene-content1 .txtBox .brandBox {
+  .scene_content1 .txtBox .brandBox {
     width: 48vw;
   }
-  .scene-content2 .txtBox .brandBox {
+  .scene_content2 .txtBox .brandBox {
     width: 48vw;
   }
-  .scene-content1 .txtBox {
+  .scene_content1 .txtBox {
     padding: 5.25rem 3.25rem;
   }
-  .scene-content2 .txtBox {
+  .scene_content2 .txtBox {
     padding: 5.25rem 3.25rem;
   }
-  .scene-content1 .txtBox .brandBox a {
+  .scene_content1 .txtBox .brandBox a {
     min-width: 30px;
     width: 17%;
   }
-  .scene-content2 .txtBox .brandBox a {
+  .scene_content2 .txtBox .brandBox a {
     min-width: 30px;
     width: 17%;
   }
@@ -786,24 +785,24 @@ button {
     height: 30px;
     font-size: 14px;
   }
-  .scene-content1 .txtBox .brandBox {
+  .scene_content1 .txtBox .brandBox {
     min-width: 170px;
     width: 55vw;
   }
-  .scene-content2 .txtBox .brandBox {
+  .scene_content2 .txtBox .brandBox {
     min-width: 170px;
     width: 55vw;
   }
-  .scene-content1 .txtBox {
+  .scene_content1 .txtBox {
     padding: 5.25rem 0px 5.25rem 0px;
   }
-  .scene-content2 .txtBox {
+  .scene_content2 .txtBox {
     padding: 5.25rem 0px 5.25rem 0px;
   }
-  .scene-content1 .txtBox .beer-img {
+  .scene_content1 .txtBox .beer_img {
     right: -10%;
   }
-  .scene-content1 .txtBox .international-img {
+  .scene_content1 .txtBox .international_img {
     right: -6%;
   }
 }
