@@ -62,13 +62,13 @@ button{background:none; border:none;}
         .lifestyleDesign_box3 {width: calc(100%/6); height: 100%; @include flexCenter(); flex-direction: column; border-right: 1px solid #333;
             p {font-size: 50px;}
         }
-        .lifestyleDesign_box4 { @include flexAlign(); margin-left: 100px; background-color: yellow;
+        .lifestyleDesign_box4 { @include flexAlign(); margin-left: 100px; 
             div {position: relative; margin-right: 50px;
-                img {width: 300px;}
+                img {width: 350px;}
                 p {@include content_positionTxt(); color: #eee;}
             }
         }
-        .lifestyleDesign_box5 {width: calc(100%/6); height: 100%; background-color: orange; position: absolute; right: 0px; @include flexCenter();
+        .lifestyleDesign_box5 {width: calc(100%/6); height: 100%; position: absolute; right: 0px; @include flexCenter();
             div {width: 1200px; @include flexAlign(); flex-direction: column;
                 p {font-size: 60px; font-family: 'PuradakGentleGothicR';}
                 span {font-family: 'Pretendard-Regular'; margin: 20px 0px;}

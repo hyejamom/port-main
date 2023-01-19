@@ -135,14 +135,13 @@ button {
   display: flex;
   align-items: center;
   margin-left: 100px;
-  background-color: yellow;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div {
   position: relative;
   margin-right: 50px;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div img {
-  width: 300px;
+  width: 350px;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div p {
   position: absolute;
@@ -153,7 +152,6 @@ button {
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 {
   width: 16.6666666667%;
   height: 100%;
-  background-color: orange;
   position: absolute;
   right: 0px;
   display: flex;
