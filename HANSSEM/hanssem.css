@@ -72,6 +72,46 @@ button {
   font-family: "RIDIBatang";
 }
 
+.bestRemodeling {
+  padding: 5rem 0rem;
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.bestRemodeling .single-item {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.bestRemodeling .single-item div {
+  width: 100%;
+  height: 100%;
+}
+
+.bestRemodeling .single-item .slick-arrow {
+  display: none !important;
+}
+
+.bestRemodeling .single-item .slick-dots {
+  display: flex;
+  position: absolute;
+  top: -5%;
+  right: 0px;
+}
+
+.bestRemodeling .single-item .slick-dots li {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.bestRemodeling .single-item .slick-dots li.font {
+  font-weight: 900 !important;
+  color: #333 !important;
+}
+
 .unchangeableValue {
   width: 100%;
   position: relative;
@@ -106,14 +146,23 @@ button {
 }
 
 .unchangeableValue .unchangeableValue_con button {
+  cursor: pointer;
+  transition: 0.5s;
   color: #eee;
   border: 1px solid #eee;
-  padding: 5px 20px;
+  padding: 10px 30px;
   margin-top: 20px;
 }
 
+.unchangeableValue .unchangeableValue_con button:hover {
+  background-color: #eee;
+  color: #333;
+}
+
 .expertConsultation {
-  padding: 5rem 3.11rem;
+  padding: 5rem 0rem;
+  width: 1200px;
+  margin: 0px auto;
 }
 
 .expertConsultation .expertConsultation_con {
