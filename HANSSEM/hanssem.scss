@@ -45,13 +45,13 @@ button{background:none; border:none;}
 
 // lifestyleDesign 
 .lifestyleDesign {width: 100vw; height: 100vh;
-    .lifestyleDesign_wrap {width: 600%; height: 100%; background-color: #ECEBE7; display: flex; position: relative;
-        .lifestyleDesign_box1 {width: calc(100%/6); height: 100%; padding-top: 5rem; display: flex; flex-direction: column; justify-content: flex-end;
-            .lifestyleDesignCategory { width: 1200px; margin-left: 50px;
+    .lifestyleDesign_wrap {height: 100%; background-color: #ECEBE7; display: flex; position: relative;
+        .lifestyleDesign_box1 {height: 100%; padding-top: 5rem; display: flex; flex-direction: column; justify-content: flex-end;
+            .lifestyleDesignCategory { width: 100vw; padding-left: 50px;
                 button {border: 1px solid #333; padding: 10px 30px; transition: 0.5s;}
                 button:hover {background-color: #333; color: #eee; }
             }
-            .lifestyleDesign_title { margin: 100px auto 50px 50px; width: 1200px; 
+            .lifestyleDesign_title { width: 100vw; margin: 100px auto 50px 50px; width: 1200px; 
             p {font-size: 100px; font-family: 'PuradakGentleGothicR';}
             span {font-size: 50px; font-family: 'Pretendard-Regular';}
             }
@@ -59,8 +59,8 @@ button{background:none; border:none;}
         .lifestyleDesign_box2 {
             img {height: 100%; width: auto;}
         }
-        .lifestyleDesign_box3 {width: calc(100%/6); height: 100%; @include flexCenter(); flex-direction: column; border-right: 1px solid #333;
-            p {font-size: 50px;}
+        .lifestyleDesign_box3 { height: 100%; @include flexCenter(); flex-direction: column; border-right: 1px solid #333;
+            p {font-size: 50px; width: 100vw; text-align: center}
         }
         .lifestyleDesign_box4 { @include flexAlign(); margin-left: 100px; 
             div {position: relative; margin-right: 50px;
@@ -68,8 +68,8 @@ button{background:none; border:none;}
                 p {@include content_positionTxt(); color: #eee;}
             }
         }
-        .lifestyleDesign_box5 {width: calc(100%/6); height: 100%; position: absolute; right: 0px; @include flexCenter();
-            div {width: 1200px; @include flexAlign(); flex-direction: column;
+        .lifestyleDesign_box5 {height: 100%; @include flexCenter();
+            div {width: 100vw; @include flexAlign(); flex-direction: column;
                 p {font-size: 60px; font-family: 'PuradakGentleGothicR';}
                 span {font-family: 'Pretendard-Regular'; margin: 20px 0px;}
                 a {border-bottom: 1px solid #333; padding-bottom: 5px; font-weight: 800;}
@@ -142,7 +142,7 @@ button{background:none; border:none;}
 
 // exploreNow 
 .exploreNow {position: relative;
-    img {width: 400px; margin: 0px auto;}
+    img {width: 600px; margin: 0px auto;}
     a {position: absolute; font-weight: 900; @include transCenter(); @include content_bigP(); @include flexCenter(); border-bottom: 5px solid #333;
         span {font-weight: 100; margin-right: 20px;}
 }
