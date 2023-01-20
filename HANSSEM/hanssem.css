@@ -71,6 +71,129 @@ button {
   font-family: "RIDIBatang";
 }
 
+header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+header nav {
+  width: 1200px;
+  padding: 20px;
+  margin: 0px auto;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .logo_box {
+  display: flex;
+  align-items: center;
+}
+header nav .logo_box h1 a {
+  margin: 0px;
+}
+header nav .logo_box img {
+  width: 200px;
+}
+header nav .logo_box a {
+  margin-left: 50px;
+  color: #eee;
+  text-shadow: 0px 0px 10px #333;
+}
+header nav .login_box {
+  display: flex;
+}
+header nav .login_box i {
+  color: #eee;
+}
+
+.visual {
+  width: 100%;
+  height: 100vh;
+}
+.visual .visual_background {
+  background: url(./img/visual.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.interiorType {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.interiorType .interiorType_txtBox {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.interiorType .interiorType_txtBox p {
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+.interiorType .interiorType_txtBox p:last-child {
+  margin-bottom: 0px;
+}
+.interiorType .interiorType_interiorTxt {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  display: none;
+  opacity: 0;
+  transition: 0.5;
+}
+.interiorType .interiorType_interiorTxt h2 {
+  margin-bottom: 20px;
+}
+.interiorType .interiorType_interiorTxt a {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 10px 0px;
+}
+.interiorType .interiorType_interiorTxt a i {
+  margin-right: 10px;
+}
+.interiorType .interiorType_interiorTxt.opa {
+  display: block;
+  opacity: 1;
+}
+.interiorType .type_wrap {
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  z-index: 5;
+}
+.interiorType .type_wrap .type_box {
+  position: relative;
+  margin-bottom: 200px;
+}
+.interiorType .type_wrap .type_box p {
+  position: absolute;
+  left: -50%;
+  bottom: 50%;
+  transform: translate(-25%, 50%) rotate(-90deg);
+  font-size: 100px;
+  font-family: "PuradakGentleGothicR";
+  -webkit-text-stroke: 1px #333;
+  color: #fff;
+}
+.interiorType .type_wrap .type_box img {
+  width: 400px;
+}
+
 .lifestyleDesign {
   width: 100vw;
   height: 100vh;
@@ -96,6 +219,7 @@ button {
   border: 1px solid #333;
   padding: 10px 30px;
   transition: 0.5s;
+  cursor: pointer;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesignCategory button:hover {
   background-color: #333;
@@ -103,8 +227,7 @@ button {
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title {
   width: 100vw;
-  margin: 100px auto 50px 50px;
-  width: 1200px;
+  padding: 100px 0px 50px 50px;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title p {
   font-size: 100px;
