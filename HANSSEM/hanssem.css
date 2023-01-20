@@ -107,6 +107,9 @@ header nav .login_box {
 header nav .login_box i {
   color: #eee;
 }
+header nav .login_box a {
+  margin-left: 20px;
+}
 
 .visual {
   width: 100%;
