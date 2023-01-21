@@ -71,20 +71,61 @@ button {
   font-family: "RIDIBatang";
 }
 
+.more {
+  cursor: pointer;
+  transition: 0.5s;
+  color: #eee;
+  border: 1px solid #eee;
+  padding: 10px 30px;
+}
+
+.more:hover {
+  background-color: #eee;
+  color: #333;
+}
+
 header {
   width: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
+  transition: 0.5s;
+  z-index: 99;
 }
 header nav {
   width: 1200px;
-  padding: 20px;
   margin: 0px auto;
-  background-color: orange;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 20px;
+}
+header nav .menu_hover {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  background-color: #fff;
+  z-index: -1;
+  top: 67px;
+  left: 0px;
+  display: flex;
+}
+header nav .menu_hover .menu_title {
+  width: 150px;
+  height: 100%;
+  padding: 50px 20px;
+  border-right: 1px solid #eee;
+  box-sizing: content-box;
+}
+header nav .menu_hover .menu_li {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border-right: 1px solid #eee;
+}
+header nav .menu_hover .menu_li a {
+  margin-bottom: 10px;
 }
 header nav .logo_box {
   display: flex;
@@ -93,22 +134,53 @@ header nav .logo_box {
 header nav .logo_box h1 a {
   margin: 0px;
 }
-header nav .logo_box img {
+header nav .logo_box h1 a img {
   width: 200px;
 }
-header nav .logo_box a {
-  margin-left: 50px;
+header nav .logo_box .manu {
+  display: flex;
+  padding-left: 30px;
+}
+header nav .logo_box .manu li a {
   color: #eee;
-  text-shadow: 0px 0px 10px #333;
+  transition: 0.5s;
+  font-weight: 800;
+  padding: 20px;
+  display: block;
+}
+header nav .logo_box .manu li a::after {
+  content: "";
+  width: 100%;
+  margin-top: 5px;
+  height: 2px;
+  background-color: transparent;
+  display: block;
+  transition: 0.5s;
+}
+header nav .logo_box .manu li a:hover:after {
+  background-color: #333;
 }
 header nav .login_box {
   display: flex;
 }
-header nav .login_box i {
-  color: #eee;
-}
 header nav .login_box a {
   margin-left: 20px;
+}
+header nav .login_box a i {
+  color: #eee;
+  transition: 0.5s;
+}
+
+header:hover {
+  background-color: #fff;
+}
+
+header:hover .logo_box ul li a {
+  color: #333;
+}
+
+header:hover .login_box i {
+  color: #333;
 }
 
 .visual {
@@ -120,6 +192,75 @@ header nav .login_box a {
   background-size: cover;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+.visual .visual_background .main_txt {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.visual .visual_background .main_txt h2 {
+  font-size: 66px;
+  color: #eee;
+}
+.visual .visual_background .scroll_box {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 5%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+.visual .visual_background .scroll_box .scroll_background {
+  width: 3px;
+  height: 150px;
+  background-color: hsla(0deg, 0%, 100%, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+.visual .visual_background .scroll_box .scroll_background::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 3px;
+  height: 50%;
+  background-color: #fff;
+  -webkit-animation: scroll_ani linear infinite 2s;
+          animation: scroll_ani linear infinite 2s;
+}
+@-webkit-keyframes scroll_ani {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+@keyframes scroll_ani {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+.visual .visual_background .scroll_box p {
+  margin-left: 20px;
+  color: #eee;
 }
 
 .interiorType {
@@ -139,7 +280,7 @@ header nav .login_box a {
   flex-direction: column;
 }
 .interiorType .interiorType_txtBox p {
-  font-size: 100px;
+  font-size: 66px;
   margin-bottom: 30px;
 }
 .interiorType .interiorType_txtBox p:last-child {
@@ -185,16 +326,19 @@ header nav .login_box a {
 }
 .interiorType .type_wrap .type_box p {
   position: absolute;
-  left: -50%;
-  bottom: 50%;
-  transform: translate(-25%, 50%) rotate(-90deg);
-  font-size: 100px;
+  left: -55%;
+  top: 25%;
+  transform: rotate(-90deg);
+  font-size: 66px;
   font-family: "PuradakGentleGothicR";
   -webkit-text-stroke: 1px #333;
   color: #fff;
 }
 .interiorType .type_wrap .type_box img {
   width: 400px;
+}
+.interiorType .type_wrap .type_box:last-child {
+  margin-bottom: 0px;
 }
 
 .lifestyleDesign {
@@ -233,7 +377,7 @@ header nav .login_box a {
   padding: 100px 0px 50px 50px;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title p {
-  font-size: 100px;
+  font-size: 66px;
   font-family: "PuradakGentleGothicR";
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title span {
@@ -253,7 +397,7 @@ header nav .login_box a {
   border-right: 1px solid #333;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box3 p {
-  font-size: 50px;
+  font-size: 40px;
   width: 100vw;
   text-align: center;
 }
@@ -288,7 +432,7 @@ header nav .login_box a {
   flex-direction: column;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 div p {
-  font-size: 60px;
+  font-size: 66px;
   font-family: "PuradakGentleGothicR";
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 div span {
@@ -411,16 +555,7 @@ header nav .login_box a {
   color: #eee;
 }
 .unchangeableValue .unchangeableValue_con button {
-  cursor: pointer;
-  transition: 0.5s;
-  color: #eee;
-  border: 1px solid #eee;
-  padding: 10px 30px;
   margin-top: 20px;
-}
-.unchangeableValue .unchangeableValue_con button:hover {
-  background-color: #eee;
-  color: #333;
 }
 
 .unchangeableValue img {
@@ -478,7 +613,7 @@ header nav .login_box a {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  font-size: 90px;
+  font-size: 66px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,6 +624,29 @@ header nav .login_box a {
   margin-right: 20px;
 }
 
+@media (max-width: 1250px) {
+  header nav {
+    width: 100%;
+  }
+  header nav .logo_box h1 a img {
+    width: 150px;
+  }
+  header nav .logo_box > a {
+    display: none;
+  }
+  header:hover nav .login_box a::after {
+    color: #333;
+  }
+  header nav .login_box a::after {
+    content: "MENU";
+    margin-left: 20px;
+    color: #eee;
+    transition: 0.5s;
+  }
+  .pc_i {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .pc {
     display: none;

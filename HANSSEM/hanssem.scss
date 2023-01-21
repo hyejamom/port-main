@@ -14,9 +14,8 @@
 @mixin content_positionTxt {position: absolute; bottom: 5%; left: 5%;}
 
 @mixin content_h2 {font-size: 30px}
-@mixin content_bigP {font-size: 90px;}
+@mixin content_bigP {font-size: 66px;}
 @mixin content_span {font-family: 'RIDIBatang';}
-
 
 
 /* rem control  */
@@ -41,28 +40,67 @@ button{background:none; border:none;}
     h2 {@include content_h2(); margin-bottom: 10px}
     span {@include content_span();}
 }
+.more {cursor: pointer; transition: 0.5s; color: #eee; border: 1px solid #eee; padding: 10px 30px; }
+.more:hover {background-color: #eee; color: #333;}
 
 
 // header 
-header {width: 100%; position: fixed; top: 0px; left: 0px; 
-    nav {width: 1200px; padding: 20px; margin: 0px auto; background-color: orange; @include flexAlign(); justify-content: space-between;
+header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-index: 99;
+    nav {width: 1200px; margin: 0px auto; @include flexAlign(); justify-content: space-between; padding: 0px 20px;
+        .menu_hover {width: 100%; height: 300px; position: absolute; background-color: #fff; z-index: -1; top: 67px; left: 0px; display: flex;
+            .menu_title {width: 150px; height: 100%; padding: 50px 20px; border-right: 1px solid #eee; box-sizing: content-box;}
+            .menu_li {padding: 50px 20px; display: flex; flex-direction: column; width: 500px; border-right: 1px solid #eee;
+                a {margin-bottom: 10px}
+            }
+            .menu_slide {
+
+                
+            }
+        }
         .logo_box {@include flexAlign();
             h1 {
-                a {margin: 0px;}
+                a {margin: 0px;
+                    img {width: 200px;}
+                }
             }
-            img {width: 200px;}
-            a {margin-left: 50px; color: #eee; text-shadow: 0px 0px 10px #333;}
+            .manu { display: flex; padding-left: 30px;
+                li{
+                    a{color: #eee; transition: 0.5s; font-weight: 800; padding: 20px; display: block;}
+                    a::after {content: ""; width: 100%; margin-top: 5px; height: 2px; background-color: transparent; display: block; transition: 0.5s;}
+                    a:hover:after{background-color: #333;}
+                }
+            }
         }
         .login_box {display: flex;
-            i {color: #eee;}
-            a {margin-left: 20px;}
+            a {margin-left: 20px;
+                i {color: #eee; transition: 0.5s;}
+            }
         }
     }
 }
+header:hover {background-color: #fff;}
+header:hover .logo_box ul li a {color: #333;}
+header:hover .login_box i {color: #333;}
 
 // visual 
 .visual {width: 100%; height: 100vh;
-    .visual_background {background: url(./img/visual.jpg) no-repeat; background-size: cover; width: 100%; height: 100%;}
+    .visual_background {background: url(./img/visual.jpg) no-repeat; background-size: cover; width: 100%; height: 100%; position: relative;
+        .main_txt {@include transCenter(); position: absolute; text-align: center; width: 100%;
+            h2 {font-size: 66px; color: #eee;}
+        }
+        .scroll_box {position: absolute; @include transTop(); right: 5%; z-index: 5; @include flexAlign();
+            .scroll_background {width: 3px; height: 150px; background-color: hsla(0,0%,100%,.4); position: relative; overflow: hidden;}
+            .scroll_background::before {content: ""; position: absolute; top: 0px; width: 3px; height: 50%; background-color: #fff; animation: scroll_ani linear infinite 2s;}
+            @keyframes scroll_ani {
+                0%{top: 0%; opacity: 1;}
+                50% {opacity: 1;}
+                100%{top: 50%; opacity: 0;}
+            }
+            p {margin-left: 20px; color: #eee;}
+
+        }
+    }
+
 }
 
 
@@ -70,7 +108,7 @@ header {width: 100%; position: fixed; top: 0px; left: 0px;
 // interiorType
 .interiorType {width: 100%; height: 100vh; @include flexCenter(); position: relative;
     .interiorType_txtBox {width: 80%; height: 80%; @include flexCenter(); flex-direction: column;
-        p {font-size: 100px; margin-bottom: 30px;}
+        p {@include content_bigP(); margin-bottom: 30px;}
         p:last-child {margin-bottom: 0px;}
     }
     .interiorType_interiorTxt {@include content_positionTxt(); display: none; opacity: 0; transition: 0.5;
@@ -82,9 +120,10 @@ header {width: 100%; position: fixed; top: 0px; left: 0px;
     .interiorType_interiorTxt.opa {display: block; opacity: 1;}
     .type_wrap {position: absolute; top: 100%; right: 5%; z-index: 5;
         .type_box { position: relative; margin-bottom: 200px;
-            p {position: absolute; left: -50%; bottom: 50%; transform: translate(-25%,50%) rotate(-90deg); font-size: 100px; font-family: 'PuradakGentleGothicR'; -webkit-text-stroke: 1px #333; color: #fff;}
+            p {position: absolute; left: -55%; top: 25%; transform: rotate(-90deg); @include content_bigP(); font-family: 'PuradakGentleGothicR'; -webkit-text-stroke: 1px #333; color: #fff;}
             img {width: 400px;}
         }
+        .type_box:last-child {margin-bottom: 0px;}
     }
 }
 
@@ -98,7 +137,7 @@ header {width: 100%; position: fixed; top: 0px; left: 0px;
                 button:hover {background-color: #333; color: #eee; }
             }
             .lifestyleDesign_title { width: 100vw; padding: 100px 0px 50px 50px; 
-            p {font-size: 100px; font-family: 'PuradakGentleGothicR';}
+            p {@include content_bigP(); font-family: 'PuradakGentleGothicR';}
             span {font-size: 50px; font-family: 'Pretendard-Regular';}
             }
         }
@@ -106,7 +145,7 @@ header {width: 100%; position: fixed; top: 0px; left: 0px;
             img {height: 100%; width: auto;}
         }
         .lifestyleDesign_box3 { height: 100%; @include flexCenter(); flex-direction: column; border-right: 1px solid #333;
-            p {font-size: 50px; width: 100vw; text-align: center}
+            p {font-size: 40px; width: 100vw; text-align: center}
         }
         .lifestyleDesign_box4 { @include flexAlign(); margin-left: 100px; 
             div {position: relative; margin-right: 50px;
@@ -116,7 +155,7 @@ header {width: 100%; position: fixed; top: 0px; left: 0px;
         }
         .lifestyleDesign_box5 {height: 100%; @include flexCenter();
             div {width: 100vw; @include flexAlign(); flex-direction: column;
-                p {font-size: 60px; font-family: 'PuradakGentleGothicR';}
+                p {@include content_bigP(); font-family: 'PuradakGentleGothicR';}
                 span {font-family: 'Pretendard-Regular'; margin: 20px 0px;}
                 a {border-bottom: 1px solid #333; padding-bottom: 5px; font-weight: 800;}
                 a span {margin-left: 10px;}
@@ -164,8 +203,7 @@ header {width: 100%; position: fixed; top: 0px; left: 0px;
     .unchangeableValue_con {position: absolute; @include transCenter(); color: #eee; @include flexCenter(); flex-direction: column;
         h2 {margin-bottom: 20px;}
         p {color: #eee;}
-        button {cursor: pointer; transition: 0.5s; color: #eee; border: 1px solid #eee; padding: 10px 30px; margin-top: 20px;}
-        button:hover {background-color: #eee; color: #333;}
+        button {margin-top: 20px;}
     }
 }
 .unchangeableValue {
@@ -197,8 +235,12 @@ header {width: 100%; position: fixed; top: 0px; left: 0px;
 
 
 @media (max-width: 1250px) {
-    
-    
+    header nav {width: 100%;}
+    header nav .logo_box h1 a img {width: 150px;}
+    header nav .logo_box>a {display: none;}
+    header:hover nav .login_box a::after {color: #333;}
+    header nav .login_box a::after {content: "MENU"; margin-left: 20px; color: #eee; transition: 0.5s;}
+    .pc_i {display: none;}
 }
 @media (max-width: 768px) {
     .pc {display: none;}
