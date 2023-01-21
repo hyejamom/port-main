@@ -82,11 +82,13 @@ header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-i
                 }
             }
         }
-        .login_box {display: flex;
+        .login_box {@include flexAlign();
             a {margin-left: 20px;
                 i {color: #eee; transition: 0.5s;}
                 i.change {color: #333;}
             }
+            .mo_i {display: none;}
+            .mo_i.change {color: #333;}
         }
     }
 }
@@ -250,10 +252,12 @@ header.change {background-color: #fff;}
 @media (max-width: 1250px) {
     header nav {width: 100%;}
     header nav .logo_box h1 a img {width: 150px;}
-    header nav .logo_box>a {display: none;}
+    header nav .logo_box .menu {display: none;}
     header:hover nav .login_box a::after {color: #333;}
-    header nav .login_box a::after {content: "MENU"; margin-left: 20px; color: #eee; transition: 0.5s;}
+    .login_box i {padding: 20px 0px;}
     .pc_i {display: none;}
+    header nav .login_box .mo_i {display: block; color: #eee; transition: 0.5s;}
+    header:hover nav .login_box .mo_i {color: #333;}
 }
 @media (max-width: 768px) {
     .pc {display: none;}

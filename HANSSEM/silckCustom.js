@@ -35,6 +35,16 @@ $(document).ready(function(){
 
     })
 
+    //media 1200px menu click
+    let moI = '.mo_i'
+    $(moI).on('click',()=>{
+        $($header).addClass('change')
+        $($header).find('.mo_i').addClass('change')
+        $($header).find('i').addClass('change')
+
+    })
+    
+
 
     //menu_hover 안에있는 slide
     $('.menu_slide .single-item').slick({

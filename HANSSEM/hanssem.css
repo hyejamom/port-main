@@ -210,6 +210,7 @@ header nav .logo_box .menu li a.change {
 }
 header nav .login_box {
   display: flex;
+  align-items: center;
 }
 header nav .login_box a {
   margin-left: 20px;
@@ -219,6 +220,12 @@ header nav .login_box a i {
   transition: 0.5s;
 }
 header nav .login_box a i.change {
+  color: #333;
+}
+header nav .login_box .mo_i {
+  display: none;
+}
+header nav .login_box .mo_i.change {
   color: #333;
 }
 
@@ -689,20 +696,25 @@ header.change {
   header nav .logo_box h1 a img {
     width: 150px;
   }
-  header nav .logo_box > a {
+  header nav .logo_box .menu {
     display: none;
   }
   header:hover nav .login_box a::after {
     color: #333;
   }
-  header nav .login_box a::after {
-    content: "MENU";
-    margin-left: 20px;
-    color: #eee;
-    transition: 0.5s;
+  .login_box i {
+    padding: 20px 0px;
   }
   .pc_i {
     display: none;
+  }
+  header nav .login_box .mo_i {
+    display: block;
+    color: #eee;
+    transition: 0.5s;
+  }
+  header:hover nav .login_box .mo_i {
+    color: #333;
   }
 }
 @media (max-width: 768px) {
