@@ -37,12 +37,39 @@ $(document).ready(function(){
 
     //media 1200px menu click
     let moI = '.mo_i'
+    let mobileMenu ='.mobile_menu'
+    let socialBox ='.social_box'
+    let mobileX ='.mo_X'
+    let mobileUl ='.mobile_ul'
     $(moI).on('click',()=>{
         $($header).addClass('change')
         $($header).find('.mo_i').addClass('change')
         $($header).find('i').addClass('change')
+        $(mobileMenu).css({'display':'block'})
+        setTimeout(function(){
+            $(mobileUl).children('li:nth-of-type(1)').addClass('trans')
+            $(socialBox).addClass('trans')
+        },100)
+        setTimeout(function(){
+            $(mobileUl).children('li:nth-of-type(2)').addClass('trans')
+        },200)
+        setTimeout(function(){
+            $(mobileUl).children('li:nth-of-type(3)').addClass('trans')
+        },300)
+        setTimeout(function(){
+            $(mobileUl).children('li:nth-of-type(4)').addClass('trans')
+        },400)
 
     })
+    $(mobileX).on('click',()=>{
+        $($header).removeClass('change')
+        $($header).find('.mo_i').removeClass('change')
+        $($header).find('i').removeClass('change')
+        $(mobileMenu).css({'display':'none'})
+        $(mobileUl).children('li').removeClass('trans')
+        $(socialBox).removeClass('trans')
+    })
+    
     
 
 

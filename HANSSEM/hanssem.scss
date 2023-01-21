@@ -49,12 +49,12 @@ header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-i
     nav {width: 1200px; margin: 0px auto; @include flexAlign(); justify-content: space-between; padding: 0px 20px;
         .menu_hover {width: 100%; height: 300px; position: absolute; background-color: #fff; left: 0px; @include flexJust(); top: 67px; transform: translateY(-123%); transition: 0.5s; z-index: -1;
             .menu_title {width: 200px; height: 100%; padding: 20px 0px; border-right: 1px solid #eee; 
-                p {color: #D7172B}
+                p {color: #D7172B; display: none;}
             }
-            .menu_li {padding: 20px; display: flex; flex-direction: column; width: 400px; border-right: 1px solid #eee; 
-                li {margin-bottom: 5px; display: none;}
+            .menu_li {padding: 20px; display: flex; flex-direction: column; width: 400px; 
+                li {margin-bottom: 10px; display: none;}
             }
-            .menu_slide {width: 500px; padding: 20px;
+            .menu_slide {width: 500px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;
                 .single-item {width: 100%; position: relative;
                     .slick-arrow {display: none !important;}
                     .slick-dots {display: flex; width: 100%;}
@@ -64,6 +64,12 @@ header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-i
                         li:last-child {margin-right: 0px}
                     }
                 }
+            }
+            .social_box { display: flex;
+                a {display: block; margin-right: 10px; transition: 0.5s;
+                    i {font-size: 24px;}
+                }
+                a:hover {color: #aaa}
             }
         }
         .menu_hover.open {transform: translateY(0%)}
@@ -82,11 +88,38 @@ header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-i
                 }
             }
         }
+        .mobile_menu {width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; background-color: #fff; display: none;
+            .mobile_nev {width: 100%; padding: 0px 20px; @include flexAlign(); justify-content: space-between;
+                h1 {
+                    a {margin: 0px;
+                        img {width: 200px;}
+                    }
+                }
+                .login_box {
+                    .mo_X {font-size: 25px;}
+                }
+            }
+            .mobile_ul {padding: 50px 20px; 
+                li {margin-bottom: 20px; opacity: 0; transform: translateX(-25%); transition: 0.5s;
+                    a {font-size: 23px; font-weight: 800;}
+                }
+                li.trans {opacity: 1; transform: translateX(0%);}
+            }
+            .social_box {position: absolute; bottom: 0px; left: 0px; width: 100%; border-top: 1px solid #333; transform: translateY(100%); transition: 0.5s;
+                a{ transition: 0.5s;
+                    i {padding: 20px 10px; font-size: 24px}
+                    i:nth-of-type(1) {padding: 20px 10px 20px 20px}
+                }
+                a:hover {color: #aaa;}
+            }
+            .social_box.trans {transform: translateY(0%)}
+        }
         .login_box {@include flexAlign();
-            a {margin-left: 20px;
-                i {color: #eee; transition: 0.5s;}
+            a {margin-left: 20px; color: #eee; 
+                i {transition: 0.5s;}
                 i.change {color: #333;}
             }
+            a:hover i{color: #aaa;}
             .mo_i {display: none;}
             .mo_i.change {color: #333;}
         }
@@ -99,7 +132,7 @@ header.change {background-color: #fff;}
 
 // visual 
 .visual {width: 100%; height: 100vh;
-    .visual_background {background: url(./img/visual.jpg) no-repeat; background-size: cover; width: 100%; height: 100%; position: relative;
+    .visual_background {background: url(./img/visual.jpg) center no-repeat; background-size: cover; width: 100%; height: 100%; position: relative;
         .main_txt {@include transCenter(); position: absolute; text-align: center; width: 100%;
             h2 {font-size: 66px; color: #eee;}
         }
@@ -251,7 +284,7 @@ header.change {background-color: #fff;}
 
 @media (max-width: 1250px) {
     header nav {width: 100%;}
-    header nav .logo_box h1 a img {width: 150px;}
+    header nav .logo_box h1 a img {width: 200px;}
     header nav .logo_box .menu {display: none;}
     header:hover nav .login_box a::after {color: #333;}
     .login_box i {padding: 20px 0px;}
@@ -262,5 +295,7 @@ header.change {background-color: #fff;}
 @media (max-width: 768px) {
     .pc {display: none;}
     .mo {display: block;}
-    
+    header nav .logo_box h1 a img {width: 150px;}
+    header nav .mobile_menu .mobile_nev h1 a img {width: 150px;}
+    header nav .mobile_menu .mobile_ul li a {font-size: 18px;}
 }
