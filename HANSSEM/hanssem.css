@@ -105,27 +105,72 @@ header nav .menu_hover {
   height: 300px;
   position: absolute;
   background-color: #fff;
-  z-index: -1;
-  top: 67px;
   left: 0px;
   display: flex;
+  justify-content: center;
+  top: 67px;
+  transform: translateY(-123%);
+  transition: 0.5s;
+  z-index: -1;
 }
 header nav .menu_hover .menu_title {
-  width: 150px;
+  width: 200px;
   height: 100%;
-  padding: 50px 20px;
+  padding: 20px 0px;
   border-right: 1px solid #eee;
-  box-sizing: content-box;
+}
+header nav .menu_hover .menu_title p {
+  color: #D7172B;
 }
 header nav .menu_hover .menu_li {
-  padding: 50px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 400px;
   border-right: 1px solid #eee;
 }
-header nav .menu_hover .menu_li a {
-  margin-bottom: 10px;
+header nav .menu_hover .menu_li li {
+  margin-bottom: 5px;
+  display: none;
+}
+header nav .menu_hover .menu_slide {
+  width: 500px;
+  padding: 20px;
+}
+header nav .menu_hover .menu_slide .single-item {
+  width: 100%;
+  position: relative;
+}
+header nav .menu_hover .menu_slide .single-item .slick-arrow {
+  display: none !important;
+}
+header nav .menu_hover .menu_slide .single-item .slick-dots {
+  display: flex;
+  width: 100%;
+}
+header nav .menu_hover .menu_slide .single-item .menu_dot_custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .menu_hover .menu_slide .single-item .menu_dot_custom li {
+  background-color: #ddd;
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.5s;
+}
+header nav .menu_hover .menu_slide .single-item .menu_dot_custom li.slick-active {
+  background-color: #333 !important;
+}
+header nav .menu_hover .menu_slide .single-item .menu_dot_custom li:last-child {
+  margin-right: 0px;
+}
+header nav .menu_hover.open {
+  transform: translateY(0%);
 }
 header nav .logo_box {
   display: flex;
@@ -137,18 +182,18 @@ header nav .logo_box h1 a {
 header nav .logo_box h1 a img {
   width: 200px;
 }
-header nav .logo_box .manu {
+header nav .logo_box .menu {
   display: flex;
   padding-left: 30px;
 }
-header nav .logo_box .manu li a {
+header nav .logo_box .menu li a {
   color: #eee;
   transition: 0.5s;
   font-weight: 800;
   padding: 20px;
   display: block;
 }
-header nav .logo_box .manu li a::after {
+header nav .logo_box .menu li a::after {
   content: "";
   width: 100%;
   margin-top: 5px;
@@ -157,8 +202,11 @@ header nav .logo_box .manu li a::after {
   display: block;
   transition: 0.5s;
 }
-header nav .logo_box .manu li a:hover:after {
+header nav .logo_box .menu li a:hover:after {
   background-color: #333;
+}
+header nav .logo_box .menu li a.change {
+  color: #333;
 }
 header nav .login_box {
   display: flex;
@@ -170,17 +218,24 @@ header nav .login_box a i {
   color: #eee;
   transition: 0.5s;
 }
+header nav .login_box a i.change {
+  color: #333;
+}
 
 header:hover {
   background-color: #fff;
 }
 
-header:hover .logo_box ul li a {
+header:hover .logo_box .menu li a {
   color: #333;
 }
 
 header:hover .login_box i {
   color: #333;
+}
+
+header.change {
+  background-color: #fff;
 }
 
 .visual {
@@ -319,6 +374,7 @@ header:hover .login_box i {
   top: 100%;
   right: 5%;
   z-index: 5;
+  display: none;
 }
 .interiorType .type_wrap .type_box {
   position: relative;
@@ -471,6 +527,8 @@ header:hover .login_box i {
 .bestRemodeling .single-item .dots_custom li {
   margin-left: 20px;
   cursor: pointer;
+  color: #adadad;
+  transition: 0.5s;
 }
 .bestRemodeling .single-item .dots_custom li.font {
   font-weight: 900 !important;

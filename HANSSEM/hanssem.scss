@@ -47,40 +47,53 @@ button{background:none; border:none;}
 // header 
 header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-index: 99;
     nav {width: 1200px; margin: 0px auto; @include flexAlign(); justify-content: space-between; padding: 0px 20px;
-        .menu_hover {width: 100%; height: 300px; position: absolute; background-color: #fff; z-index: -1; top: 67px; left: 0px; display: flex;
-            .menu_title {width: 150px; height: 100%; padding: 50px 20px; border-right: 1px solid #eee; box-sizing: content-box;}
-            .menu_li {padding: 50px 20px; display: flex; flex-direction: column; width: 500px; border-right: 1px solid #eee;
-                a {margin-bottom: 10px}
+        .menu_hover {width: 100%; height: 300px; position: absolute; background-color: #fff; left: 0px; @include flexJust(); top: 67px; transform: translateY(-123%); transition: 0.5s; z-index: -1;
+            .menu_title {width: 200px; height: 100%; padding: 20px 0px; border-right: 1px solid #eee; 
+                p {color: #D7172B}
             }
-            .menu_slide {
-
-                
+            .menu_li {padding: 20px; display: flex; flex-direction: column; width: 400px; border-right: 1px solid #eee; 
+                li {margin-bottom: 5px; display: none;}
+            }
+            .menu_slide {width: 500px; padding: 20px;
+                .single-item {width: 100%; position: relative;
+                    .slick-arrow {display: none !important;}
+                    .slick-dots {display: flex; width: 100%;}
+                    .menu_dot_custom {@include flexCenter();
+                        li {background-color: #ddd; border-radius : 50px; width: 10px; height: 10px; margin-top: 10px; cursor: pointer; margin-right: 5px; transition: 0.5s;}
+                        li.slick-active { background-color: #333 !important;}
+                        li:last-child {margin-right: 0px}
+                    }
+                }
             }
         }
+        .menu_hover.open {transform: translateY(0%)}
         .logo_box {@include flexAlign();
             h1 {
                 a {margin: 0px;
                     img {width: 200px;}
                 }
             }
-            .manu { display: flex; padding-left: 30px;
+            .menu { display: flex; padding-left: 30px;
                 li{
                     a{color: #eee; transition: 0.5s; font-weight: 800; padding: 20px; display: block;}
                     a::after {content: ""; width: 100%; margin-top: 5px; height: 2px; background-color: transparent; display: block; transition: 0.5s;}
                     a:hover:after{background-color: #333;}
+                    a.change {color: #333}
                 }
             }
         }
         .login_box {display: flex;
             a {margin-left: 20px;
                 i {color: #eee; transition: 0.5s;}
+                i.change {color: #333;}
             }
         }
     }
 }
 header:hover {background-color: #fff;}
-header:hover .logo_box ul li a {color: #333;}
+header:hover .logo_box .menu li a {color: #333;}
 header:hover .login_box i {color: #333;}
+header.change {background-color: #fff;}
 
 // visual 
 .visual {width: 100%; height: 100vh;
@@ -88,7 +101,7 @@ header:hover .login_box i {color: #333;}
         .main_txt {@include transCenter(); position: absolute; text-align: center; width: 100%;
             h2 {font-size: 66px; color: #eee;}
         }
-        .scroll_box {position: absolute; @include transTop(); right: 5%; z-index: 5; @include flexAlign();
+        .scroll_box {position: absolute; @include transTop(); right: 5%; z-index: 5; @include flexAlign(); 
             .scroll_background {width: 3px; height: 150px; background-color: hsla(0,0%,100%,.4); position: relative; overflow: hidden;}
             .scroll_background::before {content: ""; position: absolute; top: 0px; width: 3px; height: 50%; background-color: #fff; animation: scroll_ani linear infinite 2s;}
             @keyframes scroll_ani {
@@ -118,7 +131,7 @@ header:hover .login_box i {color: #333;}
         }
     }
     .interiorType_interiorTxt.opa {display: block; opacity: 1;}
-    .type_wrap {position: absolute; top: 100%; right: 5%; z-index: 5;
+    .type_wrap {position: absolute; top: 100%; right: 5%; z-index: 5; display: none;
         .type_box { position: relative; margin-bottom: 200px;
             p {position: absolute; left: -55%; top: 25%; transform: rotate(-90deg); @include content_bigP(); font-family: 'PuradakGentleGothicR'; -webkit-text-stroke: 1px #333; color: #fff;}
             img {width: 400px;}
@@ -170,7 +183,7 @@ header:hover .login_box i {color: #333;}
     .single-item  {@include flexJust(); margin-top: 20px; position: relative;
         .slick-arrow {display: none !important;}
         .dots_custom {display: flex; position: absolute; top: -5%; right: 0px;
-            li {margin-left: 20px; cursor: pointer;}
+            li {margin-left: 20px; cursor: pointer; color: #adadad; transition: 0.5s;}
             li.font {font-weight: 900 !important; color: #333 !important;}
             li.slick-active { font-weight: 800; color: #333 !important;}
         }
