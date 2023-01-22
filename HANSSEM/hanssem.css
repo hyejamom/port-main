@@ -20,6 +20,7 @@
 html {
   font-size: 18px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -335,6 +336,7 @@ header.change {
 .visual {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 .visual .visual_background {
   background: url(./img/visual.jpg) center no-repeat;
@@ -431,6 +433,7 @@ header.change {
 .interiorType .interiorType_txtBox p {
   font-size: 66px;
   margin-bottom: 30px;
+  font-weight: 800;
 }
 .interiorType .interiorType_txtBox p:last-child {
   margin-bottom: 0px;
@@ -445,6 +448,12 @@ header.change {
 }
 .interiorType .interiorType_interiorTxt h2 {
   margin-bottom: 20px;
+}
+.interiorType .interiorType_interiorTxt p:nth-of-type(1) {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "PuradakGentleGothicR";
 }
 .interiorType .interiorType_interiorTxt a {
   width: 250px;
@@ -467,8 +476,7 @@ header.change {
   position: absolute;
   top: 100%;
   right: 5%;
-  z-index: 5;
-  display: none;
+  z-index: 99;
 }
 .interiorType .type_wrap .type_box {
   position: relative;
@@ -496,12 +504,14 @@ header.change {
   height: 100vh;
 }
 .lifestyleDesign .lifestyleDesign_wrap {
+  width: 600vw;
   height: 100%;
   background-color: #ECEBE7;
   display: flex;
   position: relative;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 {
+  width: 16.6666666667%;
   height: 100%;
   padding-top: 5rem;
   display: flex;
@@ -534,17 +544,19 @@ header.change {
   font-size: 50px;
   font-family: "Pretendard-Regular";
 }
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box2 {
+  width: 16.6666666667%;
+}
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box2 img {
-  height: 100%;
-  width: auto;
+  width: 100%;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box3 {
+  width: 16.6666666667%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-right: 1px solid #333;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box3 p {
   font-size: 40px;
@@ -552,6 +564,7 @@ header.change {
   text-align: center;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 {
+  width: 33.3333333333%;
   display: flex;
   align-items: center;
   margin-left: 100px;
@@ -559,9 +572,13 @@ header.change {
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div {
   position: relative;
   margin-right: 50px;
+  overflow: hidden;
+  cursor: pointer;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div img {
-  width: 350px;
+  width: 330px;
+  transition: 0.5s;
+  filter: brightness(0.7);
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div p {
   position: absolute;
@@ -569,7 +586,12 @@ header.change {
   left: 5%;
   color: #eee;
 }
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 {
+  width: 16.6666666667%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -699,6 +721,7 @@ header.change {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  opacity: 0;
 }
 .unchangeableValue .unchangeableValue_con h2 {
   margin-bottom: 20px;
@@ -710,6 +733,9 @@ header.change {
   margin-top: 20px;
 }
 
+.unchangeableValue .valuePc {
+  transform: scale(0.5);
+}
 .unchangeableValue img {
   width: 100%;
 }

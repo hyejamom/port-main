@@ -19,7 +19,7 @@
 
 
 /* rem control  */
-html{font-size:18px; scroll-behavior: smooth;} 
+html{font-size:18px; scroll-behavior: smooth; overflow-x: hidden;} 
 
 * { margin: 0px; padding: 0px; box-sizing: border-box; } 
 body { font-family: 'Pretendard-Regular'; /*overflow-x: hidden;*/} 
@@ -131,7 +131,7 @@ header:hover .login_box i {color: #333;}
 header.change {background-color: #fff;}
 
 // visual 
-.visual {width: 100%; height: 100vh;
+.visual {width: 100%; height: 100vh; overflow: hidden;
     .visual_background {background: url(./img/visual.jpg) center no-repeat; background-size: cover; width: 100%; height: 100%; position: relative;
         .main_txt {@include transCenter(); position: absolute; text-align: center; width: 100%;
             h2 {font-size: 66px; color: #eee;}
@@ -156,17 +156,18 @@ header.change {background-color: #fff;}
 // interiorType
 .interiorType {width: 100%; height: 100vh; @include flexCenter(); position: relative;
     .interiorType_txtBox {width: 80%; height: 80%; @include flexCenter(); flex-direction: column;
-        p {@include content_bigP(); margin-bottom: 30px;}
+        p {@include content_bigP(); margin-bottom: 30px; font-weight: 800;}
         p:last-child {margin-bottom: 0px;}
     }
     .interiorType_interiorTxt {@include content_positionTxt(); display: none; opacity: 0; transition: 0.5;
         h2 {margin-bottom: 20px;}
+        p:nth-of-type(1) {font-weight: 800; font-size: 20px; margin-bottom: 10px; font-family: 'PuradakGentleGothicR';}
         a {width: 250px; @include flexAlign(); justify-content: space-between; margin: 20px 0px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 10px 0px;
             i {margin-right: 10px;}
         }
     }
     .interiorType_interiorTxt.opa {display: block; opacity: 1;}
-    .type_wrap {position: absolute; top: 100%; right: 5%; z-index: 5; display: none;
+    .type_wrap {position: absolute; top: 100%; right: 5%; z-index: 99; 
         .type_box { position: relative; margin-bottom: 200px;
             p {position: absolute; left: -55%; top: 25%; transform: rotate(-90deg); @include content_bigP(); font-family: 'PuradakGentleGothicR'; -webkit-text-stroke: 1px #333; color: #fff;}
             img {width: 400px;}
@@ -178,8 +179,8 @@ header.change {background-color: #fff;}
 
 // lifestyleDesign 
 .lifestyleDesign {width: 100vw; height: 100vh;
-    .lifestyleDesign_wrap {height: 100%; background-color: #ECEBE7; display: flex; position: relative;
-        .lifestyleDesign_box1 {height: 100%; padding-top: 5rem; display: flex; flex-direction: column; justify-content: flex-end;
+    .lifestyleDesign_wrap {width: 600vw; height: 100%; background-color: #ECEBE7; display: flex; position: relative;
+        .lifestyleDesign_box1 {width: calc(100%/6); height: 100%; padding-top: 5rem; display: flex; flex-direction: column; justify-content: flex-end;
             .lifestyleDesignCategory { width: 100vw; padding-left: 50px;
                 button {border: 1px solid #333; padding: 10px 30px; transition: 0.5s; cursor: pointer;}
                 button:hover {background-color: #333; color: #eee; }
@@ -189,19 +190,20 @@ header.change {background-color: #fff;}
             span {font-size: 50px; font-family: 'Pretendard-Regular';}
             }
         }
-        .lifestyleDesign_box2 {
-            img {height: 100%; width: auto;}
+        .lifestyleDesign_box2 {width: calc(100%/6);
+            img {width: 100%; }
         }
-        .lifestyleDesign_box3 { height: 100%; @include flexCenter(); flex-direction: column; border-right: 1px solid #333;
+        .lifestyleDesign_box3 {width: calc(100%/6); height: 100%; @include flexCenter(); flex-direction: column; 
             p {font-size: 40px; width: 100vw; text-align: center}
         }
-        .lifestyleDesign_box4 { @include flexAlign(); margin-left: 100px; 
-            div {position: relative; margin-right: 50px;
-                img {width: 350px;}
+        .lifestyleDesign_box4 {width: calc((100%/6)*2); @include flexAlign(); margin-left: 100px; 
+            div {position: relative; margin-right: 50px; overflow: hidden; cursor: pointer;
+                img {width: 330px; transition: 0.5s; filter: brightness(0.7)}
                 p {@include content_positionTxt(); color: #eee;}
             }
+            div:hover img{transform: scale(1.1); filter: brightness(1);}
         }
-        .lifestyleDesign_box5 {height: 100%; @include flexCenter();
+        .lifestyleDesign_box5 {width: calc(100%/6); height: 100%; @include flexCenter();
             div {width: 100vw; @include flexAlign(); flex-direction: column;
                 p {@include content_bigP(); font-family: 'PuradakGentleGothicR';}
                 span {font-family: 'Pretendard-Regular'; margin: 20px 0px;}
@@ -248,13 +250,14 @@ header.change {background-color: #fff;}
 
 // unchangeableValue
 .unchangeableValue {width: 100%; position: relative;
-    .unchangeableValue_con {position: absolute; @include transCenter(); color: #eee; @include flexCenter(); flex-direction: column;
+    .unchangeableValue_con {position: absolute; @include transCenter(); color: #eee; @include flexCenter(); flex-direction: column; opacity: 0;
         h2 {margin-bottom: 20px;}
         p {color: #eee;}
         button {margin-top: 20px;}
     }
 }
 .unchangeableValue {
+    .valuePc {transform: scale(0.5);}
     img {width: 100%;}
 }
 

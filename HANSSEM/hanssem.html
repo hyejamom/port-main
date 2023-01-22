@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="./hanssem.css">
@@ -137,31 +139,33 @@
                 </div>
             </div>
             <div class="interiorType_txtBox">
-                <p>MODERN</p>
-                <p>NATUAL</p>
-                <p>CLASSIC</p>
-                <p>UNIQUE</p>
+                <p class="move_txt1">MODERN</p>
+                <p class="move_txt2">NATUAL</p>
+                <p class="move_txt3">CLASSIC</p>
+                <p class="move_txt4">UNIQUE</p>
             </div>
             <div class="interiorType_interiorTxt modern">
                 <h2>Type</h2>
+                <p>MODERN</p>
                 <p>원룸부터 고급 주택까지 다양한 형태의 주거공간에 모두 잘 어울리는<br>모던 스타일을 만나보세요. 꼭 필요한 물건들만 채워 공간에 여백을<br>주고 간결한 선과 면으로 다듬어진 깔끔한 인테리어를 선보입니다.</p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
             <div class="interiorType_interiorTxt natual">
                 <h2>Type</h2>
+                <p>NATUAL</p>
                 <p>진정한 아름다움은 자연스러움에서 시작됩니다.<br>자연에서 얻은 소재와 색감은 공간에 담담하면서도 활발한 에너지를<br>더해주며 오래도록 질리지 않는 편안하고 안락한 공간을 완성해줍니다.</p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
-            <div class="interiorType_interiorTxt natual">
+            <div class="interiorType_interiorTxt classic">
                 <h2>Type</h2>
+                <p>CLASSIC</p>
                 <p>과하지 않은 화려함으로 절제된 아름다움을 보여주는 클래식 스타일은<br>적절하게 가미된 장식적 요소와 우아한 곡선 포인트로 공간에 격식과<br> 품격을 더해줍니다.</p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
-            <div class="interiorType_interiorTxt natual">
+            <div class="interiorType_interiorTxt unique">
                 <h2>Type</h2>
-                <p>
-                    나만의 개성과 취향을 듬뿍 담아 집안 구석구석 생동감 넘치는<br>아이템들로 완성한 유니크 스타일은 지루하고 나른한 일상에 새로움을 선사합니다.<br> 톡톡 튀는 컬러와 다양한 소재의 믹스매치로 완성된 독창적인 공간을 만나보세요. 
-                </p>
+                <p>UNIQUE</p>
+                <p>나만의 개성과 취향을 듬뿍 담아 집안 구석구석 생동감 넘치는<br>아이템들로 완성한 유니크 스타일은 지루하고 나른한 일상에 새로움을 선사합니다.<br> 톡톡 튀는 컬러와 다양한 소재의 믹스매치로 완성된 독창적인 공간을 만나보세요.</p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
             
@@ -313,7 +317,7 @@
 
         <!-- unchangeableValue -->
         <section class="unchangeableValue">
-            <img class="pc" src="./img/pc_unchangeable.jpg" alt="">
+            <img class="pc valuePc" src="./img/pc_unchangeable.jpg" alt="">
             <img class="mo" src="./img/mo_unchangeable.jpg" alt="">
             <div class="unchangeableValue_con">
                 <h2>시간이 흘러도 변하지 않는 가치</h2>
@@ -361,14 +365,17 @@
 
 
     <!-- footer  -->
-    <footer></footer>
+    <footer>
+
+        
+    </footer>
     <!-- footer  -->
 
 
 
     
     
-    <script src="./hanssem.js"></script>
+    <script src="./hanssemGSAP.js"></script>
     <script src="silckCustom.js"></script>
 </body>
 </html>
