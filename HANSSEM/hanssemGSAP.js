@@ -14,6 +14,7 @@ $(()=>{
             markers : true,
         }
     })
+
     //처음 글씨 움직임
     interiorType.to('.move_txt1',{
         'transform':'translateX(-140%)',
@@ -54,7 +55,8 @@ $(()=>{
     //modern 이미지올라옴 
     interiorType.to('.type_wrap',{
         'transform':'translateY(-33%)',
-        duration:10
+        ease: "none",
+        duration:10,
     },"<")
     
     //modern txt 없어짐 + NATUAL txt나옴
@@ -72,6 +74,7 @@ $(()=>{
     //NATUAL 이미지 올라옴 + NATUAL txt나옴
     interiorType.to('.type_wrap',{
         'transform':'translateY(-60%)',
+        ease: "none",
         duration:10
     })
 
@@ -90,6 +93,7 @@ $(()=>{
     //classic 이미지 올라옴 
     interiorType.to('.type_wrap',{
         'transform':'translateY(-86.5%)',
+        ease: "none",
         duration:10
     })
 
@@ -108,8 +112,28 @@ $(()=>{
     //unique 이미지 올라옴
     interiorType.to('.type_wrap',{
         'transform':'translateY(-113%)',
+        ease: "none",
         duration:10
     })
+
+    // section interiorType move
+    let lifestyleDesignTop = gsap.timeline({
+        scrollTrigger: {
+            trigger : '.lifestyleDesign',
+            start : 'top center',
+            scrub : true,
+            onLeaveBack : ()=>{ 
+                $('.lifestyleDesign_wrap').removeClass('back')
+                $('.interiorType').removeClass('back')
+            },
+            onEnter : ()=>{ 
+                $('.lifestyleDesign_wrap').addClass('back')
+                $('.interiorType').addClass('back')
+            },
+            markers : true,
+        }
+    })
+    
 
     // section interiorType move
     let lifestyleDesign = gsap.timeline({
@@ -123,6 +147,7 @@ $(()=>{
         }
     })
 
+    
     //첫이미지에서 잠시 멈춤
     lifestyleDesign.to('.lifestyleDesign_wrap',{
         'transform':'translateX(0%)',

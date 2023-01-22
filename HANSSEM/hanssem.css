@@ -421,6 +421,8 @@ header.change {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: 0.5s;
+  transition-property: background-color;
 }
 .interiorType .interiorType_txtBox {
   width: 80%;
@@ -499,16 +501,23 @@ header.change {
   margin-bottom: 0px;
 }
 
+.interiorType.back {
+  background-color: #ECEBE7;
+}
+
 .lifestyleDesign {
   width: 100vw;
   height: 100vh;
+  transform: translate(0px, -1px);
 }
 .lifestyleDesign .lifestyleDesign_wrap {
   width: 600vw;
   height: 100%;
-  background-color: #ECEBE7;
+  background-color: #fff;
   display: flex;
   position: relative;
+  transition: 0.5s;
+  transition-property: background-color;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 {
   width: 16.6666666667%;
@@ -549,6 +558,9 @@ header.change {
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box2 img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box3 {
   width: 16.6666666667%;
@@ -596,28 +608,51 @@ header.change {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 div {
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p {
+  font-family: "Pretendard-Regular";
+  margin: 20px 0px;
+  font-size: 40px;
+  text-align: center;
+}
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p span {
+  font-weight: 800;
+  font-family: "Pretendard-Regular";
+}
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 {
   width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  opacity: 0;
 }
-.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 div p {
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 p {
   font-size: 66px;
   font-family: "PuradakGentleGothicR";
 }
-.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 div span {
-  font-family: "Pretendard-Regular";
-  margin: 20px 0px;
-}
-.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 div a {
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 a {
   border-bottom: 1px solid #333;
   padding-bottom: 5px;
   font-weight: 800;
 }
-.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 div a span {
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 a span {
   margin-left: 10px;
+}
+.lifestyleDesign .lifestyleDesign_wrap.back {
+  background-color: #ECEBE7;
 }
 
 .bestRemodeling {
@@ -733,8 +768,15 @@ header.change {
   margin-top: 20px;
 }
 
+.unchangeableValue {
+  width: 100%;
+  height: 100vh;
+}
 .unchangeableValue .valuePc {
   transform: scale(0.5);
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .unchangeableValue img {
   width: 100%;

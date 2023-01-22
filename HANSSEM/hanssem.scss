@@ -154,7 +154,7 @@ header.change {background-color: #fff;}
 
 
 // interiorType
-.interiorType {width: 100%; height: 100vh; @include flexCenter(); position: relative;
+.interiorType {width: 100%; height: 100vh; @include flexCenter(); position: relative; transition: 0.5s; transition-property: background-color; 
     .interiorType_txtBox {width: 80%; height: 80%; @include flexCenter(); flex-direction: column;
         p {@include content_bigP(); margin-bottom: 30px; font-weight: 800;}
         p:last-child {margin-bottom: 0px;}
@@ -175,11 +175,12 @@ header.change {background-color: #fff;}
         .type_box:last-child {margin-bottom: 0px;}
     }
 }
+.interiorType.back {background-color: #ECEBE7;}
 
 
 // lifestyleDesign 
-.lifestyleDesign {width: 100vw; height: 100vh;
-    .lifestyleDesign_wrap {width: 600vw; height: 100%; background-color: #ECEBE7; display: flex; position: relative;
+.lifestyleDesign {width: 100vw; height: 100vh; transform:translate(0px, -1px);
+    .lifestyleDesign_wrap {width: 600vw; height: 100%; background-color: #fff; display: flex; position: relative; transition: 0.5s; transition-property: background-color; 
         .lifestyleDesign_box1 {width: calc(100%/6); height: 100%; padding-top: 5rem; display: flex; flex-direction: column; justify-content: flex-end;
             .lifestyleDesignCategory { width: 100vw; padding-left: 50px;
                 button {border: 1px solid #333; padding: 10px 30px; transition: 0.5s; cursor: pointer;}
@@ -191,7 +192,7 @@ header.change {background-color: #fff;}
             }
         }
         .lifestyleDesign_box2 {width: calc(100%/6);
-            img {width: 100%; }
+            img {width: 100%; height: 100%; object-fit: cover;}
         }
         .lifestyleDesign_box3 {width: calc(100%/6); height: 100%; @include flexCenter(); flex-direction: column; 
             p {font-size: 40px; width: 100vw; text-align: center}
@@ -203,15 +204,20 @@ header.change {background-color: #fff;}
             }
             div:hover img{transform: scale(1.1); filter: brightness(1);}
         }
-        .lifestyleDesign_box5 {width: calc(100%/6); height: 100%; @include flexCenter();
-            div {width: 100vw; @include flexAlign(); flex-direction: column;
+        .lifestyleDesign_box5 {width: calc(100%/6); height: 100%; @include flexCenter(); position: relative;
+            .life_txt1 { @include transCenter(); position: absolute; width: 100%; opacity: 0;
+                p {font-family: 'Pretendard-Regular'; margin: 20px 0px; font-size: 40px; text-align: center;
+                    span {font-weight: 800; font-family: 'Pretendard-Regular';}
+                }
+            }
+            .life_txt2 {width: 100vw; @include flexAlign(); flex-direction: column; @include transCenter(); position: absolute; opacity: 0;
                 p {@include content_bigP(); font-family: 'PuradakGentleGothicR';}
-                span {font-family: 'Pretendard-Regular'; margin: 20px 0px;}
                 a {border-bottom: 1px solid #333; padding-bottom: 5px; font-weight: 800;}
                 a span {margin-left: 10px;}
             }
         }
     }
+    .lifestyleDesign_wrap.back {background-color: #ECEBE7;}
 }
 
 
@@ -256,9 +262,9 @@ header.change {background-color: #fff;}
         button {margin-top: 20px;}
     }
 }
-.unchangeableValue {
-    .valuePc {transform: scale(0.5);}
-    img {width: 100%;}
+.unchangeableValue {width: 100%; height: 100vh;
+    .valuePc {transform: scale(0.5); height: 100%; object-fit: cover;}
+    img {width: 100%; }
 }
 
 
