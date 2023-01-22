@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -447,6 +448,7 @@ header.change {
   display: none;
   opacity: 0;
   transition: 0.5;
+  transform: translateX(-10%);
 }
 .interiorType .interiorType_interiorTxt h2 {
   margin-bottom: 20px;
@@ -842,9 +844,10 @@ header.change {
 
 .exploreNow {
   position: relative;
+  margin: 80px 0px;
 }
 .exploreNow img {
-  width: 600px;
+  width: 400px;
   margin: 0px auto;
 }
 .exploreNow a {
@@ -862,6 +865,67 @@ header.change {
 .exploreNow a span {
   font-weight: 100;
   margin-right: 20px;
+}
+
+footer {
+  width: 100%;
+  background-color: #F6F5F3;
+  padding: 50px 0px 0px 0px;
+}
+footer .f_top {
+  display: flex;
+  padding: 0px 100px;
+}
+footer .f_top .f_logo_box {
+  width: 20%;
+  padding: 20px;
+}
+footer .f_top .f_logo_box p:nth-of-type(1) {
+  font-size: 24px;
+}
+footer .f_top .f_logo_box img {
+  width: 150px;
+}
+footer .f_top .f_txt_box {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+footer .f_top .f_txt_box div {
+  display: flex;
+  flex-direction: column;
+}
+footer .f_top .f_txt_box div a {
+  margin-bottom: 20px;
+}
+footer .f_top .f_txt_box .f_txt1 {
+  margin-right: 100px;
+}
+footer .f_top .f_txt_box .f_txt2 {
+  margin-right: 100px;
+}
+footer .f_top .f_txt_box .f_txt3 a {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+footer .f_top .f_txt_box .f_txt3 a img {
+  height: 20px;
+  width: 20px;
+}
+footer .f_btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ECEBE7;
+  padding: 20px 100px;
+}
+footer .f_btn p:nth-of-type(1) {
+  font-family: "PuradakGentleGothicR";
+}
+footer .f_btn p:nth-of-type(1)::before {
+  content: "ⓒ";
 }
 
 @media (max-width: 1250px) {

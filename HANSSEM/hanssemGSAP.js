@@ -46,6 +46,7 @@ $(()=>{
 
     //modern txt나옴
     interiorType.to('.modern',{
+        'transform': 'translateX(0%)',
         'opacity':'1',
         'display':'block',
         duration:3
@@ -62,12 +63,13 @@ $(()=>{
     interiorType.to('.modern',{
         'opacity':'0',
         'display':'none',
-        duration:1
+        duration:3
     })
     interiorType.to('.natual',{
+        'transform': 'translateX(0%)',
         'opacity':'1',
         'display':'block',
-        duration:1
+        duration:3
     },"<")
 
     //NATUAL 이미지 올라옴 + NATUAL txt나옴
@@ -81,12 +83,13 @@ $(()=>{
     interiorType.to('.natual',{
         'opacity':'0',
         'display':'none',
-        duration:1
+        duration:3
     })
     interiorType.to('.classic',{
+        'transform': 'translateX(0%)',
         'opacity':'1',
         'display':'block',
-        duration:1
+        duration:3
     },"<")
 
     //classic 이미지 올라옴 
@@ -100,12 +103,13 @@ $(()=>{
     interiorType.to('.classic',{
         'opacity':'0',
         'display':'none',
-        duration:1
+        duration:3
     })
     interiorType.to('.unique',{
+        'transform': 'translateX(0%)',
         'opacity':'1',
         'display':'block',
-        duration:1
+        duration:3
     },"<")
 
     //unique 이미지 올라옴
@@ -148,59 +152,60 @@ $(()=>{
     //첫이미지에서 잠시 멈춤
     lifestyleDesign.to('.lifestyleDesign_wrap',{
         'transform':'translateX(0%)',
-        duration:3
+        duration:1
     })
 
     //이미지 움직임
     lifestyleDesign.to('.lifestyleDesign_wrap',{
         'transform':'translateX(-83.5%)',
-        duration:50
+        ease: "none",
+        duration:20
     })
 
     //마지막 이미지에서 txt1 나옴
     lifestyleDesign.to('.life_txt1',{
         'transform':'translate(-50%,-50%)',
         'opacity':'1',
-        duration:5
+        duration:2
     })
 
     //마지막 이미지에서 txt1 유지
     lifestyleDesign.to('.life_txt1',{
-        duration:5
+        duration:2
     })
 
     
     //마지막 이미지에서 txt1사라짐 + 다음 동영상 나옴
     lifestyleDesign.to('.life_txt1',{
         'opacity':'0',
-        duration:10
+        duration:3.5
     })
     lifestyleDesign.to('.life_video',{
         'opacity':'1',
-        duration:10
+        duration:3.5
     },"<")
 
     //동영상 잠시 유지
     lifestyleDesign.to('.life_video',{
-        duration:5
+        duration:2
     })
 
     //동영상 사라짐 + 마지막 텍스트 나옴
     lifestyleDesign.to('.life_video',{
         'opacity':'0',
-        duration:10
+        duration:3.5
     })
     lifestyleDesign.to('.life_txt2',{
         'transform':'translate(-50%,-50%)',
         'opacity':'1',
-        duration:10
+        duration:3.5
     },"<")
 
     //마지막 텍스트 사라짐
     lifestyleDesign.to('.life_txt2',{
         'transform':'translate(-50%,-70%)',
         'opacity':'0',
-        duration:10
+        duration:3.5
     })
 
     
