@@ -205,12 +205,15 @@ header.change {background-color: #fff;}
             div:hover img{transform: scale(1.1); filter: brightness(1);}
         }
         .lifestyleDesign_box5 {width: calc(100%/6); height: 100%; @include flexCenter(); position: relative;
-            .life_txt1 { @include transCenter(); position: absolute; width: 100%; opacity: 0;
+            .life_txt1 { @include transCenter(); transform: translate(-50%,-30%); position: absolute; width: 100%; opacity: 0;
                 p {font-family: 'Pretendard-Regular'; margin: 20px 0px; font-size: 40px; text-align: center;
                     span {font-weight: 800; font-family: 'Pretendard-Regular';}
                 }
             }
-            .life_txt2 {width: 100vw; @include flexAlign(); flex-direction: column; @include transCenter(); position: absolute; opacity: 0;
+            .life_video {position: absolute; @include transCenter(); width: 100%; height: 100%; @include flexCenter(); opacity: 0;
+                video {width: 80%; height: 80%; object-fit: cover;}
+            }
+            .life_txt2 {width: 100vw; @include flexAlign(); flex-direction: column; @include transCenter(); transform: translate(-50%,-30%); position: absolute; opacity: 0;
                 p {@include content_bigP(); font-family: 'PuradakGentleGothicR';}
                 a {border-bottom: 1px solid #333; padding-bottom: 5px; font-weight: 800;}
                 a span {margin-left: 10px;}

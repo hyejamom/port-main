@@ -11,7 +11,6 @@ $(()=>{
             scrub : true,
             pin : true,
             end : '+=7000',
-            markers : true,
         }
     })
 
@@ -130,7 +129,6 @@ $(()=>{
                 $('.lifestyleDesign_wrap').addClass('back')
                 $('.interiorType').addClass('back')
             },
-            markers : true,
         }
     })
     
@@ -142,8 +140,7 @@ $(()=>{
             start : 'bottom bottom',
             scrub : true,
             pin : true,
-            end : '+=7000',
-            markers : true,
+            end : '+=9000',
         }
     })
 
@@ -151,18 +148,61 @@ $(()=>{
     //첫이미지에서 잠시 멈춤
     lifestyleDesign.to('.lifestyleDesign_wrap',{
         'transform':'translateX(0%)',
-        duration:5
+        duration:3
     })
+
     //이미지 움직임
     lifestyleDesign.to('.lifestyleDesign_wrap',{
         'transform':'translateX(-83.5%)',
-        duration:60
+        duration:50
     })
-    //마지막 이미지에서 잠시 멈춤
-    lifestyleDesign.to('.lifestyleDesign_wrap',{
-        'transform':'translateX(-83.5%)',
+
+    //마지막 이미지에서 txt1 나옴
+    lifestyleDesign.to('.life_txt1',{
+        'transform':'translate(-50%,-50%)',
+        'opacity':'1',
         duration:5
     })
+
+    //마지막 이미지에서 txt1 유지
+    lifestyleDesign.to('.life_txt1',{
+        duration:5
+    })
+
+    
+    //마지막 이미지에서 txt1사라짐 + 다음 동영상 나옴
+    lifestyleDesign.to('.life_txt1',{
+        'opacity':'0',
+        duration:10
+    })
+    lifestyleDesign.to('.life_video',{
+        'opacity':'1',
+        duration:10
+    },"<")
+
+    //동영상 잠시 유지
+    lifestyleDesign.to('.life_video',{
+        duration:5
+    })
+
+    //동영상 사라짐 + 마지막 텍스트 나옴
+    lifestyleDesign.to('.life_video',{
+        'opacity':'0',
+        duration:10
+    })
+    lifestyleDesign.to('.life_txt2',{
+        'transform':'translate(-50%,-50%)',
+        'opacity':'1',
+        duration:10
+    },"<")
+
+    //마지막 텍스트 사라짐
+    lifestyleDesign.to('.life_txt2',{
+        'transform':'translate(-50%,-70%)',
+        'opacity':'0',
+        duration:10
+    })
+
     
 
     //unchangeableValue 이미지 커짐
@@ -173,7 +213,6 @@ $(()=>{
             scrub : true,
             pin : true,
             end : '+=1500',
-            markers : true,
         }
     })
     //이미지 나옴 + txt 나옴

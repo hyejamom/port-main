@@ -87,8 +87,8 @@ $(document).ready(function(){
     $('.bestRemodeling .single-item').slick({
         dots: true,
         dotsClass: 'dots_custom',
-        // autoplay: true,
-        // autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 5000,
     });
     $('.bestRemodeling .dots_custom li:nth-of-type(1)').text('20평대');
     $('.bestRemodeling .dots_custom li:nth-of-type(2)').text('30평대');
