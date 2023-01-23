@@ -1,6 +1,10 @@
 $(document).ready(function(){
 
 
+    //visual txt animation
+    let mainTxt = '.main_txt'
+    $(mainTxt).addClass('show')
+
     //menu a click -> menu_hover open
     let menu = '.menu li'
     let menuHover = '.menu_hover'

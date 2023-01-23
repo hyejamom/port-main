@@ -353,10 +353,17 @@ header.change {
   position: absolute;
   text-align: center;
   width: 100%;
+  opacity: 0;
+  transform: translate(-50%, -30%);
+  transition: 1s;
 }
 .visual .visual_background .main_txt h2 {
   font-size: 66px;
   color: #eee;
+}
+.visual .visual_background .main_txt.show {
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 .visual .visual_background .scroll_box {
   position: absolute;
@@ -826,6 +833,8 @@ header.change {
   flex-direction: column;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   margin-top: 50px;
+  opacity: 0;
+  transform: translate(0%, 30%);
 }
 .expertConsultation .expertConsultation_con .expert_box p {
   margin: 20px 0px 10px 0px;
