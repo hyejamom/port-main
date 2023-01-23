@@ -114,6 +114,7 @@ header nav .menu_hover {
   transform: translateY(-123%);
   transition: 0.5s;
   z-index: -1;
+  padding-bottom: 50px;
 }
 header nav .menu_hover .menu_title {
   width: 200px;
@@ -130,6 +131,7 @@ header nav .menu_hover .menu_li {
   display: flex;
   flex-direction: column;
   width: 400px;
+  border-right: 1px solid #eee;
 }
 header nav .menu_hover .menu_li li {
   margin-bottom: 10px;
@@ -137,7 +139,7 @@ header nav .menu_hover .menu_li li {
 }
 header nav .menu_hover .menu_slide {
   width: 500px;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -190,6 +192,7 @@ header nav .menu_hover .social_box a:hover {
 }
 header nav .menu_hover.open {
   transform: translateY(0%);
+  box-shadow: 0px 5px 10px rgba(221, 221, 221, 0.3);
 }
 header nav .logo_box {
   display: flex;
@@ -205,14 +208,14 @@ header nav .logo_box .menu {
   display: flex;
   padding-left: 30px;
 }
-header nav .logo_box .menu li a {
+header nav .logo_box .menu li {
   color: #eee;
   transition: 0.5s;
   font-weight: 800;
   padding: 20px;
   display: block;
 }
-header nav .logo_box .menu li a::after {
+header nav .logo_box .menu li::after {
   content: "";
   width: 100%;
   margin-top: 5px;
@@ -221,10 +224,10 @@ header nav .logo_box .menu li a::after {
   display: block;
   transition: 0.5s;
 }
-header nav .logo_box .menu li a:hover:after {
+header nav .logo_box .menu li:hover:after {
   background-color: #333;
 }
-header nav .logo_box .menu li a.change {
+header nav .logo_box .menu li.change {
   color: #333;
 }
 header nav .mobile_menu {
@@ -322,7 +325,7 @@ header:hover {
   background-color: #fff;
 }
 
-header:hover .logo_box .menu li a {
+header:hover .logo_box .menu li {
   color: #333;
 }
 

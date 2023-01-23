@@ -105,8 +105,8 @@ $(()=>{
     lifestyleDesign.to('.life_video',{ 'opacity':'0', duration:3.5 })
     lifestyleDesign.to('.life_txt2',{ 'transform':'translate(-50%,-50%)', 'opacity':'1', duration:3.5 },"<")
 
-    //마지막 텍스트 사라짐
-    lifestyleDesign.to('.life_txt2',{ 'transform':'translate(-50%,-70%)', 'opacity':'0', duration:3.5 })
+    //마지막 텍스트 유지
+    lifestyleDesign.to('.life_txt2',{ 'transform':'translate(-50%,-50%)', 'opacity':'1', duration:3.5 })
 
     
     //unchangeableValue 이미지 커짐
@@ -134,20 +134,16 @@ $(()=>{
         scrollTrigger: {
             trigger : '.expertConsultation',
             start : 'top center',
-            // scrub : true,
-            // pin : true,
-            // end : '+=1000',
-            markers : true, //확인용 마커
         }
     })
+
+    expertConsultation.to('.expert_box:nth-of-type(1)',{ y: 0, opacity:1, duration:0.5, ease: "none" })
+    expertConsultation.to('.expert_box:nth-of-type(2)',{ y: 0, opacity:1, duration:0.5, delay: 0.2, ease: 'none' },"<")
+    expertConsultation.to('.expert_box:nth-of-type(3)',{ y: 0, opacity:1, duration:0.5, delay: 0.4, ease: 'none' },"<")
+
+
+
     
-    expertConsultation.to('.expert_box:nth-of-type(1)',{ y: 0, opacity:1, duration:0.5, ease: "bounce" })
-    expertConsultation.to('.expert_box:nth-of-type(2)',{ y: 0, opacity:1, duration:0.5, delay: 0.3, ease: 'none' },"<")
-    expertConsultation.to('.expert_box:nth-of-type(3)',{ y: 0, opacity:1, duration:0.5, delay: 0.6, ease: 'none' },"<")
-
-
-
-
 
 
 
