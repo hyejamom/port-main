@@ -101,18 +101,18 @@ $(document).ready(function(){
 
 
 
+
     let lastScrollTop = 0;
     let delta = 15; //동작의 구현이 시작되는 위치
     $(window).on('scroll', function () {
-        var scrollTop = $(this).scrollTop();
+        let scrollTop = $(this).scrollTop();
         if (scrollTop >= 100) {
             $('header').addClass('change')
             $('.menu li').addClass('change')
             $('.login_box').find('i').addClass('change')
             $('.login_box').find('.mo_i').addClass('change')
             $('.menu_hover').removeClass('open')
-            if (Math.abs(lastScrollTop - scrollTop) <= delta) // 스크롤 값을 받아서 ~
-                return; // ~ 리턴
+            if (Math.abs(lastScrollTop - scrollTop) <= delta){return;} // 스크롤 값을 받아서 ~ ~ 리턴
             if ((scrollTop > lastScrollTop) && (lastScrollTop > 0)) {
                 /* 화면에 나오지 않을 때, top값은 요소가 보이지 않을 정도로 사용해야함 */
                 $("nav").slideUp(300);
@@ -132,6 +132,23 @@ $(document).ready(function(){
 
 
 
+//     let lastScrollTop = 0;
+//     let delta = 15;
+//     $(window).on('scroll',function(){
+//         let scrollTop = $(this).scrollTop();
+//         if(scrollTop >= 100){
+//             if(Math.abs(scrollTop-lastScrollTop) >= delta){return;}
+//             if((scrollTop>lastScrollTop)&&(lastScrollTop>0)){
+//                 $('nav').slideUp(300);
+//             }
+//             else{
+//                 $('nav').slideDown(300);
+//             }
+//             lastScrollTop=scrollTop
+//         }
+//         else if(scrollTop <= 100){}
+// 
+//     })
 
 
 
