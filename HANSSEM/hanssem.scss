@@ -34,13 +34,16 @@ button{background:none; border:none;}
 
 
 // common style 
-.pc{display:block;}
-.mo{display:none;}
+.pc{display:block !important;}
+.mo{display:none !important;}
+.pc_br{display: block !important;}
+.tab_br {display: none !important;}
+.mo_br {display: none !important;}
 .contentWrap {
     h2 {@include content_h2(); margin-bottom: 10px}
     span {@include content_span();}
 }
-.more {cursor: pointer; transition: 0.5s; color: #eee; border: 1px solid #eee; padding: 10px 30px; }
+.more {cursor: pointer; transition: 0.5s; color: #eee; border: 1px solid #eee; padding: 10px 30px; font-size: 14px;}
 .more:hover {background-color: #eee; color: #333;}
 
 
@@ -94,7 +97,7 @@ header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-i
                     }
                 }
                 .login_box {
-                    .mo_X {font-size: 25px;}
+                    .mo_X {font-size: 25px; cursor: pointer;}
                 }
             }
             .mobile_ul {padding: 50px 20px; 
@@ -113,12 +116,10 @@ header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-i
             .social_box.trans {transform: translateY(0%)}
         }
         .login_box {@include flexAlign();
-            a {margin-left: 20px; color: #eee; 
-                i {transition: 0.5s;}
-                i.change {color: #333;}
-            }
-            a:hover i{color: #aaa;}
-            .mo_i {display: none;}
+            i {transition: 0.5s; margin-left: 20px; color: #eee; }
+            i.change {color: #333;}
+            i:hover {color: #aaa;}
+            .mo_i {display: none; margin-left: 20px; cursor: pointer;}
             .mo_i.change {color: #333;}
         }
     }
@@ -154,10 +155,11 @@ header.change {background-color: #fff;}
 
 // interiorType
 .interiorType {width: 100%; height: 100vh; @include flexCenter(); position: relative; transition: 0.5s; transition-property: background-color; 
-    .interiorType_txtBox {width: 80%; height: 80%; @include flexCenter(); flex-direction: column;
+    .interiorType_txtBox {width: 80%; height: 80%; @include flexCenter(); flex-direction: column; position: absolute; @include transCenter();
         p {@include content_bigP(); margin-bottom: 30px; font-weight: 800;}
         p:last-child {margin-bottom: 0px;}
     }
+    
     .interiorType_interiorTxt {@include content_positionTxt(); display: none; opacity: 0; transition: 0.5; transform: translateX(-10%);
         h2 {margin-bottom: 20px;}
         p:nth-of-type(1) {font-weight: 800; font-size: 20px; margin-bottom: 10px; font-family: 'PuradakGentleGothicR';}
@@ -210,7 +212,7 @@ header.change {background-color: #fff;}
                 }
             }
             .life_video {position: absolute; @include transCenter(); width: 100%; height: 100%; @include flexCenter(); opacity: 0;
-                video {width: 80%; height: 80%; object-fit: cover;}
+                video {width: 100%; height: 100%; object-fit: cover;}
             }
             .life_txt2 {width: 100vw; @include flexAlign(); flex-direction: column; @include transCenter(); transform: translate(-50%,-30%); position: absolute; opacity: 0;
                 p {@include content_bigP(); font-family: 'PuradakGentleGothicR';}
@@ -265,7 +267,7 @@ header.change {background-color: #fff;}
     }
 }
 .unchangeableValue {width: 100%; height: 100vh;
-    .valuePc {transform: scale(0.5); height: 100%; object-fit: cover;}
+    .value {transform: scale(0.5); height: 100%; object-fit: cover;}
     img {width: 100%; }
 }
 
@@ -320,18 +322,74 @@ footer {width: 100%; background-color: #F6F5F3; padding: 50px 0px 0px 0px;
 }
 
 
-
+//tab
 @media (max-width: 1250px) {
+    //common style 
+    .pc_br{display: none;}
+    .tab_br {display: block;}
+    .mo_br {display: none;}
+    .pc_i {display: none;}
+    .more {padding: 8px 20px; font-size: 12px;}
+    .contentWrap h2 {font-size: 24px;}
+
+    //header
     header nav {width: 100%;}
     header nav .logo_box h1 a img {width: 200px;}
     header nav .logo_box .menu {display: none;}
     header:hover nav .login_box a::after {color: #333;}
-    .login_box i {padding: 20px 0px;}
-    .pc_i {display: none;}
     header nav .login_box .mo_i {display: block; color: #eee; transition: 0.5s;}
     header:hover nav .login_box .mo_i {color: #333;}
+    .login_box i {padding: 20px 0px;}
+    .interiorType .interiorType_txtBox p {font-size: 45px;}
+    .interiorType .interiorType_txtBox .move_txt1 {transform: translateX(-70%);}
+    .interiorType .interiorType_txtBox .move_txt2 {transform: translateX(-35%);}
+    .interiorType .interiorType_txtBox .move_txt3 {transform: translateX(35%);}
+    .interiorType .interiorType_txtBox .move_txt4 {transform: translateX(70%);}
+    .interiorType .type_wrap .type_box img {width: 300px;}
+    .interiorType .type_wrap .type_box p {top: 100%; transform: rotate(0deg); left: 0%; font-size: 45px}
+    .visual .visual_background .main_txt h2 {font-size: 45px;}
+    .visual .visual_background .scroll_box {top: 95%; right: 50%; flex-direction: column;}
+    .visual .visual_background .scroll_box .scroll_background {height: 30px; width: 2px;}
+    .visual .visual_background .scroll_box p {margin: 0px; font-size: 12px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesignCategory button {font-size: 12px; padding: 8px 20px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title p {font-size: 45px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title span {font-size: 35px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box3 p {font-size: 25px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p {font-size: 25px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 p {font-size: 45px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 a {margin-top: 5px; padding: 0px; font-size: 18px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 {margin-left: 50px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div {margin-right: 20px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div img {width: 200px;}
+    .bestRemodeling {width: 90%;}
+    .expertConsultation {width: 90%;}
+    .exploreNow img {width: 250px;}
+    .exploreNow a {font-size: 45px; border-bottom: 4px solid #333;}
+    footer .f_top {padding: 0px 50px;}
+    footer .f_top .f_logo_box {padding: 20px 0px 50px 0px;}
+    footer .f_top .f_txt_box {padding: 20px 0px 50px 0px;}
+    footer .f_top .f_txt_box .f_txt1 {margin-right: 50px;}
+    footer .f_top .f_txt_box .f_txt2 {margin-right: 50px;}
+    footer .f_top .f_txt_box div a {margin-bottom: 15px;}
+    footer .f_btn {padding: 20px 50px;}
 }
+
+//tab
 @media (max-width: 768px) {
+    //common style 
+    .pc {display: none !important;}
+    .mo {display: block !important;}
+    header nav .logo_box h1 a img {width: 150px;}
+    header nav .mobile_menu .mobile_nev h1 a img {width: 150px;}
+    header nav .mobile_menu .mobile_ul li a {font-size: 18px;}
+    .visual .visual_background .main_txt h2 {font-size: 35px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title p {font-size: 35px;}
+    .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title span {font-size: 24px;}
+}
+
+//mo
+@media (max-width: 480px) {
+    //common style 
     .pc {display: none;}
     .mo {display: block;}
     header nav .logo_box h1 a img {width: 150px;}

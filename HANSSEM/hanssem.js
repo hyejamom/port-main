@@ -127,6 +127,7 @@ $(document).ready(function(){
             $('.login_box').find('i').removeClass('change')
             $('.login_box').find('.mo_i').removeClass('change')
             $('.menu_hover').removeClass('open')
+            $('.mobile_menu').css({'display':'none'})
         }
     })
 
