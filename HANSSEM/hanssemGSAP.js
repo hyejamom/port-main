@@ -72,10 +72,7 @@ $(()=>{
             end : '+=9000',
             onUpdate : self =>{
                 console.log(self.progress)
-                if(self.progress > 0.50 && self.progress < 0.66){
-                    $('.life_video video').get(0).load();
-                }
-                else if(self.progress > 0.672 && self.progress < 0.68){
+                if(self.progress > 0.672 && self.progress < 0.68){
                     $('.life_video video').get(0).play();
                 }
             }

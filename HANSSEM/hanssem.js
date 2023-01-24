@@ -77,7 +77,7 @@ $(document).ready(function(){
     
 
 
-    //menu_hover 안에있는 slide
+    //menu_hover 안에있는 slide 
     $('.menu_slide .single-item').slick({
         dots: true,
         dotsClass: 'menu_dot_custom',
@@ -87,21 +87,30 @@ $(document).ready(function(){
     $('.menu_slide .menu_dot_custom li').text('')
 
 
-    //bestRemodeling
-    $('.bestRemodeling .single-item').slick({
+    //bestRemodeling .pc
+    $('.bestRemodeling .single-item.pc').slick({
         dots: true,
         dotsClass: 'dots_custom',
         autoplay: true,
         autoplaySpeed: 5000,
     });
+
+    //bestRemodeling .mo
+    $('.bestRemodeling .single-item.mo').slick({
+        // autoplay: true,
+        // autoplaySpeed: 5000,
+      });
+
     $('.bestRemodeling .dots_custom li:nth-of-type(1)').text('20평대');
     $('.bestRemodeling .dots_custom li:nth-of-type(2)').text('30평대');
     $('.bestRemodeling .dots_custom li:nth-of-type(3)').text('40평대');
     $('.bestRemodeling .dots_custom li:nth-of-type(4)').text('50평대이상');
 
+    $('.bestRemodeling .single-item.mo .slick-prev').html('<i class="fa-solid fa-angle-left"></i>');
+    $('.bestRemodeling .single-item.mo .slick-next').html('<i class="fa-solid fa-angle-right"></i>');
 
 
-
+    //nav 올라감
     let lastScrollTop = 0;
     let delta = 15; //동작의 구현이 시작되는 위치
     $(window).on('scroll', function () {

@@ -609,7 +609,6 @@ header.change {
   width: 33.3333333333%;
   display: flex;
   align-items: center;
-  margin-left: 100px;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div {
   position: relative;
@@ -618,7 +617,7 @@ header.change {
   cursor: pointer;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div img {
-  width: 330px;
+  width: 300px;
   transition: 0.5s;
   filter: brightness(0.7);
 }
@@ -627,6 +626,9 @@ header.change {
   bottom: 5%;
   left: 5%;
   color: #eee;
+}
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div:nth-of-type(1) {
+  margin-left: 100px;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div:hover img {
   transform: scale(1.1);
@@ -710,86 +712,114 @@ header.change {
   width: 1200px;
   margin: 0px auto;
 }
-.bestRemodeling .single-item {
+.bestRemodeling .single-item.pc {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   position: relative;
 }
-.bestRemodeling .single-item .slick-arrow {
+.bestRemodeling .single-item.pc .slick-arrow {
   display: none !important;
 }
-.bestRemodeling .single-item .dots_custom {
+.bestRemodeling .single-item.pc .dots_custom {
   display: flex;
   position: absolute;
   top: -5%;
   right: 0px;
 }
-.bestRemodeling .single-item .dots_custom li {
+.bestRemodeling .single-item.pc .dots_custom li {
   margin-left: 20px;
   cursor: pointer;
   color: #adadad;
   transition: 0.5s;
 }
-.bestRemodeling .single-item .dots_custom li.font {
+.bestRemodeling .single-item.pc .dots_custom li.font {
   font-weight: 900 !important;
   color: #333 !important;
 }
-.bestRemodeling .single-item .dots_custom li.slick-active {
+.bestRemodeling .single-item.pc .dots_custom li.slick-active {
   font-weight: 800;
   color: #333 !important;
 }
-.bestRemodeling .single-item .bestRemodeling_box {
+.bestRemodeling .single-item.pc .bestRemodeling_box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px 0px;
 }
-.bestRemodeling .single-item .bestRemodeling_box .bestRemodeling_flex {
+.bestRemodeling .single-item.pc .bestRemodeling_box .bestRemodeling_flex {
   width: 51%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.bestRemodeling .single-item .bestRemodeling_box .bestRemodeling_flex div {
+.bestRemodeling .single-item.pc .bestRemodeling_box .bestRemodeling_flex div {
   width: 100%;
   position: relative;
 }
-.bestRemodeling .single-item .bestRemodeling_box .bestRemodeling_flex div p {
+.bestRemodeling .single-item.pc .bestRemodeling_box .bestRemodeling_flex div p {
   position: absolute;
   bottom: 5%;
   left: 5%;
   color: #eee;
 }
-.bestRemodeling .single-item .bestRemodeling_box .bestRemodeling_flex div:nth-of-type(1) {
+.bestRemodeling .single-item.pc .bestRemodeling_box .bestRemodeling_flex div:nth-of-type(1) {
   width: 52.5%;
   margin-bottom: 2%;
 }
-.bestRemodeling .single-item .bestRemodeling_box .bestRemodeling_flex div:nth-of-type(1) img {
+.bestRemodeling .single-item.pc .bestRemodeling_box .bestRemodeling_flex div:nth-of-type(1) img {
   width: 100%;
 }
-.bestRemodeling .single-item .bestRemodeling_box .bestRemodeling_big {
+.bestRemodeling .single-item.pc .bestRemodeling_box .bestRemodeling_big {
   width: 48%;
   position: relative;
 }
-.bestRemodeling .single-item .bestRemodeling_box .bestRemodeling_big p {
+.bestRemodeling .single-item.pc .bestRemodeling_box .bestRemodeling_big p {
   width: 48%;
   position: absolute;
   bottom: 5%;
   left: 5%;
   color: #eee;
 }
-.bestRemodeling .single-item .bestRemodeling_box.revers .bestRemodeling_flex {
+.bestRemodeling .single-item.pc .bestRemodeling_box.revers .bestRemodeling_flex {
   align-items: flex-start;
   flex-direction: column-reverse;
 }
-.bestRemodeling .single-item .bestRemodeling_box.revers .bestRemodeling_flex img:nth-of-type(1) {
+.bestRemodeling .single-item.pc .bestRemodeling_box.revers .bestRemodeling_flex img:nth-of-type(1) {
   margin-bottom: 0%;
   margin-top: 2%;
 }
-.bestRemodeling .single-item div {
+.bestRemodeling .single-item.pc div {
   width: 100%;
   height: 100%;
+}
+.bestRemodeling .single-item.mo {
+  margin-top: 30px;
+  position: relative;
+}
+.bestRemodeling .single-item.mo .slick-arrow {
+  position: absolute;
+  bottom: -10%;
+  font-size: 24px;
+  cursor: pointer;
+}
+.bestRemodeling .single-item.mo .slick-prev {
+  right: 10%;
+}
+.bestRemodeling .single-item.mo .slick-next {
+  right: 2%;
+}
+.bestRemodeling .single-item.mo div {
+  width: 100%;
+  margin: 0px 5px;
+  position: relative;
+}
+.bestRemodeling .single-item.mo div p {
+  position: absolute;
+  bottom: 5%;
+  z-index: 99;
+  color: #fff;
+  left: 5%;
 }
 
 .unchangeableValue {
@@ -807,6 +837,7 @@ header.change {
   align-items: center;
   flex-direction: column;
   opacity: 0;
+  text-align: center;
 }
 .unchangeableValue .unchangeableValue_con h2 {
   margin-bottom: 20px;
@@ -960,10 +991,7 @@ footer .f_btn p:nth-of-type(1)::before {
 
 @media (max-width: 1250px) {
   .pc_br {
-    display: none;
-  }
-  .tab_br {
-    display: block;
+    display: none !important;
   }
   .mo_br {
     display: none;
@@ -977,6 +1005,9 @@ footer .f_btn p:nth-of-type(1)::before {
   }
   .contentWrap h2 {
     font-size: 24px;
+  }
+  .unchangeableValue .unchangeableValue_con {
+    width: 100%;
   }
   header nav {
     width: 100%;
@@ -1000,6 +1031,12 @@ footer .f_btn p:nth-of-type(1)::before {
   }
   .login_box i {
     padding: 20px 0px;
+  }
+  .interiorType .interiorType_interiorTxt {
+    width: 45%;
+  }
+  .interiorType .interiorType_interiorTxt a {
+    width: 100%;
   }
   .interiorType .interiorType_txtBox p {
     font-size: 45px;
@@ -1065,11 +1102,11 @@ footer .f_btn p:nth-of-type(1)::before {
     padding: 0px;
     font-size: 18px;
   }
-  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 {
-    margin-left: 50px;
-  }
   .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div {
     margin-right: 20px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div:nth-of-type(1) {
+    margin-left: 0px;
   }
   .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div img {
     width: 200px;
@@ -1128,11 +1165,136 @@ footer .f_btn p:nth-of-type(1)::before {
   .visual .visual_background .main_txt h2 {
     font-size: 35px;
   }
+  .interiorType .interiorType_txtBox p {
+    font-size: 35px;
+  }
+  .interiorType .interiorType_interiorTxt {
+    font-size: 14px;
+  }
+  .interiorType .interiorType_txtBox p {
+    font-size: 50px;
+  }
+  .interiorType .interiorType_txtBox .move_txt1 {
+    transform: translate(0%, 0px);
+  }
+  .interiorType .interiorType_txtBox .move_txt2 {
+    transform: translate(0%, 0px);
+  }
+  .interiorType .interiorType_txtBox .move_txt3 {
+    transform: translate(0%, 0px);
+  }
+  .interiorType .interiorType_txtBox .move_txt4 {
+    transform: translate(0%, 0px);
+  }
+  .interiorType .type_wrap .type_box p {
+    font-size: 35px;
+  }
+  .interiorType .type_wrap .type_box img {
+    width: 180px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box3 p {
+    width: 75%;
+  }
   .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title p {
     font-size: 35px;
   }
   .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title span {
     font-size: 24px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesignCategory {
+    padding-left: 30px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 .lifestyleDesign_title {
+    padding: 50px 0px 30px 30px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box1 {
+    justify-content: center;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box2 {
+    display: flex;
+    align-items: center;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box2 img {
+    height: 50%;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div p {
+    font-size: 14px;
+    left: 15%;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 {
+    flex-wrap: wrap;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap.back {
+    align-items: center;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 .lifeTop {
+    margin-bottom: 20px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 div img {
+    width: 80%;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p {
+    width: 80%;
+    margin: 0px auto;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 p {
+    font-size: 35px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 a {
+    font-size: 14px;
+  }
+  .unchangeableValue .unchangeableValue_con p {
+    font-size: 14px;
+    width: 75%;
+    max-width: 350px;
+  }
+  .expertConsultation {
+    text-align: center;
+  }
+  .expertConsultation p {
+    font-size: 14px;
+  }
+  .expertConsultation .expertConsultation_con {
+    flex-direction: column;
+  }
+  .expertConsultation .expertConsultation_con .expert_box {
+    width: 70%;
+  }
+  .exploreNow img {
+    width: 350px;
+  }
+  footer .f_top {
+    flex-direction: column;
+  }
+  footer .f_top .f_logo_box p:nth-of-type(1) {
+    text-align: center;
+  }
+  footer .f_top .f_logo_box {
+    width: 100%;
+  }
+  footer .f_top .f_txt_box {
+    width: 100%;
+    justify-content: space-between;
+  }
+  footer .f_top .f_txt_box .f_txt1 {
+    margin: 0px;
+  }
+  footer .f_top .f_txt_box .f_txt2 {
+    margin: 0px;
+  }
+  .f_txt_box a {
+    font-size: 14px;
+  }
+  footer .f_btn p:nth-of-type(2) {
+    font-size: 14px;
+  }
+  footer .f_top .f_txt_box .f_txt3 a {
+    width: 100px;
   }
 }
 @media (max-width: 480px) {
@@ -1150,5 +1312,41 @@ footer .f_btn p:nth-of-type(1)::before {
   }
   header nav .mobile_menu .mobile_ul li a {
     font-size: 18px;
+  }
+  .interiorType .type_wrap .type_box img {
+    width: 150px;
+  }
+  .interiorType .type_wrap .type_box p {
+    font-size: 25px;
+  }
+  .bestRemodeling .single-item.mo .slick-arrow {
+    bottom: -15%;
+  }
+  footer .f_top .f_logo_box {
+    padding: 20px 0px 30px 0px;
+  }
+  footer .f_top .f_txt_box {
+    flex-direction: column;
+  }
+  footer .f_top .f_txt_box div {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .f_top .f_txt_box a {
+    margin-right: 10px;
+  }
+  footer .f_top .f_txt_box a:last-child {
+    margin-right: 0px;
+  }
+  footer .f_top .f_txt_box div img {
+    display: none;
+  }
+  footer .f_top .f_txt_box .f_txt3 a {
+    width: auto;
+  }
+  footer .f_btn p:nth-of-type(1) {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=hanssem.css.map */
