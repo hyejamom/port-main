@@ -88,7 +88,7 @@ let portSlide = '.port-slide'
 let port = 0;
 let portNumber = '.port-number' //title 번호
 let portTitle = '.port-text' //title p와 h3
-let portTitleList = [ 'SEOUL FOOD', 'HITE JINRO', '세번째'] //바뀔내용
+let portTitleList = [ 'HITE JINRO', 'HANSSEM', 'SEOUL FOOD'] //바뀔내용
 
 
 //section4 오른쪽으로 움직임 변수
@@ -157,11 +157,13 @@ $(section4Hover).on('mouseleave',function(){
 let seoulFood = '.seoul-food' //panning 버튼
 let portfolioSee1 = '.portfolio-see1:nth-of-type(1)' //열릴화면
 let portfolioSee2 = '.portfolio-see1:nth-of-type(2)' //열릴화면
+let portfolioSee3 = '.portfolio-see1:nth-of-type(3)' //열릴화면
 let html = 'html' //html 스크롤 없앨 예정
 let body = 'body' //html 스크롤 없앨 예정
 let portfolioBut = '.portfolio-but'
 let allSeen = '.all-seen'
 let hiteJinro = '.hite-jinro'
+let hanssem = '.hanssem'
 
 //서울푸드 포트폴리오 열리는 버튼
 $(seoulFood).on('click',()=>{
@@ -174,6 +176,12 @@ $(hiteJinro).on('click',()=>{
     $(body).css({'overflow':'hidden'})
     $(html).css({'overflow':'hidden'})
     $(portfolioSee2).addClass('on')
+})
+//한샘 포트폴리오 열리는 버튼
+$(hanssem).on('click',()=>{
+    $(body).css({'overflow':'hidden'})
+    $(html).css({'overflow':'hidden'})
+    $(portfolioSee3).addClass('on')
 })
 //엑스버튼 누르면 포트폴리오창 닫히는 버튼
 $(portfolioBut).on('click',()=>{

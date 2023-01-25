@@ -227,6 +227,7 @@ header nav .logo_box .menu li {
   font-weight: 800;
   padding: 20px;
   display: block;
+  cursor: pointer;
 }
 header nav .logo_box .menu li::after {
   content: "";
@@ -606,6 +607,9 @@ header.change {
   width: 100vw;
   text-align: center;
 }
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box3 span {
+  font-family: "Pretendard-Regular";
+}
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box4 {
   width: 33.3333333333%;
   display: flex;
@@ -661,6 +665,9 @@ header.change {
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p span {
   font-weight: 800;
   font-family: "Pretendard-Regular";
+}
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p span.pc {
+  font-weight: 300;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_video {
   position: absolute;

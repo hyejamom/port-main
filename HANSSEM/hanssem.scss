@@ -83,7 +83,7 @@ header {width: 100%; position: fixed; top: 0px; left: 0px; transition: 0.5s; z-i
                 }
             }
             .menu { display: flex; padding-left: 30px;
-                li{color: #eee; transition: 0.5s; font-weight: 800; padding: 20px; display: block;}
+                li{color: #eee; transition: 0.5s; font-weight: 800; padding: 20px; display: block; cursor: pointer;}
                 li::after {content: ""; width: 100%; margin-top: 5px; height: 2px; background-color: transparent; display: block; transition: 0.5s;}
                 li:hover:after{background-color: #333;}
                 li.change {color: #333}
@@ -197,6 +197,7 @@ header.change {background-color: #fff;}
         }
         .lifestyleDesign_box3 {width: calc(100%/6); height: 100%; @include flexCenter(); flex-direction: column; 
             p {font-size: 40px; width: 100vw; text-align: center}
+            span {font-family: 'Pretendard-Regular';}
         }
         .lifestyleDesign_box4 {width: calc((100%/6)*2); @include flexAlign(); 
             div {position: relative; margin-right: 50px; overflow: hidden; cursor: pointer;
@@ -210,6 +211,7 @@ header.change {background-color: #fff;}
             .life_txt1 { @include transCenter(); transform: translate(-50%,-30%); position: absolute; width: 100%; opacity: 0;
                 p {font-family: 'Pretendard-Regular'; margin: 20px 0px; font-size: 40px; text-align: center;
                     span {font-weight: 800; font-family: 'Pretendard-Regular';}
+                    span.pc {font-weight: 300;}
                 }
             }
             .life_video {position: absolute; @include transCenter(); width: 100%; height: 100%; @include flexCenter(); opacity: 0;
