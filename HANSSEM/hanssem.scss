@@ -160,7 +160,7 @@ header.change {background-color: #fff;}
         p:last-child {margin-bottom: 0px;}
     }
     
-    .interiorType_interiorTxt {@include content_positionTxt(); display: none; opacity: 0; transition: 0.5; transform: translateX(-10%);
+    .interiorType_interiorTxt {@include content_positionTxt(); display: none; opacity: 0; transition: 0.5; transform: translateX(-10%); width: 45%;
         h2 {margin-bottom: 20px;}
         p:nth-of-type(1) {font-weight: 800; font-size: 20px; margin-bottom: 10px; font-family: 'PuradakGentleGothicR';}
         a {width: 250px; @include flexAlign(); justify-content: space-between; margin: 20px 0px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 10px 0px;
@@ -305,14 +305,14 @@ header.change {background-color: #fff;}
 
 // footer 
 footer {width: 100%; background-color: #F6F5F3; padding: 50px 0px 0px 0px; 
-    .f_top {display: flex; padding: 0px 100px;
+    .f_top {display: flex; padding: 0px 100px; 
         .f_logo_box {width: 20%; padding: 20px; 
-            p:nth-of-type(1) {font-size: 24px;}
+            p:nth-of-type(1) {font-size: 24px; color: #707070; }
             img {width: 150px;}
         }
         .f_txt_box {width: 80%; padding: 20px; display: flex; justify-content: flex-end;
             div {display: flex; flex-direction: column;
-                a {margin-bottom: 20px;}
+                a {margin-bottom: 20px; color: #707070;}
             }
             .f_txt1 { margin-right: 100px;}
             .f_txt2 { margin-right: 100px;}
@@ -324,6 +324,7 @@ footer {width: 100%; background-color: #F6F5F3; padding: 50px 0px 0px 0px;
         }
     }
     .f_btn {width: 100%; display: flex; justify-content: space-between; background-color: #ECEBE7; padding: 20px 100px;
+        p {color: #707070;}
         p:nth-of-type(1) {font-family: 'PuradakGentleGothicR'; }
         p:nth-of-type(1)::before {content: 	"\24D2";}
 
@@ -352,7 +353,6 @@ footer {width: 100%; background-color: #F6F5F3; padding: 50px 0px 0px 0px;
     header:hover nav .login_box .mo_i {color: #333;}
     .login_box i {padding: 20px 0px;}
     .interiorType .interiorType_interiorTxt {width: 45%;}
-    .interiorType .interiorType_interiorTxt a {width: 100%;}
     .interiorType .interiorType_txtBox p {font-size: 45px;}
     .interiorType .interiorType_txtBox .move_txt1 {transform: translateX(-70%);}
     .interiorType .interiorType_txtBox .move_txt2 {transform: translateX(-35%);}
@@ -395,6 +395,7 @@ footer {width: 100%; background-color: #F6F5F3; padding: 50px 0px 0px 0px;
     header nav .logo_box h1 a img {width: 150px;}
     header nav .mobile_menu .mobile_nev h1 a img {width: 150px;}
     header nav .mobile_menu .mobile_ul li a {font-size: 18px;}
+    .interiorType .interiorType_interiorTxt a {width: 100%;}
     .visual .visual_background .main_txt h2 {font-size: 35px;}
     .interiorType .interiorType_txtBox p {font-size: 35px;}
     .interiorType .interiorType_interiorTxt {font-size: 14px;}

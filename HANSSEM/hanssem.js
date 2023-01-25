@@ -97,8 +97,8 @@ $(document).ready(function(){
 
     //bestRemodeling .mo
     $('.bestRemodeling .single-item.mo').slick({
-        // autoplay: true,
-        // autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 5000,
       });
 
     $('.bestRemodeling .dots_custom li:nth-of-type(1)').text('20평대');

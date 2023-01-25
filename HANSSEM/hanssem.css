@@ -477,6 +477,7 @@ header.change {
   opacity: 0;
   transition: 0.5;
   transform: translateX(-10%);
+  width: 45%;
 }
 .interiorType .interiorType_interiorTxt h2 {
   margin-bottom: 20px;
@@ -943,6 +944,7 @@ footer .f_top .f_logo_box {
 }
 footer .f_top .f_logo_box p:nth-of-type(1) {
   font-size: 24px;
+  color: #707070;
 }
 footer .f_top .f_logo_box img {
   width: 150px;
@@ -959,6 +961,7 @@ footer .f_top .f_txt_box div {
 }
 footer .f_top .f_txt_box div a {
   margin-bottom: 20px;
+  color: #707070;
 }
 footer .f_top .f_txt_box .f_txt1 {
   margin-right: 100px;
@@ -981,6 +984,9 @@ footer .f_btn {
   justify-content: space-between;
   background-color: #ECEBE7;
   padding: 20px 100px;
+}
+footer .f_btn p {
+  color: #707070;
 }
 footer .f_btn p:nth-of-type(1) {
   font-family: "PuradakGentleGothicR";
@@ -1034,9 +1040,6 @@ footer .f_btn p:nth-of-type(1)::before {
   }
   .interiorType .interiorType_interiorTxt {
     width: 45%;
-  }
-  .interiorType .interiorType_interiorTxt a {
-    width: 100%;
   }
   .interiorType .interiorType_txtBox p {
     font-size: 45px;
@@ -1161,6 +1164,9 @@ footer .f_btn p:nth-of-type(1)::before {
   }
   header nav .mobile_menu .mobile_ul li a {
     font-size: 18px;
+  }
+  .interiorType .interiorType_interiorTxt a {
+    width: 100%;
   }
   .visual .visual_background .main_txt h2 {
     font-size: 35px;
