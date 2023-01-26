@@ -178,6 +178,12 @@ $(portSlideLi).on('mouseleave',function(){
 })
 
 
+//section4 첫번째 li hover하면 video start
+$('.port-slide li:nth-of-type(1)').on('mouseover',()=>{
+    $('.video1').get(0).play();
+})
+
+
 //section4 PLANNING
 let seoulFood = '.seoul-food' //panning 버튼
 let portfolioSee1 = '.portfolio-see1:nth-of-type(1)' //열릴화면
