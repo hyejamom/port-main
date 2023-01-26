@@ -27,9 +27,9 @@ img { width: 100%; display: block; }
 .portfolio-see1 .hitejinro.mo {display: none;}
 .portfolio-see1 >img { width: 100%; } 
 .portfolio-see1 .see1-title { display: flex; position: relative; width: 100%; height: 100vh; background-size: cover; background-attachment: fixed; } 
-.portfolio-see1 .see1-title.back { background: url(./seoulFood/img/mockupBack.png) center center no-repeat; } 
-.portfolio-see1 .see1-title.back2 { background: url(./HiteJinro/MAIN/img/mockupBack.png) center center no-repeat; } 
-.portfolio-see1 .see1-title.back3 { background: url(./HANSSEM/img/mockupBack.png) center center no-repeat; } 
+.portfolio-see1 .see1-title.back { background: url(./seoulFood/img/mockupBack.png) center center no-repeat; background-size: cover;} 
+.portfolio-see1 .see1-title.back2 { background: url(./HiteJinro/MAIN/img/mockupBack.png) center center no-repeat; background-size: cover;} 
+.portfolio-see1 .see1-title.back3 { background: url(./HANSSEM/img/mockupBack.png) center center no-repeat; background-size: cover;} 
 .portfolio-see1 .see1-title>img { width: 50%; }
 .portfolio-see1 .see1-title .see1-title1 { width: 40%; display: flex; justify-content: flex-end; align-items: center; } 
 .portfolio-see1 .see1-title .see1-title1 .see1-title2 { width: 85%; height: auto; display: flex; flex-direction: column; } 
@@ -348,7 +348,9 @@ img { width: 100%; display: block; }
 
 /* portfolio see */
 .portfolio-see1 .see1-title { height: 700px; } 
-.portfolio-see1 .see1-title.back { flex-direction: column-reverse; justify-content: center;} 
+.portfolio-see1 .see1-title.back,
+.portfolio-see1 .see1-title.back2,
+.portfolio-see1 .see1-title.back3 { flex-direction: column-reverse; justify-content: center;} 
 .portfolio-see1 .see1-title .see1-title1 { width: 100%; justify-content: center;} 
 .portfolio-see1 .see1-title .see1-title1 .see1-title2 {margin-top: 20px; width: 80%; align-items: center; justify-content: center; } 
 .portfolio-see1 .see1-title .see1-title1 .see1-title2 img { width: 100px; margin-right: 20px; height: auto; } 
@@ -359,7 +361,6 @@ img { width: 100%; display: block; }
 .portfolio-see1 .see1-title .see1-title1 .see1-title2 .see1-btn-box .see1-fig-btn {width: 100px;}
 .portfolio-see1 .see1-title .see1-img-box { width: 100%; height: auto; } 
 .portfolio-see1 .see1-title .see1-img-box img { width: auto; max-height: 300px; min-height: 200px; height: 50vw;} 
-.portfolio-see1 .see1-title.back2 { flex-direction: column-reverse; justify-content: center;} 
 .portfolio-see1 .see1-title .see1-title1 .see1-title2 .see1-text h4 {margin: 10px 0px;}
 .popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: none; } 
 .popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: block; } 

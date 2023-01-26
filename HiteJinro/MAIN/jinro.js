@@ -84,7 +84,7 @@ $(document).ready(function () {
     //section0 오른쪽이동 변수
     let section0Start = function () {
         if (video <= 1) {
-            video++;
+            video++; // 1,2
             $(roding2).removeClass('on')
             $(section0Left).children('p').text(videoArrow[video - 1])
             $(section0Right).children('p').text(videoArrow[video + 1])
@@ -92,9 +92,23 @@ $(document).ready(function () {
                 $(rodingP).text(videoText[video])
                 $(roding2).addClass('on')
             })
+            if(video==1){
+                setTimeout(function(){
+                    $('.video').get(0).load();
+                    $('.video').get(2).load();
+                    $('.video').get(3).load();
+                },500)
+            }
+            else if(video==2){
+                setTimeout(function(){
+                    $('.video').get(0).load();
+                    $('.video').get(1).load();
+                    $('.video').get(3).load();
+                },500)
+            }
         }
         else if (video == 2) {
-            video++;
+            video++; //3
             $(roding2).removeClass('on')
             $(section0Left).children('p').text(videoArrow[video - 1])
             $(section0Right).children('p').text(videoArrow[video - 3])
@@ -102,9 +116,14 @@ $(document).ready(function () {
                 $(rodingP).text(videoText[video])
                 $(roding2).addClass('on')
             })
+            setTimeout(function(){
+                $('.video').get(0).load();
+                $('.video').get(1).load();
+                $('.video').get(2).load();
+            },500)
         }
         else if (video == 3) {
-            video = 0;
+            video = 0; 
             $(roding2).removeClass('on')
             $(section0Left).children('p').text(videoArrow[video + 3])
             $(section0Right).children('p').text(videoArrow[video + 1])
@@ -112,7 +131,17 @@ $(document).ready(function () {
                 $(rodingP).text(videoText[video])
                 $(roding2).addClass('on')
             })
+            setTimeout(function(){
+                $('.video').get(1).load();
+                $('.video').get(2).load();
+                $('.video').get(3).load();
+            },500)
         }
+        $('.video').get(0).pause();
+        $('.video').get(1).pause();
+        $('.video').get(2).pause();
+        $('.video').get(3).pause();
+        $(`.video${video}`).get(0).play();
     }
     //section0 왼쪽 이동 변수
     let section0PrevStart = function () {
@@ -125,9 +154,14 @@ $(document).ready(function () {
                 $(rodingP).text(videoText[video])
                 $(roding2).addClass('on')
             })
+            setTimeout(function(){
+                $('.video').get(0).load();
+                $('.video').get(1).load();
+                $('.video').get(2).load();
+            },500)
         }
         else if (video >= 2) {
-            video--;
+            video--; //2,1
             $(roding2).removeClass('on')
             $(section0Left).children('p').text(videoArrow[video - 1])
             $(section0Right).children('p').text(videoArrow[video + 1])
@@ -135,9 +169,24 @@ $(document).ready(function () {
                 $(rodingP).text(videoText[video])
                 $(roding2).addClass('on')
             })
+            if(video==2){
+                setTimeout(function(){
+                    $('.video').get(0).load();
+                    $('.video').get(1).load();
+                    $('.video').get(3).load();
+                },500)
+            }
+            else if(video==1){
+                setTimeout(function(){
+                    $('.video').get(0).load();
+                    $('.video').get(2).load();
+                    $('.video').get(3).load();
+                },500)
+            }
+            console.log(video)
         }
         else if (video >= 1) {
-            video--;
+            video--; //0
             $(roding2).removeClass('on')
             $(section0Left).children('p').text(videoArrow[video + 3])
             $(section0Right).children('p').text(videoArrow[video + 1])
@@ -145,8 +194,20 @@ $(document).ready(function () {
                 $(rodingP).text(videoText[video])
                 $(roding2).addClass('on')
             })
+            setTimeout(function(){
+                $('.video').get(1).load();
+                $('.video').get(2).load();
+                $('.video').get(3).load();
+            },500)
         }
+        $('.video').get(0).pause();
+        $('.video').get(1).pause();
+        $('.video').get(2).pause();
+        $('.video').get(3).pause();
+        $(`.video${video}`).get(0).play();
     }
+    //처음 비디오 실행
+    $('.video0').get(0).play();
     //section0 자동실행
     function Start() {
         section0Stop = setInterval(function () {
@@ -163,7 +224,9 @@ $(document).ready(function () {
     })
     //section0 왼쪽 버튼 누르면 실행
     $(section0Left).on('click', () => {
+        clearInterval(section0Stop)
         section0PrevStart();
+        Start();
     })
 
 

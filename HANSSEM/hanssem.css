@@ -34,6 +34,19 @@ body {
   font-family: "Pretendard-Regular"; /*overflow-x: hidden;*/
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ECEBE7;
+  border: 3px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
 ul {
   list-style: none;
 }
@@ -666,7 +679,7 @@ header.change {
   font-weight: 800;
   font-family: "Pretendard-Regular";
 }
-.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p span.pc {
+.lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p span.pc2 {
   font-weight: 300;
 }
 .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_video {
@@ -1260,6 +1273,9 @@ footer .f_btn p:nth-of-type(1)::before {
   }
   .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt2 a {
     font-size: 14px;
+  }
+  .lifestyleDesign .lifestyleDesign_wrap .lifestyleDesign_box5 .life_txt1 p span.pc2 {
+    display: none;
   }
   .unchangeableValue .unchangeableValue_con p {
     font-size: 14px;

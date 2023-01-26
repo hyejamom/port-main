@@ -82,9 +82,10 @@ $(menu).on('mouseleave',function(){
 
 
 // 포트폴리오 슬라이드
-let portNext = '.port-slide-box >i:nth-of-type(2)' //오른쪽버튼
-let portPrev = '.port-slide-box >i:nth-of-type(1)' //왼쪽버튼
+let portNext = '.port-next' //오른쪽버튼
+let portPrev = '.port-prev' //왼쪽버튼
 let portSlide = '.port-slide'
+let portSlideLi = '.port-slide li'
 let port = 0;
 let portNumber = '.port-number' //title 번호
 let portTitle = '.port-text' //title p와 h3
@@ -102,10 +103,9 @@ let portNextStart = function(){
 let portPrevStart = function(){
     $(portSlide).stop().animate({'left':'-40%'},()=>{
         $(portSlide).css({'left':'-100%'})
-        $(portSlide).children('li').last().prependTo(portSlide)
+        $(portSlideLi).last().prependTo(portSlide)
     })
 }
-
 
 
 // section4 portfolio 오른쪽버튼 클릭
@@ -116,12 +116,26 @@ $(portNext).on('click',function(){
         $(portSlide).animate({'left':`${8.5+(-83.5*port)}%`})
         $(portNumber).text(`0${port+1}`)
         $(portTitle).children('h3').text(portTitleList[port])
+        if(port==1){
+            $(`.video1`).get(0).load();
+            $(`.video3`).get(0).load();
+            $(`.video2`).get(0).play();
+        }
+        else if(port==2){
+            $(`.video1`).get(0).load();
+            $(`.video2`).get(0).load();
+            $(`.video3`).get(0).play();
+
+        }
     }
     else if(port==2){
         port=0;
         $(portSlide).animate({'left':`${8.5+(-83.5*port)}%`})
         $(portNumber).text(`0${port+1}`)
         $(portTitle).children('h3').text(portTitleList[port])
+        $(`.video2`).get(0).load();
+        $(`.video3`).get(0).load();
+        $(`.video1`).get(0).play();
     }
 })
 // section4 portfolio 왼쪽버튼 클릭 
@@ -133,22 +147,33 @@ $(portPrev).on('click',function(){
         $(portSlide).animate({'left':`${8.5+(-83.5*port)}%`})
         $(portNumber).text('03')
         $(portTitle).children('h3').text(portTitleList[port])
+        $(`.video1`).get(0).load();
+        $(`.video2`).get(0).load();
+        $(`.video3`).get(0).play();
     }
-    else if(port>=1){
+    else if(port<=2){
         port--;
         $(portSlide).animate({'left':`${8.5+(-83.5*port)}%`})
         $(portNumber).text(`0${port+1}`)
         $(portTitle).children('h3').text(portTitleList[port])
+        if(port==1){
+            $(`.video1`).get(0).load();
+            $(`.video3`).get(0).load();
+        }
+        else if(port==0){
+            $(`.video2`).get(0).load();
+            $(`.video3`).get(0).load();
+        }
+        $(`.video${port+1}`).get(0).play();
     }
 })
 
 
 //section4 사진 hover하면 비디오 나오게 하기
-let section4Hover = '.port-slide li'
-$(section4Hover).on('mouseover',function(){
+$(portSlideLi).on('mouseover',function(){
     $(this).children('video').css({'opacity':'1'})
 })
-$(section4Hover).on('mouseleave',function(){
+$(portSlideLi).on('mouseleave',function(){
     $(this).children('video').css({'opacity':'0'})
 })
 
