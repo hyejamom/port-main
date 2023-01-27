@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+    <!-- 뷰포트 정의하는부분 (스크린이 다양할수도있으니까 그거 호환시키는거 ) -->
     <meta charset="UTF-8">
+    <!-- 기본 브라우저 호환성 세팅 알아서 렌더링 해줌  -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- 인코딩 타입 해당 문서의 문자 인코딩 방식을 명시함.  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- 전화번호 자동링크 없앨때 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 검색엔진 크롤러 (검색방식조절)  -->
+    <meta name="robots" content="ALL">
+    <!-- 공유버튼이나 URL전달할때 정보 포함시킬수 있는 파라미터 이면서 + 카카오톡 URL사진뜨는거 그런거 -->
+    <meta property="og:title" content="HANSSEM INTERIOR" />
+    <meta property="og:type" content="website" />
+    <!-- 대표 사이트 주소  -->
+    <meta property="og:url" content="https://hyejamom.github.io/port-main/" />
+    <!-- 대표 이미지 절대경로 적으면됨 -->
+    <meta property="og:image" content="https://hyejamom.github.io/port-main/img/LOGO-black.png" />
+    <!-- 테마컬러 메인컬러 - 사이트에 어울리게 예쁘게 보정 -->
+    <meta name="theme-color" content="#ECEBE7" />
+    <!-- meta 내에서 타이틀 확인  -->
+    <meta name="title" content='HANSSEM INTERIOR'>
+    <!-- SEO의 핵심 사이트 묘사 -->
+    <meta name="Description"
+        content="This site is a portfolio of web publisher Jo KyoungA. This is the renewal site of the liquor company HANSSEM INTERIOR.">
+    <meta name="Keywords"
+        content="web publisher, web design, web designer, portfolio, HTML, CSS, JavaScript, Jquery, SCSS, Junior portfolio, Junior web publisher, HANSSEM INTERIOR ,renewal web site">
+    <!-- 대표사이트 메인페이지로 유도할 때 사용 -->
+    <link rel="canonical" href="https://hyejamom.github.io/port-main/">
+    <!-- 저작자  -->
+    <meta name="Author" content="KyoungA Jo">
+    <!-- 파비콘  -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./hanssem.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" href="./hanssem.css">
     <title>Hanssem</title>
 </head>
+
 <body>
     <!-- header  -->
     <header>
@@ -27,7 +59,7 @@
                         <p class="title2">인테리어 솔루션</p>
                         <p class="title3">리모델링 성공사례</p>
                     </div>
-                    <ul class="menu_li" >
+                    <ul class="menu_li">
                         <li class="li0"><a href="#">Made in Hanssem</a></li>
                         <li class="li0"><a href="#">Life with Hanssem</a></li>
                         <li class="li1"><a href="#">키친/붙박이장</a></li>
@@ -71,7 +103,7 @@
                     <li>제품</li>
                     <li>인테리어 솔루션</li>
                     <li>리모델링 성공사례</li>
-                </ul> 
+                </ul>
             </div>
             <div class="mobile_menu">
                 <div class="mobile_nev">
@@ -79,7 +111,7 @@
                     <div class="login_box">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-xmark mo_X"></i>
-                    </div>             
+                    </div>
                 </div>
                 <ul class="mobile_ul">
                     <li><a href="#">브랜드</a></li>
@@ -94,7 +126,7 @@
                 </div>
             </div>
             <div class="login_box">
-                <a href="#" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a href="#" class="pc_i"><i class="fa-regular fa-heart"></i></a>
                 <a href="#" class="pc_i"><i class="fa-regular fa-user"></i></a>
                 <p class="mo_i">MENU</p>
@@ -114,7 +146,8 @@
                 </div>
                 <div class="scroll_box">
                     <div class="scroll_background"></div>
-                    <p>S<br class="pc">C<br class="pc">R<br class="pc">O<br class="pc">L<br class="pc">L<br class="pc"></p>
+                    <p>S<br class="pc">C<br class="pc">R<br class="pc">O<br class="pc">L<br class="pc">L<br class="pc">
+                    </p>
                 </div>
         </section>
         <!-- visual -->
@@ -153,28 +186,31 @@
             <div class="interiorType_interiorTxt modern">
                 <h2>Type</h2>
                 <p>MODERN</p>
-                <p>원룸부터 고급 주택까지 다양한 형태의 주거공간에 모두 잘 어울리는 모던 스타일을 만나보세요. 꼭 필요한  물건들만 채워 공간에 여백을 주고 간결한 선과 면으로  다듬어진 깔끔한 인테리어를 선보입니다.</p>
+                <p>원룸부터 고급 주택까지 다양한 형태의 주거공간에 모두 잘 어울리는 모던 스타일을 만나보세요. 꼭 필요한 물건들만 채워 공간에 여백을 주고 간결한 선과 면으로 다듬어진 깔끔한
+                    인테리어를 선보입니다.</p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
             <div class="interiorType_interiorTxt natual">
                 <h2>Type</h2>
                 <p>NATUAL</p>
-                <p>진정한 아름다움은 자연스러움에서 시작됩니다. 자연에서 얻은 소재와 색감은 공간에 담담하면서도 활발한 에너지를 더해주며 오래도록 질리지 않는 편안하고 안락한 공간을 완성해줍니다.</p>
+                <p>진정한 아름다움은 자연스러움에서 시작됩니다. 자연에서 얻은 소재와 색감은 공간에 담담하면서도 활발한 에너지를 더해주며 오래도록 질리지 않는 편안하고 안락한 공간을 완성해줍니다.
+                </p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
             <div class="interiorType_interiorTxt classic">
                 <h2>Type</h2>
                 <p>CLASSIC</p>
-                <p>과하지 않은 화려함으로 절제된 아름다움을 보여주는 클래식 스타일은 적절하게 가미된 장식적 요소와 우아한 곡선 포인트로 공간에 격식과  품격을 더해줍니다.</p>
+                <p>과하지 않은 화려함으로 절제된 아름다움을 보여주는 클래식 스타일은 적절하게 가미된 장식적 요소와 우아한 곡선 포인트로 공간에 격식과 품격을 더해줍니다.</p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
             <div class="interiorType_interiorTxt unique">
                 <h2>Type</h2>
                 <p>UNIQUE</p>
-                <p>나만의 개성과 취향을 듬뿍 담아 집안 구석구석 생동감 넘치는 아이템들로 완성한 유니크 스타일은 지루하고 나른한 일상에 새로움을 선사합니다.  톡톡 튀는 컬러와 다양한 소재의 믹스매치로 완성된 독창적인 공간을 만나보세요.</p>
+                <p>나만의 개성과 취향을 듬뿍 담아 집안 구석구석 생동감 넘치는 아이템들로 완성한 유니크 스타일은 지루하고 나른한 일상에 새로움을 선사합니다. 톡톡 튀는 컬러와 다양한 소재의 믹스매치로
+                    완성된 독창적인 공간을 만나보세요.</p>
                 <a href="#">인테리어 스타일 제안<span><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
-            
+
         </section>
         <!-- interiorType -->
 
@@ -196,7 +232,8 @@
                     <img src="./img/lifestyleDesign_main.jpg" alt="">
                 </div>
                 <div class="lifestyleDesign_box3">
-                    <p>다양한 라이프 스타일 속에서<br class="pc"><span class="pc">최적화된 당신의 주거 공간을 디자인 합니다.</span>가치있는 당신의 일상을 위한<br class="pc">취향에 딱 맞는 인테리어 디자인을 만나보세요.</p>
+                    <p>다양한 라이프 스타일 속에서<br class="pc"><span class="pc">최적화된 당신의 주거 공간을 디자인 합니다.</span>가치있는 당신의 일상을 위한<br
+                            class="pc">취향에 딱 맞는 인테리어 디자인을 만나보세요.</p>
                 </div>
                 <div class="lifestyleDesign_box4">
                     <div class="lifeTop">
@@ -234,7 +271,9 @@
                 </div>
                 <div class="lifestyleDesign_box5">
                     <div class="life_txt1">
-                        <p>한샘 본사와 공장은 <span class="pc2">물론 전국의 각 대리점과 협력사, <br class="pc">시공 요원을 전산으로통합 관리하는 최고 수준의 정보 시스템과<br class="pc"> 인터넷을 기반으로</span> 계약과 동시에 생산, 물류 프로세스가 연동되는<br class="pc"> <span>‘3일납기 1일 시공’</span>을 실현하고 있습니다.</p>
+                        <p>한샘 본사와 공장은 <span class="pc2">물론 전국의 각 대리점과 협력사, <br class="pc">시공 요원을 전산으로통합 관리하는 최고 수준의 정보
+                                시스템과<br class="pc"> 인터넷을 기반으로</span> 계약과 동시에 생산, 물류 프로세스가 연동되는<br class="pc">
+                            <span>‘3일납기 1일 시공’</span>을 실현하고 있습니다.</p>
                     </div>
                     <div class="life_video">
                         <video muted playsinline src="./img/hanssemVideo.mp4"></video>
@@ -368,7 +407,7 @@
                     <img src="./img/mo_remodeling4-3.jpg" alt="">
                     <p>#아파트 #강렬한 첫인상</p>
                 </div>
-                
+
             </div>
         </section>
         <!-- bestRemodeling -->
@@ -452,7 +491,7 @@
         </div>
         <div class="f_btn">
             <p>HANSSEM</p>
-            <p>고객센터  1588-0900</p>
+            <p>고객센터 1588-0900</p>
         </div>
 
     </footer>
@@ -460,9 +499,10 @@
 
 
 
-    
-    
+
+
     <script src="./hanssemGSAP.js"></script>
     <script src="hanssem.js"></script>
 </body>
+
 </html>
