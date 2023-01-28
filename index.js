@@ -329,13 +329,17 @@ $(popupPrev).on('click',function(){
 })
 
 //section5 이미지클릭
+let popupH3 = '.popup-title >div h3'
+let popupP = '.popup-title >p'
+
 $(popupImg).children('img').on('click',function(){
     let popupImgIndex = $(this).index();
     clearInterval(popupStop);
     $(popupImg).children('img').removeClass('filter')
     $(this).addClass('filter')
-    // // $('.popup-slide li').removeClass('on')
     $('.popup-slide li').eq(popupFilter).addClass('on')
+    $(popupH3).text(titleText[popupImgIndex])
+    $(popupP).text(contentText[popupImgIndex])
     if(popupImgIndex==0){
         $(popupSlide).stop().animate({'left':`170%`})
         popupFilter=1;
@@ -454,17 +458,17 @@ $(section6But).eq(4).on('click',function(){
 
 
 //footer 포트폴리오를 봐주셔서 감사합니다
-let lastScroll = 0;
-let value;
-let moveFooter = $('.thanks-box h2')
-
-$(window).on('scroll', function () {
-    let scrollTop = $(this).scrollTop();
-    if (scrollTop >= scrollSection6) {
-        value = (window.pageYOffset - scrollSection6);
-        moveFooter.css({ 'transform': `translateX(${-value + footerheight}px)` })
-    }
-})
+// let lastScroll = 0;
+// let value;
+// let moveFooter = $('.thanks-box h2')
+// 
+// $(window).on('scroll', function () {
+//     let scrollTop = $(this).scrollTop();
+//     if (scrollTop >= scrollSection6) {
+//         value = (window.pageYOffset - scrollSection6);
+//         moveFooter.css({ 'transform': `translateX(${-value + footerheight}px)` })
+//     }
+// })
 
 
 //footer resume
