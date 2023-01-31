@@ -59,8 +59,8 @@ img { width: 100%; display: block; }
 /* popup see */
 .popup-see .seen1 { width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; z-index: 99; display: none; } 
 .popup-see .seen1 .popup-back { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background-color: #101010; opacity: 0.3; z-index: -1; } 
-.popup-see .seen1 .ipad-inner-img { overflow: auto; z-index: 1; width: 59.5vw; height: 44vw; max-width: 860px; max-height: 636px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
-.popup-see .seen1 .ipad-box { width: 65%; max-width: 925px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.popup-see .seen1 .ipad-inner-img { overflow: auto; z-index: 1; width: 59.5vw; height: 44vw; max-width: 860px; max-height: 595px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.popup-see .seen1 .ipad-box { width: 65%; max-width: 860px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: block; } 
 .popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: none; } 
 .popup-see .seen1 .ipad-box .popup-see-x { position: absolute; top: 0%; right: -5%; cursor: pointer; color: #fff; transition: 0.5s; } 
@@ -70,9 +70,9 @@ img { width: 100%; display: block; }
 /* banner see */
 .seen2 { display: none; width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; z-index: 99; } 
 .seen2 .banner-back { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background-color: #101010; opacity: 0.3; z-index: -1; } 
-.seen2 .ipad-inner-img { overflow: hidden; z-index: 1; width: 59.5vw; height: 42vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.seen2 .ipad-inner-img { overflow: hidden; z-index: 1; width: 64.5vw; max-width: 850px; height: 48vw; max-height: 637px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .seen2 .ipad-inner-img img { height: 100%; width: auto; } 
-.seen2 .ipad-box { width: 65%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.seen2 .ipad-box { width: 70vw; max-width: 925px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .seen2 .ipad-box .ipad-x { width: 100%; display: block; } 
 .seen2 .ipad-box .ipad-y { width: 100%; display: none; } 
 .seen2 .ipad-box .popup-see-x { position: absolute; top: 0%; right: -12%; cursor: pointer; color: #fff; transition: 0.5s; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; } 
@@ -347,10 +347,10 @@ img { width: 100%; display: block; }
  }
 @media (max-width: 1025px) { html { font-size: 16px; } 
 /* popup-see */
-.seen2 .ipad-box { width: 60.5%; } 
+.seen2 .ipad-box { width: 52vw; } 
 .seen2 .ipad-box .ipad-x { display: none; } 
 .seen2 .ipad-box .ipad-y { display: block; } 
-.seen2 .ipad-inner-img { overflow: auto; width: 53.5vw; height: 76.5vw; } 
+.seen2 .ipad-inner-img { overflow: auto; width: 46.5vw; height: 76.5vw; } 
 
 
 /* portfolio see */
@@ -371,7 +371,7 @@ img { width: 100%; display: block; }
 .portfolio-see1 .see1-title .see1-title1 .see1-title2 .see1-text h4 {margin: 10px 0px;}
 .popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: none; } 
 .popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: block; } 
-.popup-see .seen1 .ipad-inner-img {height: auto; width: 44vw; max-width: 445px;}
+.popup-see .seen1 .ipad-inner-img {height: auto; width: 44.5vw; max-width: 445px; max-height: 630px;}
 .popup-see .seen1 .ipad-box {width: 50%;}
 
 /* header */
@@ -486,6 +486,7 @@ img { width: 100%; display: block; }
 .moMedia {display: block;} 
  }
 @media (max-width: 600px) { html { font-size: 13px; } 
+.popup-see .seen1 .ipad-inner-img {width: 44vw;}
  }
 
 /* 모바일 */
