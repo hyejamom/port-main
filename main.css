@@ -372,7 +372,7 @@ img { width: 100%; display: block; }
 .popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: none; } 
 .popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: block; } 
 .popup-see .seen1 .ipad-inner-img {height: auto; width: 58.5vw; max-width: 450px; max-height: 637px;}
-.popup-see .seen1 .ipad-box {width: 90vw; max-width: 650px;}
+.popup-see .seen1 .ipad-box {width: 65vw; max-width: 500px;}
 
 /* header */
 #header #nav { justify-content: center; } 
