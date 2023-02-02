@@ -64,7 +64,7 @@ img { width: 100%; display: block; }
 .popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: block; } 
 .popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: none; } 
 .popup-see .seen1 .ipad-box .popup-see-x { position: absolute; top: 0%; right: -5%; cursor: pointer; color: #fff; transition: 0.5s; } 
-.popup-see .seen1 .ipad-box .popup-see-x:hover { color: #334B45; } 
+.popup-see .seen1 .ipad-box .fa-solid:hover { color: #334B45; } 
 
 
 /* banner see */
@@ -75,7 +75,7 @@ img { width: 100%; display: block; }
 .seen2 .ipad-box { width: 70vw; max-width: 925px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .seen2 .ipad-box .ipad-x { width: 100%; display: block; } 
 .seen2 .ipad-box .ipad-y { width: 100%; display: none; } 
-.seen2 .ipad-box .popup-see-x { position: absolute; top: 0%; right: -12%; cursor: pointer; color: #fff; transition: 0.5s; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; } 
+.seen2 .ipad-box .popup-see-x { position: absolute; top: 0%; right: -12%; cursor: pointer; color: #fff; transition: 0.5s; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; }  
 .seen2 .ipad-box .popup-see-x:hover { box-shadow: 50px 0 0 0 #334B45 inset; } 
 
 /* resume box */

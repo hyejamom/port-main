@@ -441,6 +441,7 @@ $('.ipad-box i').on('click',()=>{
 
 $(section6But).eq(0).on('click',function(){
     $(section6See).eq(0).css({'display':'block'})
+    
 })
 $(section6But).eq(1).on('click',function(){
     $(section6See).eq(1).css({'display':'block'})
