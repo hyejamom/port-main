@@ -29,23 +29,26 @@ $(()=>{
     //modern txt나옴
                 .to('.modern',{ 'transform': 'translateX(0%)', 'opacity':'1', 'display':'block', duration:3 })
     //modern 이미지올라옴 
-                .to('.type_wrap',{ 'transform':'translateY(-33%)', ease: 'none', duration:10, },"<")
+                .to('.type_wrap',{ 'transform':'translateY(-23%)', ease: 'none', duration:10, },"<")
     
     //modern txt 없어짐 + NATUAL txt나옴
                 .to('.modern',{ 'opacity':'0', 'display':'none', duration:3 })
                 .to('.natual',{ 'transform': 'translateX(0%)', 'opacity':'1', 'display':'block', duration:3 },"<")
     //NATUAL 이미지 올라옴 + NATUAL txt나옴
-                .to('.type_wrap',{ 'transform':'translateY(-60%)', ease: 'none', duration:10 })
+                .to('.type_wrap',{ 'transform':'translateY(-49%)', ease: 'none', duration:10 })
     // NATUAL txt없어짐 + classic txt나옴
                 .to('.natual',{ 'opacity':'0', 'display':'none', duration:3 })
                 .to('.classic',{ 'transform': 'translateX(0%)', 'opacity':'1', 'display':'block', duration:3 },"<")
     //classic 이미지 올라옴 
-                .to('.type_wrap',{ 'transform':'translateY(-86.5%)', ease: 'none', duration:10 })
+                .to('.type_wrap',{ 'transform':'translateY(-76%)', ease: 'none', duration:10 })
     // classic txt없어짐 + unique txt나옴
                 .to('.classic',{ 'opacity':'0', 'display':'none', duration:3 })
                 .to('.unique',{ 'transform': 'translateX(0%)', 'opacity':'1', 'display':'block', duration:3 },"<")
     //unique 이미지 올라옴
-                .to('.type_wrap',{ 'transform':'translateY(-113%)', ease: 'none', duration:10 })
+                .to('.type_wrap',{ 'transform':'translateY(-103%)', ease: 'none', duration:10 })
+    //unique 이미지 잠시 멈춤
+                .to('.type_wrap',{ 'transform':'translateY(-103%)', ease: 'none', duration:5 })
+
     // section interiorType 배경 색 변경
     let lifestyleDesignTop = gsap.timeline({
         scrollTrigger: {
@@ -71,7 +74,6 @@ $(()=>{
             pin : true,
             end : '+=9000',
             onUpdate : self =>{
-                console.log(self.progress)
                 if(self.progress > 0.672 && self.progress < 0.68){
                     $('.life_video video').get(0).play();
                 }

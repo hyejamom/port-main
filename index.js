@@ -366,43 +366,76 @@ $(popupImg).children('img').on('click',function(){
 
 
 //section5 go to see click 
-let popupBut1 = '.popup-img-click1'
-let popupBut2 = '.popup-img-click2'
-let popupBut3 = '.popup-img-click3'
-let popupBut4 = '.popup-img-click4'
-let popupBut5 = '.popup-img-click5'
-let popupSee = '.popup-see'
-//0,1,2,3,4 (+1)
-let popupImg1 = '.popup-see1'
 let popupX = '.popup-see-x'
 let popupAll = '.seen1'
-
+let seen1Img = $('.seen1 .ipad-inner-img img')
+let imgAttr1= './img/section3-1.png'
+let imgAttr2= './img/section3-2.png'
+let imgAttr3= './img/section3-3.png'
+let imgAttr4= './img/section3-4.png'
+let imgAttr5= './img/section3-5.png'
+function popupLeftClick(){
+    let attr = seen1Img.attr('src')
+    if(attr == imgAttr1){
+        seen1Img.attr({'src':`./img/section3-5.png`})
+    }
+    else if (attr == imgAttr5){
+        seen1Img.attr({'src':`./img/section3-4.png`})
+    }
+    else if (attr == imgAttr4){
+        seen1Img.attr({'src':`./img/section3-3.png`})
+    }
+    else if (attr == imgAttr3){
+        seen1Img.attr({'src':`./img/section3-2.png`})
+    }
+    else if (attr == imgAttr2){
+        seen1Img.attr({'src':`./img/section3-1.png`})
+    }
+}
+function popupRightClick(){
+    let attr = seen1Img.attr('src')
+    if(attr == imgAttr1){
+        seen1Img.attr({'src':`./img/section3-2.png`})
+    }
+    else if (attr == imgAttr2){
+        seen1Img.attr({'src':`./img/section3-3.png`})
+    }
+    else if (attr == imgAttr3){
+        seen1Img.attr({'src':`./img/section3-4.png`})
+    }
+    else if (attr == imgAttr4){
+        seen1Img.attr({'src':`./img/section3-5.png`})
+    }
+    else if (attr == imgAttr5){
+        seen1Img.attr({'src':`./img/section3-1.png`})
+    }
+}
+// popup 엑스 버튼 누르면 아이패드 사라짐
 $(popupX).on('click',()=>{
     $(popupAll).css({'display':'none'})
 })
-$(popupBut1).on('click',()=>{
-    $(popupSee).children('.popup-see1:nth-of-type(1)').css({'display':'block'})
+//go to see 버튼 누르면 이미지 보임
+$('.popup-img-click1').on('click',function(){
+    let btn = $(this).attr('id') // 1,2,3,4,5
+    $('.popup-see1').css({'display':'block'})
+    $('.seen1 .ipad-inner-img img').attr({'src':`./img/section3-${btn}.png`})
 })
-$(popupBut2).on('click',()=>{
-    $(popupSee).children('.popup-see1:nth-of-type(2)').css({'display':'block'})
+//왼쪽 버튼 누르면 이미지 src 변함
+$('.popup-see-left').on('click',function(){
+    popupLeftClick()
 })
-$(popupBut3).on('click',()=>{
-    $(popupSee).children('.popup-see1:nth-of-type(3)').css({'display':'block'})
+//오른쪽 버튼 누르면 이미지 src 변함
+$('.popup-see-right').on('click',function(){
+    popupRightClick()
 })
-$(popupBut4).on('click',()=>{
-    $(popupSee).children('.popup-see1:nth-of-type(4)').css({'display':'block'})
-})
-$(popupBut5).on('click',()=>{
-    $(popupSee).children('.popup-see1:nth-of-type(5)').css({'display':'block'})
-})
+
 
 
 // section6 이미지 클릭 fade
 let section6Li = '.banner-img-list li'
 let section6Img = '.banner-img li .off'
-let section6Off = '.off'
 let section6on = '.on'
-let section6But = '.banner-img button'
+let section6But = '.section6-but'
 let section6See = '.banner-see1'
 let section6Seen2 = '.seen2'
 
@@ -434,27 +467,81 @@ $(section6Li).on('click',function(){
     }
 })
 
-// section6 button click 
-$('.ipad-box i').on('click',()=>{
+// banner 엑스버튼 누르면 아이패드 사라짐
+let bannerX = '.banner-see-x'
+$(bannerX).on('click',()=>{
     $(section6Seen2).css({'display':'none'})
 })
+//go to see 버튼 누르면 이미지 보임
+$(section6But).on('click',function(){
+    let btn = $(this).attr('id') // 0,1,2,3,4
+    $(section6See).css({'display':'block'})
+    $('.seen2 .ipad-inner-img img').attr({'src':`./img/product${btn}.png`})
+})
+//왼쪽 버튼 누르면 이미지 src 변함
+let seen2Img = $('.seen2 .ipad-inner-img img')
+let bannerImgAttr0 = './img/product0.png'
+let bannerImgAttr1 = './img/product1.png'
+let bannerImgAttr2 = './img/product2.png'
+let bannerImgAttr3 = './img/product3.png'
+let bannerImgAttr4 = './img/product4.png'
+function bannerLeftClick(){
+    let attr = seen2Img.attr('src')
+    if(attr == bannerImgAttr0){
+        seen2Img.attr({'src':`./img/product4.png`})
+    }
+    else if (attr == bannerImgAttr4){
+        seen2Img.attr({'src':`./img/product3.png`})
+    }
+    else if (attr == bannerImgAttr3){
+        seen2Img.attr({'src':`./img/product2.png`})
+    }
+    else if (attr == bannerImgAttr2){
+        seen2Img.attr({'src':`./img/product1.png`})
+    }
+    else if (attr == bannerImgAttr1){
+        seen2Img.attr({'src':`./img/product0.png`})
+    }
+}
+function bannerRightClick(){
+    let attr = seen2Img.attr('src')
+    if(attr == bannerImgAttr0){
+        seen2Img.attr({'src':`./img/product1.png`})
+    }
+    else if (attr == bannerImgAttr1){
+        seen2Img.attr({'src':`./img/product2.png`})
+    }
+    else if (attr == bannerImgAttr2){
+        seen2Img.attr({'src':`./img/product3.png`})
+    }
+    else if (attr == bannerImgAttr3){
+        seen2Img.attr({'src':`./img/product4.png`})
+    }
+    else if (attr == bannerImgAttr4){
+        seen2Img.attr({'src':`./img/product0.png`})
+    }
+}
+$('.banner-see-left').on('click',function(){
+    bannerLeftClick();
+})
+//오른쪽 버튼 누르면 이미지 src 변함
+$('.banner-see-right').on('click',function(){
+    bannerRightClick();
+})
 
-$(section6But).eq(0).on('click',function(){
-    $(section6See).eq(0).css({'display':'block'})
-    
-})
-$(section6But).eq(1).on('click',function(){
-    $(section6See).eq(1).css({'display':'block'})
-})
-$(section6But).eq(2).on('click',function(){
-    $(section6See).eq(2).css({'display':'block'})
-})
-$(section6But).eq(3).on('click',function(){
-    $(section6See).eq(3).css({'display':'block'})
-})
-$(section6But).eq(4).on('click',function(){
-    $(section6See).eq(4).css({'display':'block'})
-})
+
+// $(section6But).eq(1).on('click',function(){
+//     $(section6See).eq(1).css({'display':'block'})
+// })
+// $(section6But).eq(2).on('click',function(){
+//     $(section6See).eq(2).css({'display':'block'})
+// })
+// $(section6But).eq(3).on('click',function(){
+//     $(section6See).eq(3).css({'display':'block'})
+// })
+// $(section6But).eq(4).on('click',function(){
+//     $(section6See).eq(4).css({'display':'block'})
+// })
 
 
 
