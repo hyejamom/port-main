@@ -59,7 +59,7 @@ img { width: 100%; display: block; }
 /* popup see */
 .popup-see .seen1 { width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; z-index: 99; display: none; } 
 .popup-see .seen1 .popup-back { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background-color: #101010; opacity: 0.3; z-index: -1; } 
-.popup-see .seen1 .ipad-inner-img { overflow: auto; z-index: 1; width: 59.5vw; height: 44vw; max-width: 860px; max-height: 595px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
+.popup-see .seen1 .ipad-inner-img { overflow: auto; z-index: 1; width: 59.5vw; height: 44vw; max-width: 794px; max-height: 595px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .popup-see .seen1 .ipad-box { width: 65%; max-width: 860px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) } 
 .popup-see .seen1 .ipad-box .ipad-x { width: 100%; display: block; } 
 .popup-see .seen1 .ipad-box .ipad-y { width: 100%; display: none; } 
@@ -347,10 +347,10 @@ img { width: 100%; display: block; }
  }
 @media (max-width: 1025px) { html { font-size: 16px; } 
 /* popup-see */
-.seen2 .ipad-box { width: 52vw; } 
+.seen2 .ipad-box { width: 68vw; max-width: 500px;} 
 .seen2 .ipad-box .ipad-x { display: none; } 
 .seen2 .ipad-box .ipad-y { display: block; } 
-.seen2 .ipad-inner-img { overflow: auto; width: 46.5vw; height: 76.5vw; } 
+.seen2 .ipad-inner-img { overflow: auto; width: 61vw; max-width: 452px; height: 87.5vw; } 
 
 
 /* portfolio see */
