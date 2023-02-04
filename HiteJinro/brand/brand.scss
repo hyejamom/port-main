@@ -7,15 +7,12 @@
 @mixin flexCenter {display: flex; justify-content: center; align-items: center;}
 @mixin flexAlign {display: flex; align-items: center;}
 @mixin flexJust { display: flex; justify-content: center;}
-
 @mixin heading2 {color:#fff; font-weight:700; font-size:3rem;}
 @mixin txtBox_h2 {font-size:1.8rem; font-weight: 800;}
 @mixin txtBox_p {font-size: 1.2rem; font-weight: 700; color:#aaaaaa;}
 
-
 /* rem control  */
 html{font-size:18px; scroll-behavior: smooth;} 
-
 * { margin: 0px; padding: 0px; box-sizing: border-box; } 
 body { font-family: 'GmarketSansMedium'; overflow-x: hidden; } 
 ::-webkit-scrollbar { width: 15px; } 
@@ -97,7 +94,6 @@ button{background:none; border:none;}
 .scene_content2 .txtBox:hover .brandBox img {filter: brightness(0.5)}
 .scene_content1 .txtBox .brandBox a img:hover {filter: brightness(1)}
 .scene_content2 .txtBox .brandBox a img:hover {filter: brightness(1)}
-
 .scene_content1 .txtBox.whiskeyBox:hover {background-color: #BB2B2B;}
 .scene_content1 .txtBox.sakeBox:hover {background-color: #2DABDF;}
 .scene_content1 .txtBox.internationalBox:hover {background-color: #F68A0A;}
@@ -135,95 +131,91 @@ button{background:none; border:none;}
 
 
 // pc only 
-
 @media screen and (max-width: 1400px){
-    .visual .subMenuList{padding:0 250px;}
-  }
+  .visual .subMenuList{padding:0 250px;}
+}
 
-  @media (max-width: 1200px) { 
-    html { font-size: 15px; } 
-  }
+@media (max-width: 1200px) { 
+  html { font-size: 15px; } 
+}
   
-  @media (max-width: 1025px) { 
-    .mo { display:flex; } 
-    .pc { display:none; } 
-    .header { height:55px; } 
-    .nav { padding:1rem; height:55px; flex-direction: row-reverse; } 
-    .hoverA1.mo { height: 55%; justify-content: space-between; display: flex; flex-direction: column; } 
-    .search { flex-direction: row-reverse; } 
-    .search i{font-size:25px; cursor:pointer;}
-    .search i:nth-of-type(2){margin-right:10px;}
-    .visual .subMenuList{padding:0 80px; top:17vw;}
-    .menu.active{position:absolute; display:block; background:red; right:0; top:0; height:500px;}
-    .visual{padding-top:55px;}
-    .settingClose{position:absolute; top:10px; right:10px; font-size:21px; cursor:pointer;}
-    .fa-bars:before, .fa-navicon:before{display:block;}
-    .tabMenu .tabMenuList {flex-wrap: wrap;}
-    .tabMenu .tabMenuList .tab_menu{height:55px; width: 25%;}
-    .tabMenu .tabMenuList .tab_menu:last-child {margin-right: 25%;}
-    .scene1 {padding: 3.25rem 0px;}
-    .scene_content1 .txtBox > img {width: auto; height: 100%;}
-    .scene_content1 .txtBox.beerBox {box-shadow: 0rem -12rem 0 #ffc100 inset;}
-    .scene_content2 .txtBox.sojuBox {box-shadow: 0rem -12rem 0 #99CC41 inset;}
-    .scene_content1 .txtBox.whiskeyBox {box-shadow: 0rem -12rem 0 #BB2B2B inset;}
-    .scene_content2 .txtBox.wineBox {box-shadow: 0rem -12rem 0 #7436B5 inset;}
-    .scene_content1 .txtBox.sakeBox {box-shadow: 0rem -12rem 0 #2DABDF inset;}
-    .scene_content2 .txtBox.otherBox {box-shadow: 0rem -12rem 0 #FF617F inset;}
-    .scene_content1 .txtBox.internationalBox {box-shadow: 0rem -12rem 0 #F68A0A inset;}
-    .scene_content1 .txtBox.left:hover,
-    .scene_content2 .txtBox.sojuBox:hover,
-    .scene_content1 .txtBox.whiskeyBox:hover,
-    .scene_content2 .txtBox.wineBox:hover,
-    .scene_content1 .txtBox.sakeBox:hover,
-    .scene_content2 .txtBox.otherBox:hover {background-color: transparent;}
-    .scene_content1 .txtBox.left:hover >h2,
-    .scene_content2 .txtBox.sojuBox:hover >h2,
-    .scene_content1 .txtBox.whiskeyBox:hover >h2,
-    .scene_content2 .txtBox.wineBox:hover >h2,
-    .scene_content1 .txtBox.sakeBox:hover >h2,
-    .scene_content2 .txtBox.otherBox:hover >h2 {color: #333;}
-    .scene_content1 .txtBox.left {padding: 5.25rem 0px 5.25rem 2rem;}
-    .scene_content2 .txtBox .brandBox a img {box-shadow: none;}
-    .scene_content1 .txtBox .brandBox a img {box-shadow: none;}
-    .scene_content2 .txtBox > img {width: auto; height: 100%;}
-    .scene_content1:before {width: 0px;}
-    .scene_content2::after {width: 0px;}
-    .scene_content1 .txtBox .brandBox {width: 48vw;}
-    .scene_content2 .txtBox .brandBox {width: 48vw;}
-    .scene_content1 .txtBox {padding: 5.25rem 3.25rem;}
-    .scene_content2 .txtBox {padding: 5.25rem 3.25rem;}
-    .scene_content1 .txtBox .brandBox a {min-width: 30px; width: 17%;}
-    .scene_content2 .txtBox .brandBox a {min-width: 30px; width: 17%;}
-  }
+@media (max-width: 1025px) { 
+  .mo { display:flex; } 
+  .pc { display:none; } 
+  .header { height:55px; } 
+  .nav { padding:1rem; height:55px; flex-direction: row-reverse; } 
+  .hoverA1.mo { height: 55%; justify-content: space-between; display: flex; flex-direction: column; } 
+  .search { flex-direction: row-reverse; } 
+  .search i{font-size:25px; cursor:pointer;}
+  .search i:nth-of-type(2){margin-right:10px;}
+  .visual .subMenuList{padding:0 80px; top:17vw;}
+  .menu.active{position:absolute; display:block; background:red; right:0; top:0; height:500px;}
+  .visual{padding-top:55px;}
+  .settingClose{position:absolute; top:10px; right:10px; font-size:21px; cursor:pointer;}
+  .fa-bars:before, .fa-navicon:before{display:block;}
+  .tabMenu .tabMenuList {flex-wrap: wrap;}
+  .tabMenu .tabMenuList .tab_menu{height:55px; width: 25%;}
+  .tabMenu .tabMenuList .tab_menu:last-child {margin-right: 25%;}
+  .scene1 {padding: 3.25rem 0px;}
+  .scene_content1 .txtBox > img {width: auto; height: 100%;}
+  .scene_content1 .txtBox.beerBox {box-shadow: 0rem -12rem 0 #ffc100 inset;}
+  .scene_content2 .txtBox.sojuBox {box-shadow: 0rem -12rem 0 #99CC41 inset;}
+  .scene_content1 .txtBox.whiskeyBox {box-shadow: 0rem -12rem 0 #BB2B2B inset;}
+  .scene_content2 .txtBox.wineBox {box-shadow: 0rem -12rem 0 #7436B5 inset;}
+  .scene_content1 .txtBox.sakeBox {box-shadow: 0rem -12rem 0 #2DABDF inset;}
+  .scene_content2 .txtBox.otherBox {box-shadow: 0rem -12rem 0 #FF617F inset;}
+  .scene_content1 .txtBox.internationalBox {box-shadow: 0rem -12rem 0 #F68A0A inset;}
+  .scene_content1 .txtBox.left:hover,
+  .scene_content2 .txtBox.sojuBox:hover,
+  .scene_content1 .txtBox.whiskeyBox:hover,
+  .scene_content2 .txtBox.wineBox:hover,
+  .scene_content1 .txtBox.sakeBox:hover,
+  .scene_content2 .txtBox.otherBox:hover {background-color: transparent;}
+  .scene_content1 .txtBox.left:hover >h2,
+  .scene_content2 .txtBox.sojuBox:hover >h2,
+  .scene_content1 .txtBox.whiskeyBox:hover >h2,
+  .scene_content2 .txtBox.wineBox:hover >h2,
+  .scene_content1 .txtBox.sakeBox:hover >h2,
+  .scene_content2 .txtBox.otherBox:hover >h2 {color: #333;}
+  .scene_content1 .txtBox.left {padding: 5.25rem 0px 5.25rem 2rem;}
+  .scene_content2 .txtBox .brandBox a img {box-shadow: none;}
+  .scene_content1 .txtBox .brandBox a img {box-shadow: none;}
+  .scene_content2 .txtBox > img {width: auto; height: 100%;}
+  .scene_content1:before {width: 0px;}
+  .scene_content2::after {width: 0px;}
+  .scene_content1 .txtBox .brandBox {width: 48vw;}
+  .scene_content2 .txtBox .brandBox {width: 48vw;}
+  .scene_content1 .txtBox {padding: 5.25rem 3.25rem;}
+  .scene_content2 .txtBox {padding: 5.25rem 3.25rem;}
+  .scene_content1 .txtBox .brandBox a {min-width: 30px; width: 17%;}
+  .scene_content2 .txtBox .brandBox a {min-width: 30px; width: 17%;}
+}
 
-  @media (max-width: 900px) { 
-  } 
+@media (max-width: 800px) { 
+  html { font-size: 14px; } 
+} 
 
-  @media (max-width: 800px) { 
-    html { font-size: 14px; } 
-  } 
+@media (max-width: 700px) { 
+  html { font-size: 13px; } 
+  .visual .subMenuList .sub_menu a{font-size:13px;}
+  .visual .subMenuList{padding:0 25px}
+} 
 
-  @media (max-width: 700px) { 
-    html { font-size: 13px; } 
-    .visual .subMenuList .sub_menu a{font-size:13px;}
-    .visual .subMenuList{padding:0 25px}
-  } 
-  @media (max-width: 600px) { 
-    html { font-size: 12px; } 
-  } 
-  @media (max-width: 500px) { 
-    html { font-size: 11px; } 
-    .tabMenu .tabMenuList .tab_menu{height:30px; font-size:14px;}
-    .scene_content1 .txtBox .brandBox {min-width: 170px; width: 55vw;}
-    .scene_content2 .txtBox .brandBox {min-width: 170px; width: 55vw;}
-    .scene_content1 .txtBox {padding: 5.25rem 0px 5.25rem 0px;}
-    .scene_content2 .txtBox {padding: 5.25rem 0px 5.25rem 0px;}
-    .scene_content1 .txtBox .beer_img {right: -10%;}
-    .scene_content1 .txtBox .international_img {right: -6%;}
-    
-  } 
+@media (max-width: 600px) { 
+  html { font-size: 12px; } 
+} 
 
-  @media (max-width: 480px) { 
-    html { font-size: 10px; } 
+@media (max-width: 500px) { 
+  html { font-size: 11px; } 
+  .tabMenu .tabMenuList .tab_menu{height:30px; font-size:14px;}
+  .scene_content1 .txtBox .brandBox {min-width: 170px; width: 55vw;}
+  .scene_content2 .txtBox .brandBox {min-width: 170px; width: 55vw;}
+  .scene_content1 .txtBox {padding: 5.25rem 0px 5.25rem 0px;}
+  .scene_content2 .txtBox {padding: 5.25rem 0px 5.25rem 0px;}
+  .scene_content1 .txtBox .beer_img {right: -10%;}
+  .scene_content1 .txtBox .international_img {right: -6%;}
+} 
 
-  }
+@media (max-width: 480px) { 
+  html { font-size: 10px; } 
+}

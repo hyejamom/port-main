@@ -7,15 +7,12 @@
 @mixin flexCenter {display: flex; justify-content: center; align-items: center;}
 @mixin flexAlign {display: flex; align-items: center;}
 @mixin flexJust { display: flex; justify-content: center;}
-
 @mixin heading2 {color:#fff; font-weight:700; font-size:3rem;}
 @mixin txtBox_h2 {font-size:1.8rem; font-weight: 800;}
 @mixin txtBox_p {font-size: 1.2rem; font-weight: 700; color:#aaaaaa;}
 
-
 /* rem control  */
 html{font-size:18px; scroll-behavior: smooth;} 
-
 * { margin: 0px; padding: 0px; box-sizing: border-box; } 
 body { font-family: 'GmarketSansMedium'; overflow-x: hidden;} 
 ::-webkit-scrollbar { width: 15px; } 
@@ -149,91 +146,88 @@ button{background:none; border:none;}
 .section5-icon i:last-child { margin-right: 0px; } 
 
 // pc only 
+@media screen and (max-width: 1400px){
+  .visual .subMenuList{padding:0 250px;}
+}
 
-  @media screen and (max-width: 1400px){
-    .visual .subMenuList{padding:0 250px;}
-  }
+@media (max-width: 1200px) { 
+  html { font-size: 15px; } 
+}
 
-  @media (max-width: 1200px) { 
-    html { font-size: 15px; } 
-  }
+@media (max-width: 1025px) { 
+  .mo { display:flex; } 
+  .pc { display:none; } 
+  .header { height:55px; } 
+  .nav { padding:1rem; height:55px; flex-direction: row-reverse; } 
+  .hoverA1.pc {display: none;}
+  .hoverA1.mo { height: 55%; justify-content: space-between; display: flex; flex-direction: column; } 
+  .search { flex-direction: row-reverse; } 
+  .search i{font-size:25px; cursor:pointer; }
+  .search i:nth-of-type(2){margin-right:10px;}
+  .visual .subMenuList{padding:0 80px; top:17vw;}
+  .menu.active{position:absolute; display:block; right:0; top:0; height:500px;}
+  .visual{padding-top:55px;}
+  .settingClose{position:absolute; top:10px; right:10px; font-size:21px; cursor:pointer;}
+  .fa-bars:before, .fa-navicon:before{display:block;}
+  .scene2 {background: none;}
+  .scene2 .valueBallList{padding-bottom:0;}
+  .scene2 .valueBallList .value_list{margin-bottom:280px; margin-right:0;}
+  .scene2 .valueBallList .value_list:first-of-type{margin-right:50px;}
+  .scene2 .valueBallList .value_list .value_ball{width:27vw; height:27vw; min-width:204px; min-height:204px;}
+  .scene2 .valueBallList .value_wrap{display:flex;}
+  .scene2 .txtBox{margin-bottom:120px;}
+  .scene3 .slide_controller{top:65%; width:63vw}
+  .scene3 .slide_controller img{width:125px;}
+  .scene3 .slide_controller button img{width:20px;}
+  .scene3 .slide_controller .nextSlide{right:0}
+  .scene3 .slide_controller .prevSlide{left:0}
+  .scene3 h2{top:30vw;}
+  .scene4 .listBox{flex-direction: column-reverse;}
+  .scene4 .listBox.even{flex-direction: column;}
+  .scene4 .listBox .txtBox h2 {margin: 15px 0px;}
+  .scene4 .listBox.even .imgBox{padding:0;}
+  .tabMenu .tabMenuList .tab_menu{height:55px;}
+  .tabMenu .tabMenuList .tab_menu{flex:1;}
+}
 
-  @media (max-width: 1025px) { 
-    .mo { display:flex; } 
-    .pc { display:none; } 
-    .header { height:55px; } 
-    .nav { padding:1rem; height:55px; flex-direction: row-reverse; } 
-    .hoverA1.pc {display: none;}
-    .hoverA1.mo { height: 55%; justify-content: space-between; display: flex; flex-direction: column; } 
-    .search { flex-direction: row-reverse; } 
-    .search i{font-size:25px; cursor:pointer; }
-    .search i:nth-of-type(2){margin-right:10px;}
-    .visual .subMenuList{padding:0 80px; top:17vw;}
-    .menu.active{position:absolute; display:block; right:0; top:0; height:500px;}
-    .visual{padding-top:55px;}
-    .settingClose{position:absolute; top:10px; right:10px; font-size:21px; cursor:pointer;}
-    .fa-bars:before, .fa-navicon:before{display:block;}
-    .scene2 {background: none;}
-    .scene2 .valueBallList{padding-bottom:0;}
-    .scene2 .valueBallList .value_list{margin-bottom:280px; margin-right:0;}
-    .scene2 .valueBallList .value_list:first-of-type{margin-right:50px;}
-    .scene2 .valueBallList .value_list .value_ball{width:27vw; height:27vw; min-width:204px; min-height:204px;}
-    .scene2 .valueBallList .value_wrap{display:flex;}
-    .scene2 .txtBox{margin-bottom:120px;}
-    .scene3 .slide_controller{top:65%; width:63vw}
-    .scene3 .slide_controller img{width:125px;}
-    .scene3 .slide_controller button img{width:20px;}
-    .scene3 .slide_controller .nextSlide{right:0}
-    .scene3 .slide_controller .prevSlide{left:0}
-    .scene3 h2{top:30vw;}
-    .scene4 .listBox{flex-direction: column-reverse;}
-    .scene4 .listBox.even{flex-direction: column;}
-    .scene4 .listBox .txtBox h2 {margin: 15px 0px;}
-    .scene4 .listBox.even .imgBox{padding:0;}
-    .tabMenu .tabMenuList .tab_menu{height:55px;}
-    .tabMenu .tabMenuList .tab_menu{flex:1;}
-  }
+@media (max-width: 800px) { 
+  html { font-size: 14px; } 
+} 
 
-  @media (max-width: 900px) { 
-  } 
+@media (max-width: 700px) { 
+  html { font-size: 13px; } 
+  .visual .subMenuList .sub_menu a{font-size:13px;}
+  .visual .subMenuList{padding:0 25px}
+  .scene3 h2{top:35vw; font-size:2rem;}
+} 
 
-  @media (max-width: 800px) { 
-    html { font-size: 14px; } 
-  } 
+@media (max-width: 600px) { 
+  html { font-size: 12px; } 
+  .scene1{margin:50px 0;}
+  .scene2 .valueBallList .value_wrap{display:block;}
+  .scene2 .valueBallList .value_list .value_ball{width:55vw; height:55vw;}
+  .scene2 .valueBallList .value_list:first-of-type{margin-right:0;}
+  .scene3 .slide_controller img{width:100px; margin-bottom:15px;}
+  .scene3 .slide_controller h4{margin-bottom:12px;}
+  .scene3 .slide_controller p{font-size:1.1rem;}
+  .scene3 .slide_controller .nextSlide{top:20%;}
+  .scene3 .slide_controller .prevSlide{top:20%;}
+  .scene2 .valueBallList .value_list{margin-bottom:200px;}
+  .scene2 .valueBallList .value_list .value{top: calc(100% + 20px);}
+  .mo2 {display: none;}
+} 
 
-  @media (max-width: 700px) { 
-    html { font-size: 13px; } 
-    .visual .subMenuList .sub_menu a{font-size:13px;}
-    .visual .subMenuList{padding:0 25px}
-    .scene3 h2{top:35vw; font-size:2rem;}
-  } 
-  @media (max-width: 600px) { 
-    html { font-size: 12px; } 
-    .scene1{margin:50px 0;}
-    .scene2 .valueBallList .value_wrap{display:block;}
-    .scene2 .valueBallList .value_list .value_ball{width:55vw; height:55vw;}
-    .scene2 .valueBallList .value_list:first-of-type{margin-right:0;}
-    .scene3 .slide_controller img{width:100px; margin-bottom:15px;}
-    .scene3 .slide_controller h4{margin-bottom:12px;}
-    .scene3 .slide_controller p{font-size:1.1rem;}
-    .scene3 .slide_controller .nextSlide{top:20%;}
-    .scene3 .slide_controller .prevSlide{top:20%;}
-    .scene2 .valueBallList .value_list{margin-bottom:200px;}
-    .scene2 .valueBallList .value_list .value{top: calc(100% + 20px);}
-    .mo2 {display: none;}
-  } 
-  @media (max-width: 500px) { 
-    html { font-size: 11px; } 
-    .visual h2{top:70%;}
-    .tabMenu .tabMenuList .tab_menu{height:30px; font-size:14px;}
-    .scene3 h2{top:30vw;}
-    .scene4 .listBox .txtBox ul li{margin-bottom:10px;}
-    .scene4 .listBox .txtBox{padding-top:20px;}
-  } 
+@media (max-width: 500px) { 
+  html { font-size: 11px; } 
+  .visual h2{top:70%;}
+  .tabMenu .tabMenuList .tab_menu{height:30px; font-size:14px;}
+  .scene3 h2{top:30vw;}
+  .scene4 .listBox .txtBox ul li{margin-bottom:10px;}
+  .scene4 .listBox .txtBox{padding-top:20px;}
+} 
 
-  @media (max-width: 480px) { 
-    html { font-size: 10px; } 
-
-  }
+@media (max-width: 480px) { 
+  html { font-size: 10px; } 
+}
 
 
