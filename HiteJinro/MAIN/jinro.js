@@ -35,6 +35,7 @@ $(document).ready(function () {
             $(pcMenu).stop().animate({ 'left': '0%' })
         }, 300)
     }
+
     // 메뉴에 호버하면 메뉴 생김
     $(menuPc).children('li').on('mouseenter', function () {
         let hoverMenuIndex = $(this).index(); //0,1,2,3
@@ -49,12 +50,8 @@ $(document).ready(function () {
         setTimeout(function () {
             $(pcMenu).stop().animate({ 'left': '0%' })
         }, 300)
-        // if (hoverMenuIndex <= 3) {
-        //     $(hoverA1).children('a').css({ 'display': 'none' })
-        //     $(hoverA1).children(`a:nth-of-type(${hoverMenuIndex + 1})`).css({ 'display': 'flex' })
-        //     $(hoverMenu).children('img').attr({ 'src': menuImg[hoverMenuIndex] })
-        // }
     })
+    
     //블랙 배경 클릭하면 메뉴 없어짐
     $(pcMenuBack).on('click', function () {
         blackBack();

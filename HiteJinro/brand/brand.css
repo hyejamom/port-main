@@ -109,7 +109,7 @@ button {
   border-bottom: 1px solid #fff;
 }
 
-.pc_menu_back {
+.pc-menu-back {
   -webkit-animation: pcMenuBack 1s;
           animation: pcMenuBack 1s;
   transition: 1s;
@@ -141,7 +141,7 @@ button {
     opacity: 0.7;
   }
 }
-.pc_menu {
+.pc-menu {
   font-family: "GmarketSansMedium";
   position: absolute;
   height: 100vh;
@@ -154,7 +154,8 @@ button {
   padding: 100px 0px 0px 50px;
 }
 
-.pc_menu .hover_menu a {
+.pc-menu .hover-menu a {
+  margin-top: 10px;
   align-items: center;
   color: #333;
   transition: 0.5s;
@@ -164,16 +165,16 @@ button {
   padding: 0px 20px 0px 0px;
 }
 
-.pc_menu .hover_menu a > i {
+.pc-menu .hover-menu a > i {
   opacity: 0;
   transition: 0.5s;
 }
 
-.pc_menu .hover_menu a:hover {
+.pc-menu .hover-menu a:hover {
   color: #018CC7;
 }
 
-.pc_menu .hover_menu a:hover > i {
+.pc-menu .hover-menu a:hover > i {
   opacity: 1;
   -webkit-animation: pcMenu 1s linear infinite;
           animation: pcMenu 1s linear infinite;
@@ -200,15 +201,15 @@ button {
     opacity: 1;
   }
 }
-.pc_menu .hover_menu img {
+.pc-menu .hover-menu img {
   width: 300px;
 }
 
-.pc_menu.on {
+.pc-menu.on {
   transform: translateX(-100%);
 }
 
-.hover_menu {
+.hover-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -216,8 +217,6 @@ button {
 
 .hoverA1 {
   width: 100%;
-  height: 35px;
-  overflow: hidden;
 }
 
 .hoverA1.mo {

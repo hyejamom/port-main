@@ -34,22 +34,22 @@ button{background:none; border:none;}
 /* header */
 .header { z-index: 99; width: 100%; font-family: 'HarmonyM'; position: fixed; top:0; height:100px; } 
 .nav { width: 100%; padding: 1rem 8.11rem; margin: 0px auto; display: flex; justify-content: space-between; align-items: center; background-color: #fff; height: 100px; border-bottom: 1px solid #fff; } 
-.pc_menu_back { animation: pcMenuBack 1s; transition: 1s; width: 100vw; height: 100vh; background-color: black; position: absolute; top: 0px; left: 0px; z-index: -1; opacity: 0.7; display: none; } 
+.pc-menu-back { animation: pcMenuBack 1s; transition: 1s; width: 100vw; height: 100vh; background-color: black; position: absolute; top: 0px; left: 0px; z-index: -1; opacity: 0.7; display: none; } 
 @keyframes pcMenuBack { 
  0% { opacity: 0; } 100% { opacity: 0.7; } 
  } 
-.pc_menu { font-family: 'GmarketSansMedium'; position: absolute; height: 100vh; width: 450px; z-index: 1; background-color: #fff; top: 0px; left: -450px; z-index: -1; padding: 100px 0px 0px 50px } 
-.pc_menu .hover_menu a { align-items: center; color: #333; transition: 0.5s; font-size: 25px; display: flex; justify-content: space-between; padding: 0px 20px 0px 0px; } 
-.pc_menu .hover_menu a>i { opacity: 0; transition: 0.5s; } 
-.pc_menu .hover_menu a:hover { color: #018CC7 } 
-.pc_menu .hover_menu a:hover >i { opacity: 1; animation: pcMenu 1s linear infinite; } 
+.pc-menu { font-family: 'GmarketSansMedium'; position: absolute; height: 100vh; width: 450px; z-index: 1; background-color: #fff; top: 0px; left: -450px; z-index: -1; padding: 100px 0px 0px 50px } 
+.pc-menu .hover-menu a {margin-top: 10px; align-items: center; color: #333; transition: 0.5s; font-size: 25px; display: flex; justify-content: space-between; padding: 0px 20px 0px 0px; } 
+.pc-menu .hover-menu a>i { opacity: 0; transition: 0.5s; } 
+.pc-menu .hover-menu a:hover { color: #018CC7 } 
+.pc-menu .hover-menu a:hover >i { opacity: 1; animation: pcMenu 1s linear infinite; } 
 @keyframes pcMenu { 
  0% { margin-right: 20px; opacity: 0; } 100% { margin-right: 0px; opacity: 1; } 
  } 
-.pc_menu .hover_menu img { width: 300px; } 
-.pc_menu.on { transform: translateX(-100%); } 
-.hover_menu { display: flex; flex-direction: column; justify-content: space-between; } 
-.hoverA1 { width: 100%; height: 35px; overflow: hidden; } 
+.pc-menu .hover-menu img { width: 300px; } 
+.pc-menu.on { transform: translateX(-100%); } 
+.hover-menu { display: flex; flex-direction: column; justify-content: space-between; } 
+.hoverA1 { width: 100%;} 
 .hoverA1.mo { height: auto; justify-content: space-around; display: none;} 
 .hoverA1.mo a:hover {color: #018CC7;}
 .nav a { font-size: 20px; white-space: nowrap; } 

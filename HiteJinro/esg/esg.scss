@@ -40,7 +40,7 @@ section{margin-bottom:200px;}
  0% { opacity: 0; } 100% { opacity: 0.7; } 
  } 
 .pc-menu { font-family: 'GmarketSansMedium'; position: absolute; height: 100vh; width: 450px; z-index: 1; background-color: #fff; top: 0px; left: -450px; z-index: -1; padding: 100px 0px 0px 50px } 
-.pc-menu .hover-menu a { align-items: center; color: #333; transition: 0.5s; font-size: 25px; display: flex; justify-content: space-between; padding: 0px 20px 0px 0px; } 
+.pc-menu .hover-menu a {margin-top: 10px; align-items: center; color: #333; transition: 0.5s; font-size: 25px; display: flex; justify-content: space-between; padding: 0px 20px 0px 0px; } 
 .pc-menu .hover-menu a>i { opacity: 0; transition: 0.5s; } 
 .pc-menu .hover-menu a:hover { color: #018CC7 } 
 .pc-menu .hover-menu a:hover >i { opacity: 1; animation: pcMenu 1s linear infinite; } 
@@ -50,7 +50,7 @@ section{margin-bottom:200px;}
 .pc-menu .hover-menu img { width: 300px; } 
 .pc-menu.on { transform: translateX(-100%); } 
 .hover-menu { display: flex; flex-direction: column; justify-content: space-between;} 
-.hoverA1 { width: 100%; height: 35px; overflow: hidden; } 
+.hoverA1 { width: 100%; } 
 .hoverA1.mo { height: auto; justify-content: space-around; display: none;} 
 .hoverA1.mo a:hover {color: #018CC7;}
 .nav a { font-size: 20px; white-space: nowrap; } 
