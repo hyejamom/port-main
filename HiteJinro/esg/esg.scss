@@ -143,6 +143,7 @@ section{margin-bottom:200px;}
 .section5-icon i { font-size: 1.5rem; margin-right: 20px; } 
 .section5-icon i:last-child { margin-right: 0px; } 
 
+
 // pc only 
 .fa-bars:before, .fa-navicon:before{display:none;}
 @media screen and (max-width:1600px){
@@ -165,7 +166,7 @@ section{margin-bottom:200px;}
   .scene5{padding:0 7vw;}
 }
 
-//  * 탭 사이즈 */
+// tab size
 @media screen and (max-width: 1025px) { 
   html { font-size: 16px; } 
   .mo { display:flex; } 
@@ -253,7 +254,7 @@ section{margin-bottom:200px;}
   .tabMenu .tabMenuList .tab_menu{ text-align: center; height: 30px; font-size:14px;}
 } 
 
-/* 모바일사이즈 */
+/* mobile */
 @media screen and (max-width: 480px) { 
   html { font-size: 10px; } 
   .scene4 .toZeroWrap .toZeroLists{width:80%;}
