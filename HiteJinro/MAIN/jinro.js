@@ -38,6 +38,8 @@ $(document).ready(function () {
     // 메뉴에 호버하면 메뉴 생김
     $(menuPc).children('li').on('mouseenter', function () {
         let hoverMenuIndex = $(this).index(); //0,1,2,3
+        $('.hover-menu').css({'display':'none'})
+        $(`.hover-menu:nth-of-type(${hoverMenuIndex+1})`).css({'display':'block'})
         $(pcMenuBack).css({ 'opacity': '0.7' })
         $(pcMenuBack).css({ 'display': 'block' })
         $(nav).css({ 'background-color': '#fff' })
@@ -47,11 +49,11 @@ $(document).ready(function () {
         setTimeout(function () {
             $(pcMenu).stop().animate({ 'left': '0%' })
         }, 300)
-        if (hoverMenuIndex <= 3) {
-            $(hoverA1).children('a').css({ 'display': 'none' })
-            $(hoverA1).children(`a:nth-of-type(${hoverMenuIndex + 1})`).css({ 'display': 'flex' })
-            $(hoverMenu).children('img').attr({ 'src': menuImg[hoverMenuIndex] })
-        }
+        // if (hoverMenuIndex <= 3) {
+        //     $(hoverA1).children('a').css({ 'display': 'none' })
+        //     $(hoverA1).children(`a:nth-of-type(${hoverMenuIndex + 1})`).css({ 'display': 'flex' })
+        //     $(hoverMenu).children('img').attr({ 'src': menuImg[hoverMenuIndex] })
+        // }
     })
     //블랙 배경 클릭하면 메뉴 없어짐
     $(pcMenuBack).on('click', function () {
