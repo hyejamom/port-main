@@ -1,10 +1,9 @@
 $(document).ready(function () {
 
 
-
+    //윈도우 사이즈가 변경될때 footerHight 높이 자동 변경
     $(window).on('resize', () => {
         let footerHeight = $('footer').innerHeight();
-        console.log(footerHeight)
     })
 
     //header 네비게이션버튼
@@ -14,19 +13,20 @@ $(document).ready(function () {
     let nav = '#nav' //네부
     let headerHeight = document.querySelector('#header').offsetHeight; //헤더높이
 
-    $(downBtn).on('click', function () { //아래쪽버튼클릭
+    //nav 아래쪽 버튼 클릭
+    $(downBtn).on('click', function () {
         $(this).css({ 'display': 'none' })
         $(upBtn).css({ 'display': 'block' })
         $(header).animate({ 'top': '0px' })
         $(nav).removeClass('on')
     })
-    $(upBtn).on('click', function () { //위쪽버튼클릭
+    // nav 위쪽 버튼 클릭
+    $(upBtn).on('click', function () {
         $(this).css({ 'display': 'none' })
         $(downBtn).css({ 'display': 'block' })
         $(header).animate({ 'top': '-100px' })
         $(nav).addClass('on')
     })
-
 
     //구간별 height
     let visualHeight = $('#visual').outerHeight()
@@ -39,7 +39,7 @@ $(document).ready(function () {
     let scrollSection6 = section1Height + section2Height + section3Height + section4Height + section5Height
 
 
-    //오른쪽 아래 menu
+    //오른쪽 아래 fixed menu
     let menu = '.side-menu-box' //메뉴전체
     let menuClick = '.side-menu' //메뉴
     let menuOpen = '.side-menu-open' //오픈될메뉴
@@ -47,7 +47,7 @@ $(document).ready(function () {
     let xShape = '.fa-xmark.x' //엑스아이콘
     let menuControl = 1;
 
-    //오른쪽 아래 fixed 메뉴 클릭
+    //오른쪽 아래 fixed menu 클릭
     $(menuClick).on('click', function () { //메뉴를클릭
         if (menuControl == 1) { //오픈될메뉴-오픈
             $(menuOpen).addClass('on')
@@ -67,7 +67,6 @@ $(document).ready(function () {
         }
     })
 
-
     //오른쪽 아래 menu hover할때
     $(menu).on('mouseover', () => {
         $(menu).removeClass('on')
@@ -80,7 +79,6 @@ $(document).ready(function () {
         }
     })
 
-
     // 포트폴리오 슬라이드
     let portNext = '.port-next' //오른쪽버튼
     let portPrev = '.port-prev' //왼쪽버튼
@@ -91,7 +89,6 @@ $(document).ready(function () {
     let portTitle = '.port-text' //title p와 h3
     let portTitleList = ['HITE JINRO', 'HANSSEM', 'SEOUL FOOD'] //바뀔내용
 
-
     //section4 오른쪽으로 움직임 변수
     let portNextStart = function () {
         $(portSlide).stop().animate({ 'left': '-160%' }, () => {
@@ -99,6 +96,7 @@ $(document).ready(function () {
             $(portSlide).children('li').first().appendTo(portSlide)
         })
     }
+
     //section4 왼쪽으로 움직임 변수
     let portPrevStart = function () {
         $(portSlide).stop().animate({ 'left': '-40%' }, () => {
@@ -107,10 +105,8 @@ $(document).ready(function () {
         })
     }
 
-
     // section4 portfolio 오른쪽버튼 클릭
     $(portNext).on('click', function () {
-        // portNextStart();
         if (port <= 1) {
             port++;
             $(portSlide).animate({ 'left': `${8.5 + (-83.5 * port)}%` })
@@ -138,10 +134,9 @@ $(document).ready(function () {
             $(`.video1`).get(0).play();
         }
     })
+
     // section4 portfolio 왼쪽버튼 클릭 
     $(portPrev).on('click', function () {
-        // portPrevStart();
-        console.log(port)
         if (port == 0) {
             port = 2;
             $(portSlide).animate({ 'left': `${8.5 + (-83.5 * port)}%` })
@@ -168,21 +163,19 @@ $(document).ready(function () {
         }
     })
 
-
-    //section4 사진 hover하면 비디오 나오게 하기
+    //section4 사진 hover하면 비디오 나옴
     $(portSlideLi).on('mouseover', function () {
         $(this).children('video').css({ 'opacity': '1' })
     })
+    //section4 사진 mouseleave하면 비디오 없어짐
     $(portSlideLi).on('mouseleave', function () {
         $(this).children('video').css({ 'opacity': '0' })
     })
-
 
     //section4 첫번째 li hover하면 video start
     $('.port-slide li:nth-of-type(1)').on('mouseover', () => {
         $('.video1').get(0).play();
     })
-
 
     //section4 PLANNING
     let seoulFood = '.seoul-food' //panning 버튼
@@ -202,18 +195,21 @@ $(document).ready(function () {
         $(html).css({ 'overflow': 'hidden' })
         $(portfolioSee1).addClass('on')
     })
+
     //하이트진로 포트폴리오 열리는 버튼
     $(hiteJinro).on('click', () => {
         $(body).css({ 'overflow': 'hidden' })
         $(html).css({ 'overflow': 'hidden' })
         $(portfolioSee2).addClass('on')
     })
+
     //한샘 포트폴리오 열리는 버튼
     $(hanssem).on('click', () => {
         $(body).css({ 'overflow': 'hidden' })
         $(html).css({ 'overflow': 'hidden' })
         $(portfolioSee3).addClass('on')
     })
+
     //엑스버튼 누르면 포트폴리오창 닫히는 버튼
     $(portfolioBut).on('click', () => {
         $(body).css({ 'overflow': 'auto' })
@@ -221,10 +217,7 @@ $(document).ready(function () {
         $(allSeen).removeClass('on')
     })
 
-
-
-
-    // 😁😁section5 popup slide 변수
+    // section5 popup slide 변수
     let popupNext = '.popup-right >i:nth-of-type(2)'
     let popupPrev = '.popup-right >i:nth-of-type(1)'
     let popupSlide = '.popup-slide'
@@ -301,7 +294,6 @@ $(document).ready(function () {
         }
     }
 
-
     //section5 자동 움직임 function
     function popupStart() {
         popupStop = setInterval(() => {
@@ -311,7 +303,6 @@ $(document).ready(function () {
 
     //section5 자동움직임 시작
     popupStart();
-
 
     // section5 popup 오른쪽버튼 클릭
     $(popupNext).on('click', function () {
@@ -331,6 +322,7 @@ $(document).ready(function () {
     let popupH3 = '.popup-title >div h3'
     let popupP = '.popup-title >p'
 
+    //section5 작은 img 클릭하면 슬라이드 움직임
     $(popupImg).children('img').on('click', function () {
         let popupImgIndex = $(this).index();
         clearInterval(popupStop);
@@ -363,7 +355,6 @@ $(document).ready(function () {
         popupStart();
     })
 
-
     //section5 go to see click 
     let popupX = '.popup-see-x'
     let popupAll = '.seen1'
@@ -373,6 +364,8 @@ $(document).ready(function () {
     let imgAttr3 = './img/section3-3.png'
     let imgAttr4 = './img/section3-4.png'
     let imgAttr5 = './img/section3-5.png'
+
+    //section5 left arrow click 변수
     function popupLeftClick() {
         let attr = seen1Img.attr('src')
         if (attr == imgAttr1) {
@@ -391,6 +384,8 @@ $(document).ready(function () {
             seen1Img.attr({ 'src': `./img/section3-1.png` })
         }
     }
+
+    //section5 right arrow click 변수
     function popupRightClick() {
         let attr = seen1Img.attr('src')
         if (attr == imgAttr1) {
@@ -409,26 +404,27 @@ $(document).ready(function () {
             seen1Img.attr({ 'src': `./img/section3-1.png` })
         }
     }
-    // popup 엑스 버튼 누르면 아이패드 사라짐
-    $(popupX).on('click', () => {
-        $(popupAll).css({ 'display': 'none' })
-    })
-    //go to see 버튼 누르면 이미지 보임
+
+    //section5 go to see 버튼 누르면 ipad 이미지 보임
     $('.popup-img-click1').on('click', function () {
         let btn = $(this).attr('id') // 1,2,3,4,5
         $('.popup-see1').css({ 'display': 'block' })
         $('.seen1 .ipad-inner-img img').attr({ 'src': `./img/section3-${btn}.png` })
     })
-    //왼쪽 버튼 누르면 이미지 src 변함
+
+    // section5 ipad 엑스 버튼 누르면 아이패드 사라짐
+    $(popupX).on('click', () => {
+        $(popupAll).css({ 'display': 'none' })
+    })
+
+    //section5 왼쪽 버튼 누르면 이미지 src 변함
     $('.popup-see-left').on('click', function () {
         popupLeftClick()
     })
-    //오른쪽 버튼 누르면 이미지 src 변함
+    //section5 오른쪽 버튼 누르면 이미지 src 변함
     $('.popup-see-right').on('click', function () {
         popupRightClick()
     })
-
-
 
     // section6 이미지 클릭 fade
     let section6Li = '.banner-img-list li'
@@ -440,6 +436,7 @@ $(document).ready(function () {
     let section6H3 = '.banner-text h3'
     let section6P = '.banner-text-con p'
     let bannerMainImg = '.banner-main-img'
+    let section6Num = 0;
     let section6H3Text = ['LALA LAND', '댕댕이데이', 'NAKE', '제로웨이스트', '우주 세일 포스터']
     let section6PText = [
         '라라랜드의 명장면인 키스신과 춤추는 장면을 일러스트로 표현한 라라랜드 포스터입니다. 라라랜드를 본 관객이라면 그림을 보고도 바로 영화를 생각해 낼수 있는 두 명장면을 적절히 조합해 표현해 보았습니다.',
@@ -448,9 +445,8 @@ $(document).ready(function () {
         '제로웨이스트를 실천하자는 의미의 포스터입니다. 그린색을 메인컬러로 설정해 친환경 느낌을 주었고, 파란색으로 뚜렷한 선 또는 강조하고 싶은 부분을 적절히 표현하였습니다.',
         '우주만큼 폭 넓고 많은 세일을 한다는 의미의 홍보 포스터입니다. 파란색 배경을 그라데이션으로 설정해 우주의 느낌을 주었고 타이틀은 네온컬러로 설정해 집중도를 높혔습니다.'
     ]
-    let section6Num = 0;
 
-
+    //section6 자동 fadeIn fadeOut
     function section6Start() {
         section6Stop = setInterval(function () {
             if (section6Num <= 3) {
@@ -476,6 +472,7 @@ $(document).ready(function () {
         }, 5000)
     }
 
+    //section6 setInterval start
     section6Start();
 
     //section6 img click fadeIn fadeOut
@@ -501,18 +498,17 @@ $(document).ready(function () {
         section6Start()
     })
 
-
-    // banner 엑스버튼 누르면 아이패드 사라짐
-    let bannerX = '.banner-see-x'
-    $(bannerX).on('click', () => {
-        $(section6Seen2).css({ 'display': 'none' })
-    })
-
-    //go to see 버튼 누르면 이미지 보임
+    //section6 go to see 버튼 누르면 이미지 보임
     $(section6But).on('click', function () {
         let btn = $(this).attr('id') // 0,1,2,3,4
         $(section6See).css({ 'display': 'block' })
         $('.seen2 .ipad-inner-img img').attr({ 'src': `./img/product${btn}.png` })
+    })
+
+    // section6 ipad x button click 아이패드 사라짐
+    let bannerX = '.banner-see-x'
+    $(bannerX).on('click', () => {
+        $(section6Seen2).css({ 'display': 'none' })
     })
 
     //section6 ipad
@@ -573,21 +569,6 @@ $(document).ready(function () {
         bannerRightClick();
     })
 
-
-    //footer 포트폴리오를 봐주셔서 감사합니다
-    // let lastScroll = 0;
-    // let value;
-    // let moveFooter = $('.thanks-box h2')
-    // 
-    // $(window).on('scroll', function () {
-    //     let scrollTop = $(this).scrollTop();
-    //     if (scrollTop >= scrollSection6) {
-    //         value = (window.pageYOffset - scrollSection6);
-    //         moveFooter.css({ 'transform': `translateX(${-value + footerheight}px)` })
-    //     }
-    // })
-
-
     //footer resume
     let resumeBtn = '.resume-btn'
     let resumeModal = '.resume-modal'
@@ -605,10 +586,18 @@ $(document).ready(function () {
     })
 
 
-
-
-
-
+    //footer 포트폴리오를 봐주셔서 감사합니다
+    // let lastScroll = 0;
+    // let value;
+    // let moveFooter = $('.thanks-box h2')
+    // 
+    // $(window).on('scroll', function () {
+    //     let scrollTop = $(this).scrollTop();
+    //     if (scrollTop >= scrollSection6) {
+    //         value = (window.pageYOffset - scrollSection6);
+    //         moveFooter.css({ 'transform': `translateX(${-value + footerheight}px)` })
+    //     }
+    // })
 
 
 })
