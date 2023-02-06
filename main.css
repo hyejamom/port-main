@@ -309,7 +309,8 @@ img { width: 100%; display: block; }
 #banner-wrap .banner-content .banner .banner-img .section6-but.on { display: block; } 
 #banner-wrap .banner-content .banner .banner-img-list { width: 100%; margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; } 
 #banner-wrap .banner-content .banner .banner-img-list li { width: 19%; cursor: pointer; } 
-#banner-wrap .banner-content .banner .banner-img-list img { box-shadow: 10px 10px 10px lightgray; } 
+#banner-wrap .banner-content .banner .banner-img-list li.on img {filter: brightness(1);} 
+#banner-wrap .banner-content .banner .banner-img-list img { box-shadow: 10px 10px 10px lightgray; filter: brightness(0.5);} 
 #banner-wrap .banner-content .banner-text-box { width: 25%; } 
 #banner-wrap .banner-content .banner-text-box .banner-text { width: 100%; margin: 1.5rem 0px; letter-spacing: -2px; display: flex; justify-content: center; flex-direction: column; } 
 #banner-wrap .banner-content .banner-text-box .banner-text p { letter-spacing: 0.2px; font-size: 1.3rem; color: #BCA2CE; font-family: 'twaysky'; } 

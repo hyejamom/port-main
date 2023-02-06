@@ -438,12 +438,7 @@ let section6on = '.on'
 let section6But = '.section6-but'
 let section6See = '.banner-see1'
 let section6Seen2 = '.seen2'
-
-$(section6Li).on('click',function(){
-    let section6Index = $(this).index();//0,1,2,3,4
-    let section6On = $(section6Img).eq(section6Index).hasClass('on')
-    let section6Add = $(section6Img).eq(section6Index)
-    let section6H3 = '.banner-text h3'
+let section6H3 = '.banner-text h3'
     let section6P = '.banner-text-con p'
     let section6H3Text = ['LALA LAND', '댕댕이데이', 'NAKE', '제로웨이스트', '우주 세일 포스터']
     let section6PText = [
@@ -453,6 +448,12 @@ $(section6Li).on('click',function(){
         '제로웨이스트를 실천하자는 의미의 포스터입니다. 그린색을 메인컬러로 설정해 친환경 느낌을 주었고, 파란색으로 뚜렷한 선 또는 강조하고 싶은 부분을 적절히 표현하였습니다.',
         '우주만큼 폭 넓고 많은 세일을 한다는 의미의 홍보 포스터입니다. 파란색 배경을 그라데이션으로 설정해 우주의 느낌을 주었고 타이틀은 네온컬러로 설정해 집중도를 높혔습니다.'
     ]
+
+//section6 img click fadeIn fadeOut
+$(section6Li).on('click',function(){
+    let section6Index = $(this).index();//0,1,2,3,4
+    let section6On = $(section6Img).eq(section6Index).hasClass('on')
+    let section6Add = $(section6Img).eq(section6Index)
 
     if(section6On==true){}
     else {
