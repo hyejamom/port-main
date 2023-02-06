@@ -129,7 +129,7 @@ img { width: 100%; display: block; }
 #header #nav .menu a { height: 80%; transition: 0.5s; border-bottom: 1px solid transparent; padding-bottom: 3px; display: flex; align-items: flex-end; margin-left: 1.3rem; cursor: pointer; color: #fff; } 
 #header #nav .menu a:hover { border-bottom: 1px solid #fff; } 
 #header #nav .menu a>img { width: 25px; margin-right: 5px; } 
-#header #nav .nav-btn { cursor: pointer; width: 30px; height: 25px; color: #BCA2CE; box-shadow: 5px 5px 10px lightgray; border-radius: 0px 0px 10px 10px; border: 1px solid #BCA2CE; background-color: #fff; position: absolute; left: 50%; bottom: -24px; transform: translateX(-50%); } 
+#header #nav .nav-btn { cursor: pointer; width: 30px; height: 25px; color: #BCA2CE; border-radius: 0px 0px 10px 10px; border: 1px solid #BCA2CE; background-color: #fff; position: absolute; left: 50%; bottom: -24px; transform: translateX(-50%); } 
 #header #nav .nav-btn i { position: absolute; top: 40%; left: 50%; transform: translate(-50%,-40%); } 
 #header #nav .nav-btn i:nth-of-type(1) { display: block; } 
 #header #nav .nav-btn i:nth-of-type(2) { display: none; } 
@@ -298,11 +298,11 @@ img { width: 100%; display: block; }
 #banner-wrap .banner-content .banner .banner-img:hover .hover-box { opacity: 0; } 
 #banner-wrap .banner-content .banner .banner-img:hover img { filter: brightness(0.5); } 
 #banner-wrap .banner-content .banner .banner-img:hover button { opacity: 1; } 
-#banner-wrap .banner-content .banner .banner-img li { box-shadow: 10px 10px 10px lightgray; position: relative; } 
-#banner-wrap .banner-content .banner .banner-img li img { transition: 0.5s; } 
-#banner-wrap .banner-content .banner .banner-img li .off { position: absolute; top: 0px; left: 0px; opacity: 0; } 
-#banner-wrap .banner-content .banner .banner-img li .on { opacity: 1; } 
-#banner-wrap .banner-content .banner .banner-img li img:nth-of-type(1) { position: inherit; display: block; opacity: 0; } 
+#banner-wrap .banner-content .banner .banner-img .banner-main-img { box-shadow: 10px 10px 10px lightgray; position: relative; } 
+#banner-wrap .banner-content .banner .banner-img .banner-main-img img { transition: 0.5s; } 
+#banner-wrap .banner-content .banner .banner-img .banner-main-img .off { position: absolute; top: 0px; left: 0px; opacity: 0; } 
+#banner-wrap .banner-content .banner .banner-img .banner-main-img .on { opacity: 1; } 
+#banner-wrap .banner-content .banner .banner-img .banner-main-img img:nth-of-type(1) { position: inherit; display: block; opacity: 0; } 
 #banner-wrap .banner-content .banner .banner-img .section6-but { transition: 0.5s; cursor: pointer; width: 10rem; max-width: 200px; opacity: 0; color: #fff; border: 2px solid #fff; background-color: transparent; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); height: 50px; padding: 10px 15px; border-radius: 0.5rem; } 
 #banner-wrap .banner-content .banner .banner-img .section6-but:hover { box-shadow: 200px 0 0 0 #334B45 inset; border: 2px solid #334B45; } 
 #banner-wrap .banner-content .banner .banner-img .section6-but { display: none; opacity: 0; } 
@@ -310,7 +310,7 @@ img { width: 100%; display: block; }
 #banner-wrap .banner-content .banner .banner-img-list { width: 100%; margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; } 
 #banner-wrap .banner-content .banner .banner-img-list li { width: 19%; cursor: pointer; } 
 #banner-wrap .banner-content .banner .banner-img-list li.on img {filter: brightness(1);} 
-#banner-wrap .banner-content .banner .banner-img-list img { box-shadow: 10px 10px 10px lightgray; filter: brightness(0.5);} 
+#banner-wrap .banner-content .banner .banner-img-list img { box-shadow: 5px 5px 5px lightgray; filter: brightness(0.5);} 
 #banner-wrap .banner-content .banner-text-box { width: 25%; } 
 #banner-wrap .banner-content .banner-text-box .banner-text { width: 100%; margin: 1.5rem 0px; letter-spacing: -2px; display: flex; justify-content: center; flex-direction: column; } 
 #banner-wrap .banner-content .banner-text-box .banner-text p { letter-spacing: 0.2px; font-size: 1.3rem; color: #BCA2CE; font-family: 'twaysky'; } 

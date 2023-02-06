@@ -302,7 +302,6 @@ let popupPrevStart = ()=>{
 }
 
 
-
 //section5 자동 움직임 function
 function popupStart(){
     popupStop = setInterval(()=>{
@@ -439,15 +438,45 @@ let section6But = '.section6-but'
 let section6See = '.banner-see1'
 let section6Seen2 = '.seen2'
 let section6H3 = '.banner-text h3'
-    let section6P = '.banner-text-con p'
-    let section6H3Text = ['LALA LAND', '댕댕이데이', 'NAKE', '제로웨이스트', '우주 세일 포스터']
-    let section6PText = [
-        '라라랜드의 명장면인 키스신과 춤추는 장면을 일러스트로 표현한 라라랜드 포스터입니다. 라라랜드를 본 관객이라면 그림을 보고도 바로 영화를 생각해 낼수 있는 두 명장면을 적절히 조합해 표현해 보았습니다.',
-        '할인 행사나 페스티벌에 사용하기 좋은 용도로 제작된 댕댕이 맞이 기념 포스터입니다. 노란 컬러를 메인으로 설정해 밝고 통통튀는 느낌을 주었습니다.',
-        'JUST DO IT이라는 나이키의 슬로건에 맞는 역동적인 홍보 포스터 입니다. 주력 상품인 운동화를 메인으로 잡아 농구선수를 모델로 선정했고, 농구공의 컬러인 주황색만 강조해 무채색의 포스터에 포인트감을 주었습니다.',
-        '제로웨이스트를 실천하자는 의미의 포스터입니다. 그린색을 메인컬러로 설정해 친환경 느낌을 주었고, 파란색으로 뚜렷한 선 또는 강조하고 싶은 부분을 적절히 표현하였습니다.',
-        '우주만큼 폭 넓고 많은 세일을 한다는 의미의 홍보 포스터입니다. 파란색 배경을 그라데이션으로 설정해 우주의 느낌을 주었고 타이틀은 네온컬러로 설정해 집중도를 높혔습니다.'
-    ]
+let section6P = '.banner-text-con p'
+let bannerMainImg = '.banner-main-img'
+let section6H3Text = ['LALA LAND', '댕댕이데이', 'NAKE', '제로웨이스트', '우주 세일 포스터']
+let section6PText = [
+    '라라랜드의 명장면인 키스신과 춤추는 장면을 일러스트로 표현한 라라랜드 포스터입니다. 라라랜드를 본 관객이라면 그림을 보고도 바로 영화를 생각해 낼수 있는 두 명장면을 적절히 조합해 표현해 보았습니다.',
+    '할인 행사나 페스티벌에 사용하기 좋은 용도로 제작된 댕댕이 맞이 기념 포스터입니다. 노란 컬러를 메인으로 설정해 밝고 통통튀는 느낌을 주었습니다.',
+    'JUST DO IT이라는 나이키의 슬로건에 맞는 역동적인 홍보 포스터 입니다. 주력 상품인 운동화를 메인으로 잡아 농구선수를 모델로 선정했고, 농구공의 컬러인 주황색만 강조해 무채색의 포스터에 포인트감을 주었습니다.',
+    '제로웨이스트를 실천하자는 의미의 포스터입니다. 그린색을 메인컬러로 설정해 친환경 느낌을 주었고, 파란색으로 뚜렷한 선 또는 강조하고 싶은 부분을 적절히 표현하였습니다.',
+    '우주만큼 폭 넓고 많은 세일을 한다는 의미의 홍보 포스터입니다. 파란색 배경을 그라데이션으로 설정해 우주의 느낌을 주었고 타이틀은 네온컬러로 설정해 집중도를 높혔습니다.'
+]
+let section6Num = 0;
+
+
+function section6Start(){
+    section6Stop = setInterval(function(){
+        if(section6Num<=3){
+            section6Num++;
+            $(bannerMainImg).children('img').removeClass('on')
+            $(bannerMainImg).children(`img:nth-of-type(${section6Num+2})`).addClass('on')
+            $(section6H3).text(section6H3Text[section6Num]);
+            $(section6P).text(section6PText[section6Num]);
+            $(section6Li).removeClass('on')
+            $(section6Li).eq(section6Num).addClass('on')
+            $('.banner-img button').removeClass('on')
+            $(`.banner-img button:nth-of-type(${section6Num+1})`).addClass('on')
+        }
+        else if(section6Num==4){
+            section6Num = 0;
+            $(bannerMainImg).children('img').removeClass('on')
+            $(bannerMainImg).children(`img:nth-of-type(${section6Num+2})`).addClass('on')
+            $(section6Li).removeClass('on')
+            $(section6Li).eq(section6Num).addClass('on')
+            $('.banner-img button').removeClass('on')
+            $(`.banner-img button:nth-of-type(${section6Num+1})`).addClass('on')
+        }
+    },5000)
+}
+
+section6Start();
 
 //section6 img click fadeIn fadeOut
 $(section6Li).on('click',function(){
@@ -455,18 +484,26 @@ $(section6Li).on('click',function(){
     let section6On = $(section6Img).eq(section6Index).hasClass('on')
     let section6Add = $(section6Img).eq(section6Index)
 
+    clearInterval(section6Stop)
     if(section6On==true){}
     else {
         $(section6Img).removeClass('on')
         $(section6Add).addClass('on')
         $(section6But).removeClass('on')
         $(section6But).eq(section6Index).addClass('on')
+        $(section6Li).removeClass('on')
+        $(this).addClass('on')
         if(section6Index<=4){
             $(section6H3).text(section6H3Text[section6Index]);
             $(section6P).text(section6PText[section6Index]);
         }
     }
+    section6Start()
 })
+
+
+
+
 
 // banner 엑스버튼 누르면 아이패드 사라짐
 let bannerX = '.banner-see-x'
@@ -529,20 +566,6 @@ $('.banner-see-left').on('click',function(){
 $('.banner-see-right').on('click',function(){
     bannerRightClick();
 })
-
-
-// $(section6But).eq(1).on('click',function(){
-//     $(section6See).eq(1).css({'display':'block'})
-// })
-// $(section6But).eq(2).on('click',function(){
-//     $(section6See).eq(2).css({'display':'block'})
-// })
-// $(section6But).eq(3).on('click',function(){
-//     $(section6See).eq(3).css({'display':'block'})
-// })
-// $(section6But).eq(4).on('click',function(){
-//     $(section6See).eq(4).css({'display':'block'})
-// })
 
 
 
