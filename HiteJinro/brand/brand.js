@@ -12,7 +12,7 @@ $(document).ready(function () {
   let hoverMenu = '.hover-menu'
   let menuNumber = 1;
   let menuImg = ['../down_img1.jpg', '../down_img2.jpg', '../down_img3.jpg', '../down_img4.jpg']
-  
+
   //클릭했을때 메뉴 없어짐
   let blackBack = function () {
     $(pcMenu).animate({ 'left': '-450px' })

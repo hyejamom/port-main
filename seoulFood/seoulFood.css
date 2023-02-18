@@ -11,19 +11,19 @@ h2 { font-size: 2.8rem; }
 .action-position { animation: actionPosition 2s; } 
 @keyframes actionPosition { 
  0% { top: 60%; opacity: 0; } 100% { top: 55%; opacity: 1; } 
- }
+ } 
 .action-up { animation: actionUp 2s; } 
 @keyframes actionUp { 
  0% { opacity: 0; margin-bottom: 50px; } 100% { opacity: 1; margin-bottom: 0px; } 
- }
+ } 
 .action-middle { animation: actionMiddle 2s; } 
 @keyframes actionMiddle { 
  0% { opacity: 0; margin: 50px 0px; } 100% { opacity: 1; margin: 0px; } 
- }
+ } 
 .action-down { animation: actionDown 2s; } 
 @keyframes actionDown { 
  0% { opacity: 0; margin-top: 50px; } 100% { opacity: 1; margin-top: 0px; } 
- }
+ } 
 
 
 /* header + logo img */
@@ -54,8 +54,8 @@ nav { width: 100%; padding: 0.625rem 0px; display: flex; justify-content: space-
 /* header menu */
 .h-menu { display: flex; width: 60%; justify-content: space-between; margin: 0px auto; } 
 .menu-box { width: 25%; text-align: center; position: relative; } 
-.menu-box-a::after {content: ""; display: flex; margin: 10px auto 0px auto; width: 0%; height: 1px; background-color: #eee; transition: all .5s; }
-.menu-box-a:hover::after {width: 75%; height: 2px; }
+.menu-box-a::after { content: ""; display: flex; margin: 10px auto 0px auto; width: 0%; height: 1px; background-color: #eee; transition: all .5s; } 
+.menu-box-a:hover::after { width: 75%; height: 2px; } 
 .nav-menu { padding: 25px 20px 20px 20px; width: 100%; height: 100px; margin-top: 1.5rem; display: none; position: absolute; } 
 .menu-box:nth-of-type(1) .nav-menu { height: 120px; } 
 .nav-menu div { width: 100%; height: 100%; background-color: #333; position: absolute; top: 0px; left: 0px; z-index: -1; opacity: 0.5; } 
@@ -63,12 +63,12 @@ nav { width: 100%; padding: 0.625rem 0px; display: flex; justify-content: space-
 .nav-menu li { margin-bottom: 5px; animation: hAniAll 1s; } 
 @keyframes hAniAll { 
  0% { opacity: 0; } 100% { opacity: 1; } 
- }
+ } 
 .nav-menu li:nth-of-type(1) { margin-bottom: 5px; animation: hAni 1s; } 
 @keyframes hAni { 
  0% { padding-top: 20px; opacity: 0; } 100% { padding-top: 0px; opacity: 1; } 
- }
-.nav-menu a { transition: all .5s; font-size: 16px;} 
+ } 
+.nav-menu a { transition: all .5s; font-size: 16px; } 
 .nav-menu a:hover { color: #890302; } 
 
 
@@ -80,17 +80,17 @@ nav { width: 100%; padding: 0.625rem 0px; display: flex; justify-content: space-
 
 
 /* @media 1024px menu */
-.side-menu { position: fixed; width: 100%; height: 100vh; top: 0px; left: 0px; display: none; z-index: 9;} 
+.side-menu { position: fixed; width: 100%; height: 100vh; top: 0px; left: 0px; display: none; z-index: 9; } 
 .side-menu-back { opacity: 0.5; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; backdrop-filter: blur(50px); background-color: rgb(0, 0, 0); } 
 .side-menu-back.on { animation: menuBack 1s; opacity: 0.5; } 
 @keyframes menuBack { 
  0% { opacity: 0; } 100% { opacity: 0.5; } 
- }
+ } 
 .side-menu-content-box { width: 50%; height: 100vh; background-color: #890302; position: absolute; right: 0px; top: 0px; transform: translateX(0%); } 
 .side-menu-content-box.on { animation: menuContent 1s; } 
 @keyframes menuContent { 
  0% { transform: translateX(100%) } 100% { transform: translateX(0%) } 
- }
+ } 
 .side-menu-content { width: 100%; height: 90%; background-color: #eee; position: absolute; bottom: 0px; left: 0px; } 
 .side-menu-content-box>div { display: flex; justify-content: flex-end; align-items: center; width: 100%; height: 10%; color: #eee; padding-right: 2.14rem; } 
 .side-menu-content-box>div>i { float: right; color: #eee; cursor: pointer; } 
@@ -133,7 +133,7 @@ section { width: 100%; position: relative; background-repeat: no-repeat; backgro
 .section1-scroll-arrow i { margin-top: 10px; cursor: pointer; animation: scroll-down 1.5s infinite; position: absolute; opacity: 1; bottom: 0px; left: 50%; transform: translateX(-50%); } 
 @keyframes scroll-down { 
  0% { opacity: 0; bottom: 10px } 100% { opacity: 1; bottom: 0px; } 
- }
+ } 
 
 
 /* 공통 icon-box */
@@ -151,7 +151,7 @@ section { width: 100%; position: relative; background-repeat: no-repeat; backgro
 .section3-content-box a { width: 9.375em; height: 12.5em; line-height: 1.25rem; border: 0.18rem #eee solid; margin: 0.6rem 3.1rem 0.6rem 0px; position: relative; transition: all .8s; animation: border 3s linear infinite; } 
 @keyframes border { 
  0% { border: 0.18rem #eee solid; } 50% { border: 0.18rem #890302 solid; } 100% { border: 0.18rem #eee solid; } 
- }
+ } 
 .section2-content-box { display: flex; justify-content: center; } 
 .section2-content-box a:last-child { margin-right: 0px; } 
 .section2-content-box a>p { position: absolute; top: 40%; left: 50%; transform: translate(-50%,-40%); transition: all .8s; } 
@@ -261,22 +261,22 @@ section { width: 100%; position: relative; background-repeat: no-repeat; backgro
  .section3-content-box a:hover .section2-back { opacity: 0.5; } 
  .section3-content-box a:hover >p { font-size: 1rem; } 
  .section3-content-box a:hover .section-icon>i { font-size: 1rem; } 
-}
+ } 
 
 @media screen and (max-width: 1000px) { html { font-size: 14px; } 
- }
+ } 
 
 @media screen and (max-width: 870px) { html { font-size: 13px; } 
- }
+ } 
 
 @media screen and (max-width: 700px) { html { font-size: 12px; } 
  .section4-content-box { display: none; } 
  .section4-media-content { width: 33.75em; height: auto; display: flex; } 
  .media-content p { font-size: 1.2rem; } 
  .more p { justify-content: flex-end; display: flex; margin-right: 5px; } 
- }
+ } 
 
-@media screen and (max-width: 560px) {h2 { font-size: 2rem } 
+@media screen and (max-width: 560px) { h2 { font-size: 2rem } 
  .section2-text h2 { padding-bottom: 1.25rem; } 
  .section2-text p { display: none; } 
  .section3-text h2 { padding-bottom: 1.25rem; } 
@@ -289,9 +289,9 @@ section { width: 100%; position: relative; background-repeat: no-repeat; backgro
  .section3-company p { font-size: 1.5rem; } 
  .section4-company p { font-size: 1.5rem; } 
  .mo { display: block; } 
- }
+ } 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) { 
  .section1-scroll-arrow { display: none; } 
  .social-box i { display: none; } 
  .serch-box i { display: block; } 
@@ -318,13 +318,13 @@ section { width: 100%; position: relative; background-repeat: no-repeat; backgro
  .media-content p { font-size: 1rem; display: flex; justify-content: center; align-items: center; } 
  .media-content img { display: flex; width: 50%; height: 100%; } 
  .more { position: absolute; right: 0.25rem; bottom: 0.25rem; } 
- }
+ } 
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) { 
  .media-content { width: 22.75em; } 
  .media-content p { font-size: 1rem; } 
  .more p { font-size: 1rem; width: auto; padding-right: 1rem; } 
  .more { padding-right: 1rem; } 
- }
+ } 
 
 
